@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务项目 - 深圳市嘉旅国际物流有限公司</title>
+    <meta name="description" content="深圳市嘉旅国际物流有限公司提供海运、空运、快递、仓储、报关等一站式国际物流服务">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%234a90e2" width="1200" height="400"/><path fill="%23357abd" d="M0,200 Q600,0 1200,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* 服务详情 */
+        .services-detail {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #667eea;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .service-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .service-item h4 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem 0;
+            color: #667eea;
+            border-bottom: 2px solid #e1e5e9;
+            padding-bottom: 0.5rem;
+        }
+        
+        .service-item p {
+            margin-bottom: 1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .service-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        .benefits-list {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+        
+        /* 优势特色 */
+        .advantages {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .advantage-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .advantage-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .advantage-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            position: relative;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #667eea;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">嘉旅物流</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="services.html">服务</a></li>
+                    <li><a href="index.html#about">关于</a></li>
+                    <li><a href="index.html#contact">联系</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>我们的服务</h1>
+            <p>专业、高效、可靠的国际物流解决方案</p>
+        </div>
+    </section>
+
+    <!-- 服务详情 -->
+    <section class="services-detail">
+        <div class="container">
+            <h2 class="section-title">专业物流服务</h2>
+            <div class="service-grid">
+                <!-- 国际海运 -->
+                <div class="service-item">
+                    <div class="service-icon">🚢</div>
+                    <h3>国际海运</h3>
+                    <p>我们提供全球主要港口间的海运服务，包括整箱(FCL)和拼箱(LCL)，专业处理各类货物运输需求。</p>
+                    
+                    <h4>服务范围</h4>
+                    <ul class="service-features">
+                        <li>全球主要港口直达航线</li>
+                        <li>整箱(FCL)和拼箱(LCL)服务</li>
+                        <li>危险品、超大件货物运输</li>
+                        <li>冷链运输服务</li>
+                        <li>门到门运输服务</li>
+                    </ul>
+                    
+                    <h4>服务优势</h4>
+                    <div class="benefits-list">
+                        <ul class="service-features">
+                            <li>成本效益高，适合大批量货物</li>
+                            <li>与多家船公司建立合作关系</li>
+                            <li>专业的海运操作团队</li>
+                            <li>完善的货物跟踪系统</li>
+                            <li>灵活的运费结算方式</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>适用货物</h4>
+                    <ul class="service-features">
+                        <li>机械设备、工业产品</li>
+                        <li>大宗商品、原材料</li>
+                        <li>家具家电、消费品</li>
+                        <li>化工产品、危险品</li>
+                        <li>大型工程设备</li>
+                    </ul>
+                </div>
+                
+                <!-- 国际空运 -->
+                <div class="service-item">
+                    <div class="service-icon">✈️</div>
+                    <h3>国际空运</h3>
+                    <p>快速可靠的空运服务，覆盖全球主要城市，确保高价值货物的安全准时到达。</p>
+                    
+                    <h4>服务范围</h4>
+                    <ul class="service-features">
+                        <li>全球主要机场空运服务</li>
+                        <li>定期航班和包机服务</li>
+                        <li>快递空运服务</li>
+                        <li>危险品空运</li>
+                        <li>鲜活易腐货物运输</li>
+                    </ul>
+                    
+                    <h4>服务优势</h4>
+                    <div class="benefits-list">
+                        <ul class="service-features">
+                            <li>运输时效快，通常1-7天到达</li>
+                            <li>与多家航空公司合作</li>
+                            <li>专业的空运操作团队</li>
+                            <li>实时货物跟踪服务</li>
+                            <li>灵活的运输方案选择</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>适用货物</h4>
+                    <ul class="service-features">
+                        <li>高价值电子产品</li>
+                        <li>精密仪器设备</li>
+                        <li>鲜活易腐商品</li>
+                        <li>医疗用品、药品</li>
+                        <li>紧急补货、样品</li>
+                    </ul>
+                </div>
+                
+                <!-- 快递服务 -->
+                <div class="service-item">
+                    <div class="service-icon">📦</div>
+                    <h3>快递服务</h3>
+                    <p>与国际知名快递公司合作，提供门到门的快速配送服务，满足紧急货物运输需求。</p>
+                    
+                    <h4>服务范围</h4>
+                    <ul class="service-features">
+                        <li>国际快递门到门服务</li>
+                        <li>文件和小包裹快递</li>
+                        <li>大件物品快递</li>
+                        <li>限时达快递服务</li>
+                        <li>签收服务和追踪</li>
+                    </ul>
+                    
+                    <h4>服务优势</h4>
+                    <div class="benefits-list">
+                        <ul class="service-features">
+                            <li>全球网络覆盖广泛</li>
+                            <li>快速可靠的配送服务</li>
+                            <li>实时在线追踪系统</li>
+                            <li>专业的客户服务团队</li>
+                            <li>灵活的计费方式</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>适用货物</h4>
+                    <ul class="service-features">
+                        <li>商务文件、合同</li>
+                        <li>样品、礼品</li>
+                        <li>电商包裹</li>
+                        <li>个人物品</li>
+                        <li>紧急替换件</li>
+                    </ul>
+                </div>
+                
+                <!-- 仓储服务 -->
+                <div class="service-item">
+                    <div class="service-icon">🏭</div>
+                    <h3>仓储服务</h3>
+                    <p>现代化仓储设施，提供货物存储、分拣、包装、配送等一站式仓储物流服务。</p>
+                    
+                    <h4>服务范围</h4>
+                    <ul class="service-features">
+                        <li>干仓、冷库仓储服务</li>
+                        <li>货物分拣、包装</li>
+                        <li>库存管理</li>
+                        <li>订单处理</li>
+                        <li>配送服务</li>
+                    </ul>
+                    
+                    <h4>服务优势</h4>
+                    <div class="benefits-list">
+                        <ul class="service-features">
+                            <li>现代化仓储设施</li>
+                            <li>先进的WMS系统</li>
+                            <li>专业的仓储管理团队</li>
+                            <li>灵活的仓储方案</li>
+                            <li>高效的订单处理能力</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>服务特色</h4>
+                    <ul class="service-features">
+                        <li>B2B仓储服务</li>
+                        <li>电商仓储服务</li>
+                        <li>定制化包装服务</li>
+                        <li>库存优化建议</li>
+                        <li>逆向物流服务</li>
+                    </ul>
+                </div>
+                
+                <!-- 报关服务 -->
+                <div class="service-item">
+                    <div class="service-icon">📋</div>
+                    <h3>报关服务</h3>
+                    <p>专业报关团队，熟悉各国海关法规，提供高效便捷的进出口报关服务。</p>
+                    
+                    <h4>服务范围</h4>
+                    <ul class="service-features">
+                        <li>进出口报关代理</li>
+                        <li>商检、卫检代理</li>
+                        <li>原产地证办理</li>
+                        <li>ATA单证册办理</li>
+                        <li>海关查验陪同</li>
+                    </ul>
+                    
+                    <h4>服务优势</h4>
+                    <div class="benefits-list">
+                        <ul class="service-features">
+                            <li>专业的报关团队</li>
+                            <li>丰富的报关经验</li>
+                            <li>高效的报关流程</li>
+                            <li>合规的风险控制</li>
+                            <li>快速的清关时效</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>服务国家</h4>
+                    <ul class="service-features">
+                        <li>东南亚国家</li>
+                        <li>欧美发达国家</li>
+                        <li>日韩等亚洲国家</li>
+                        <li>中东地区国家</li>
+                        <li>其他主要贸易国家</li>
+                    </ul>
+                </div>
+                
+                <!-- 供应链管理 -->
+                <div class="service-item">
+                    <div class="service-icon">🌐</div>
+                    <h3>供应链管理</h3>
+                    <p>为客户提供定制化的供应链解决方案，优化物流流程，降低运营成本。</p>
+                    
+                    <h4>服务范围</h4>
+                    <ul class="service-features">
+                        <li>供应链咨询规划</li>
+                        <li>物流网络优化</li>
+                        <li>供应商管理</li>
+                        <li>库存优化</li>
+                        <li>成本控制分析</li>
+                    </ul>
+                    
+                    <h4>服务优势</h4>
+                    <div class="benefits-list">
+                        <ul class="service-features">
+                            <li>专业的供应链团队</li>
+                            <li>先进的管理系统</li>
+                            <li>数据驱动的优化</li>
+                            <li>定制化的解决方案</li>
+                            <li>持续的改进服务</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>解决方案</h4>
+                    <ul class="service-features">
+                        <li>采购物流优化</li>
+                        <li>生产物流规划</li>
+                        <li>销售物流设计</li>
+                        <li>逆向物流管理</li>
+                        <li>端到端可视化</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务优势 -->
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title">我们的优势</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">🌍</div>
+                    <h4>全球网络</h4>
+                    <p>覆盖全球主要贸易国家和地区，提供全方位的国际物流服务</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">⚡</div>
+                    <h4>高效快捷</h4>
+                    <p>优化的物流流程和先进的信息系统，确保货物快速安全到达</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">💰</div>
+                    <h4>成本优化</h4>
+                    <p>规模化运营和精细化管理，为客户提供最具竞争力的价格</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🔒</div>
+                    <h4>安全可靠</h4>
+                    <p>完善的质量管理体系和风险控制措施，确保货物运输安全</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>深圳市嘉旅国际物流</h4>
+                    <p>专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="services.html">服务项目</a></li>
+                        <li><a href="index.html#about">关于我们</a></li>
+                        <li><a href="index.html#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>服务项目</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">国际海运</a></li>
+                        <li><a href="#">国际空运</a></li>
+                        <li><a href="#">快递服务</a></li>
+                        <li><a href="#">仓储服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li>电话：+86 13590173320</li>
+                        <li>邮箱：sales06@excellent-voyage.cn</li>
+                        <li>地址：广东省深圳市龙岗区南湾街道三鼎电商文创园A612</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利. 粤ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

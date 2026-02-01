@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻资讯 - 深圳市嘉旅国际物流有限公司</title>
+    <meta name="description" content="深圳市嘉旅国际物流有限公司新闻资讯，包括行业动态、公司新闻、物流资讯等内容">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%234a90e2" width="1200" height="400"/><path fill="%23357abd" d="M0,200 Q600,0 1200,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* 新闻内容 */
+        .news-content {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        /* 新闻分类 */
+        .news-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            background: #e9ecef;
+            color: #495057;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        /* 新闻列表 */
+        .news-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .news-item {
+            background: white;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .news-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .news-content-wrapper {
+            padding: 1.5rem;
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .news-date {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .news-category {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .news-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .news-excerpt {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .news-read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .news-read-more:hover {
+            color: #764ba2;
+        }
+        
+        /* 分页 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            gap: 0.5rem;
+        }
+        
+        .page-btn {
+            padding: 0.8rem 1.2rem;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .page-btn.active, .page-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            position: relative;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #667eea;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .news-item {
+                margin-bottom: 1.5rem;
+            }
+            
+            .news-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">嘉旅物流</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="services.html">服务</a></li>
+                    <li><a href="about.html">关于</a></li>
+                    <li><a href="contact.html">联系</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>新闻资讯</h1>
+            <p>行业动态 · 公司新闻 · 物流资讯</p>
+        </div>
+    </section>
+
+    <!-- 新闻内容 -->
+    <section class="news-content">
+        <div class="container">
+            <h2 class="section-title">最新资讯</h2>
+            
+            <!-- 新闻分类 -->
+            <div class="news-categories">
+                <button class="category-btn active">全部</button>
+                <button class="category-btn">公司新闻</button>
+                <button class="category-btn">行业动态</button>
+                <button class="category-btn">政策法规</button>
+                <button class="category-btn">物流资讯</button>
+            </div>
+            
+            <!-- 新闻列表 -->
+            <div class="news-list">
+                <!-- 新闻项 1 -->
+                <article class="news-item">
+                    <div class="news-image">📰</div>
+                    <div class="news-content-wrapper">
+                        <div class="news-meta">
+                            <span class="news-date">2026-01-30</span>
+                            <span class="news-category">公司新闻</span>
+                        </div>
+                        <h3 class="news-title">深圳市嘉旅国际物流有限公司荣获"2025年度优秀物流企业"称号</h3>
+                        <p class="news-excerpt">近日，在深圳市物流行业协会举办的年度评选活动中，我司凭借优质的服务质量和良好的市场口碑，荣获"2025年度优秀物流企业"称号。这一荣誉是对我们全体员工辛勤工作的肯定，也是我们继续前进的动力。</p>
+                        <a href="#" class="news-read-more">查看详情 →</a>
+                    </div>
+                </article>
+                
+                <!-- 新闻项 2 -->
+                <article class="news-item">
+                    <div class="news-image">🚢</div>
+                    <div class="news-content-wrapper">
+                        <div class="news-meta">
+                            <span class="news-date">2026-01-28</span>
+                            <span class="news-category">行业动态</span>
+                        </div>
+                        <h3 class="news-title">全球海运市场复苏，2026年有望迎来新机遇</h3>
+                        <p class="news-excerpt">随着全球经济逐步复苏，国际贸易需求回升，全球海运市场呈现出积极的发展态势。业内专家预测，2026年海运市场将迎来新的发展机遇，同时数字化转型将成为行业发展的重要驱动力。</p>
+                        <a href="#" class="news-read-more">查看详情 →</a>
+                    </div>
+                </article>
+                
+                <!-- 新闻项 3 -->
+                <article class="news-item">
+                    <div class="news-image">✈️</div>
+                    <div class="news-content-wrapper">
+                        <div class="news-meta">
+                            <span class="news-date">2026-01-25</span>
+                            <span class="news-category">物流资讯</span>
+                        </div>
+                        <h3 class="news-title">航空货运市场持续增长，跨境电商物流需求旺盛</h3>
+                        <p class="news-excerpt">根据最新数据显示，全球航空货运市场继续保持增长势头，特别是在跨境电商领域，对快速、可靠的航空货运服务需求持续旺盛。这为航空货运企业带来了新的发展机遇。</p>
+                        <a href="#" class="news-read-more">查看详情 →</a>
+                    </div>
+                </article>
+                
+                <!-- 新闻项 4 -->
+                <article class="news-item">
+                    <div class="news-image">📋</div>
+                    <div class="news-content-wrapper">
+                        <div class="news-meta">
+                            <span class="news-date">2026-01-20</span>
+                            <span class="news-category">政策法规</span>
+                        </div>
+                        <h3 class="news-title">新版《国际物流管理办法》正式实施，行业规范化程度进一步提升</h3>
+                        <p class="news-excerpt">为规范国际物流市场秩序，提升服务质量，国家相关部门发布了新版《国际物流管理办法》，对物流企业的资质要求、服务标准、安全管理等方面提出了更明确的要求。这标志着我国国际物流行业进入更加规范化的发展阶段。</p>
+                        <a href="#" class="news-read-more">查看详情 →</a>
+                    </div>
+                </article>
+                
+                <!-- 新闻项 5 -->
+                <article class="news-item">
+                    <div class="news-image">💡</div>
+                    <div class="news-content-wrapper">
+                        <div class="news-meta">
+                            <span class="news-date">2026-01-15</span>
+                            <span class="news-category">公司新闻</span>
+                        </div>
+                        <h3 class="news-title">嘉旅物流推出全新智能物流管理系统，提升客户体验</h3>
+                        <p class="news-excerpt">为更好地服务客户，我司投入大量资源开发的全新智能物流管理系统正式上线。该系统实现了订单管理、货物追踪、数据分析等功能的一体化，大大提升了操作效率和客户体验。</p>
+                        <a href="#" class="news-read-more">查看详情 →</a>
+                    </div>
+                </article>
+                
+                <!-- 新闻项 6 -->
+                <article class="news-item">
+                    <div class="news-image">🌍</div>
+                    <div class="news-content-wrapper">
+                        <div class="news-meta">
+                            <span class="news-date">2026-01-10</span>
+                            <span class="news-category">行业动态</span>
+                        </div>
+                        <h3 class="news-title">绿色物流成为发展趋势，企业积极践行可持续发展</h3>
+                        <p class="news-excerpt">在全球环保意识日益增强的背景下，绿色物流成为行业发展的重要趋势。越来越多的物流企业开始采用新能源车辆、优化运输路线、推广绿色包装等措施，积极践行可持续发展理念。</p>
+                        <a href="#" class="news-read-more">查看详情 →</a>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- 分页 -->
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">下一页 →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>深圳市嘉旅国际物流</h4>
+                    <p>专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="services.html">服务项目</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>服务项目</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">国际海运</a></li>
+                        <li><a href="#">国际空运</a></li>
+                        <li><a href="#">快递服务</a></li>
+                        <li><a href="#">仓储服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li>电话：+86 13590173320</li>
+                        <li>邮箱：sales06@excellent-voyage.cn</li>
+                        <li>地址：广东省深圳市龙岗区南湾街道三鼎电商文创园A612</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利. 粤ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 分类按钮交互
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // 分页按钮交互
+        const pageBtns = document.querySelectorAll('.page-btn');
+        pageBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                if(this.textContent !== '下一页 →') {
+                    pageBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // 新闻详情链接处理
+        const newsLinks = document.querySelectorAll('.news-read-more');
+        newsLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('这是示例新闻，详细内容将在正式网站中展示。');
+            });
+        });
+    </script>
+</body>
+</html>

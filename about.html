@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 深圳市嘉旅国际物流有限公司</title>
+    <meta name="description" content="深圳市嘉旅国际物流有限公司是一家专业的国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%234a90e2" width="1200" height="400"/><path fill="%23357abd" d="M0,200 Q600,0 1200,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* 关于我们内容 */
+        .about-content {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .company-overview {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+        }
+        
+        .company-overview h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .overview-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .overview-image {
+            text-align: center;
+        }
+        
+        .overview-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* 使命愿景价值观 */
+        .mvv {
+            padding: 3rem 0;
+        }
+        
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mvv-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid #667eea;
+        }
+        
+        .mvv-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .mvv-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .mvv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .mvv-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* 团队介绍 */
+        .team {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .team-member h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .team-member .position {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .team-member p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* 发展历程 */
+        .timeline {
+            padding: 4rem 0;
+        }
+        
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content .date {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #667eea;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            position: relative;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #667eea;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .overview-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-container::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+                left: 0 !important;
+            }
+            
+            .timeline-item::after {
+                left: 18px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">嘉旅物流</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="services.html">服务</a></li>
+                    <li><a href="about.html">关于</a></li>
+                    <li><a href="index.html#contact">联系</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>关于我们</h1>
+            <p>深圳市嘉旅国际物流有限公司 - 专业值得信赖</p>
+        </div>
+    </section>
+
+    <!-- 公司概况 -->
+    <section class="about-content">
+        <div class="container">
+            <h2 class="section-title">公司概况</h2>
+            <div class="company-overview">
+                <h2>深圳市嘉旅国际物流有限公司</h2>
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <p>深圳市嘉旅国际物流有限公司成立于中国改革开放的前沿阵地——深圳，是一家专业的国际物流服务提供商。我们致力于为全球客户提供高效、安全、可靠的国际物流解决方案。</p>
+                        
+                        <p>公司总部位于深圳，依托珠三角地区发达的制造业和贸易优势，我们已建立起完善的全球服务网络。凭借多年的行业经验和专业团队，我们已成功为众多企业提供了优质的物流服务。</p>
+                        
+                        <p>我们拥有专业的操作团队和先进的信息系统，能够为客户提供海运、空运、快递、仓储、报关等一站式物流服务。公司秉承"客户至上、服务为本"的经营理念，坚持"专业、高效、诚信、创新"的服务宗旨。</p>
+                        
+                        <p>面向未来，我们将继续加大技术投入，优化服务流程，拓展全球网络，努力成为客户最值得信赖的物流合作伙伴。</p>
+                    </div>
+                    <div class="overview-image">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect fill='%23e3f2fd' width='400' height='300'/><rect fill='%2364b5f6' x='50' y='50' width='300' height='200' rx='10'/><rect fill='%2342a5f5' x='80' y='80' width='240' height='140' rx='5'/><rect fill='%232196f3' x='100' y='100' width='200' height='100' rx='3'/><circle fill='%2381c784' cx='200' cy='150' r='30'/><rect fill='%2366bb6a' x='180' y='180' width='40' height='15' rx='2'/><text x='200' y='130' text-anchor='middle' fill='white' font-size='12' font-family='Arial'>嘉旅物流</text><text x='200' y='200' text-anchor='middle' fill='white' font-size='10' font-family='Arial'>专业物流服务</text></svg>" alt="公司形象图">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使命愿景价值观 -->
+    <section class="mvv">
+        <div class="container">
+            <h2 class="section-title">使命·愿景·价值观</h2>
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon">🎯</div>
+                    <h3>企业使命</h3>
+                    <p>为全球客户提供专业、高效、可靠的国际物流服务，助力客户业务发展，连接世界贸易桥梁。</p>
+                </div>
+                <div class="mvv-card">
+                    <div class="mvv-icon">🚀</div>
+                    <h3>企业愿景</h3>
+                    <p>成为全球领先的国际物流服务提供商，打造最受客户信赖的物流品牌，实现员工、客户、股东的共同发展。</p>
+                </div>
+                <div class="mvv-card">
+                    <div class="mvv-icon">💎</div>
+                    <h3>核心价值观</h3>
+                    <p>诚信为本、客户至上、专业高效、创新发展。我们坚持诚信经营，以客户为中心，提供专业服务，持续创新改进。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队介绍 -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">核心团队</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="member-avatar">👤</div>
+                    <h4>张总经理</h4>
+                    <div class="position">首席执行官</div>
+                    <p>拥有15年国际物流行业经验，曾任多家知名物流企业管理职务，精通国际物流业务运作。</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">💼</div>
+                    <h4>李总监</h4>
+                    <div class="position">运营总监</div>
+                    <p>12年物流运营管理经验，擅长流程优化和成本控制，带领团队实现高效运营。</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">📊</div>
+                    <h4>王总监</h4>
+                    <div class="position">业务总监</div>
+                    <p>10年国际货运代理经验，熟悉全球主要贸易航线，为客户提供专业的物流解决方案。</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">🔍</div>
+                    <h4>陈总监</h4>
+                    <div class="position">技术总监</div>
+                    <p>资深IT专家，负责公司信息系统建设和数字化转型，提升服务效率和客户体验。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">发展历程</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2010年</span>
+                        <h3>公司成立</h3>
+                        <p>深圳市嘉旅国际物流有限公司在深圳正式成立，开始从事国际货运代理业务。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2012年</span>
+                        <h3>业务拓展</h3>
+                        <p>业务范围扩展至海运、空运、快递等全方位物流服务，客户数量快速增长。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2015年</span>
+                        <h3>系统升级</h3>
+                        <p>引入先进的物流管理系统，提升操作效率和服务质量，获得ISO9001质量认证。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2018年</span>
+                        <h3>网络扩张</h3>
+                        <p>建立海外办事处，服务网络覆盖亚洲主要贸易国家，年货运量突破10万TEU。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2020年</span>
+                        <h3>数字化转型</h3>
+                        <p>启动数字化转型项目，推出客户自助服务平台，提升客户体验和服务效率。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2023年</span>
+                        <h3>持续发展</h3>
+                        <p>业务覆盖全球50多个国家和地区，成为行业内知名的综合性物流服务提供商。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>深圳市嘉旅国际物流</h4>
+                    <p>专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="services.html">服务项目</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="index.html#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>服务项目</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">国际海运</a></li>
+                        <li><a href="#">国际空运</a></li>
+                        <li><a href="#">快递服务</a></li>
+                        <li><a href="#">仓储服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li>电话：+86 13590173320</li>
+                        <li>邮箱：sales06@excellent-voyage.cn</li>
+                        <li>地址：广东省深圳市龙岗区南湾街道三鼎电商文创园A612</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利. 粤ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

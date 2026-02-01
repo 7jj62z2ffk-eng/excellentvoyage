@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 深圳市嘉旅国际物流有限公司</title>
+    <meta name="description" content="深圳市嘉旅国际物流有限公司联系方式，包括公司地址、电话、邮箱等信息，欢迎咨询国际物流服务">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%234a90e2" width="1200" height="400"/><path fill="%23357abd" d="M0,200 Q600,0 1200,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* 联系我们内容 */
+        .contact-content {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.8rem;
+            margin-right: 1rem;
+            color: #667eea;
+            min-width: 30px;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #333;
+        }
+        
+        .contact-details p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .business-hours {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .business-hours h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+        }
+        
+        /* 地图区域 */
+        .map-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .map-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .map-container h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .map-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            position: relative;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #667eea;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-placeholder {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">嘉旅物流</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="services.html">服务</a></li>
+                    <li><a href="about.html">关于</a></li>
+                    <li><a href="contact.html">联系</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>联系我们</h1>
+            <p>我们随时准备为您提供专业的物流服务咨询</p>
+        </div>
+    </section>
+
+    <!-- 联系信息 -->
+    <section class="contact-content">
+        <div class="container">
+            <h2 class="section-title">联系信息</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>公司信息</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div class="contact-details">
+                            <h4>公司名称</h4>
+                            <p>深圳市嘉旅国际物流有限公司</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>公司地址</h4>
+                            <p>广东省深圳市龙岗区南湾街道<br>三鼎电商文创园A612</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>联系电话</h4>
+                            <p>业务经理 Davis Luo：<br>+86 13590173320</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>电子邮箱</h4>
+                            <p>业务咨询：sales06@excellent-voyage.cn</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h4>官方网站</h4>
+                            <p>www.jialv-logistics.com</p>
+                        </div>
+                    </div>
+                    <div class="business-hours">
+                        <h4>营业时间</h4>
+                        <p>周一至周五：9:00 - 18:00<br>周六：9:00 - 12:00<br>周日：休息</p>
+                        <p style="margin-top: 0.5rem;"><small>紧急业务请拨打24小时服务热线</small></p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>发送消息</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">姓名 *</label>
+                            <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">电话 *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="请输入您的电话">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱 *</label>
+                                <input type="email" id="email" name="email" required placeholder="请输入您的邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceType">服务类型</label>
+                            <select id="serviceType" name="serviceType">
+                                <option value="">请选择服务类型</option>
+                                <option value="shipping">海运服务</option>
+                                <option value="air-freight">空运服务</option>
+                                <option value="express">快递服务</option>
+                                <option value="warehousing">仓储服务</option>
+                                <option value="customs-clearance">报关服务</option>
+                                <option value="supply-chain">供应链管理</option>
+                                <option value="other">其他服务</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">消息内容 *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="请描述您的需求或问题..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 地图区域 -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <h3>我们的位置</h3>
+                <div class="map-placeholder">
+                    <div>
+                        <h4>深圳市嘉旅国际物流有限公司</h4>
+                        <p>广东省深圳市南山区粤海街道科技园南区<br>深圳湾科技生态园10栋A座15楼</p>
+                        <p style="margin-top: 1rem;">地图功能将在正式网站上线时激活</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>深圳市嘉旅国际物流</h4>
+                    <p>专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="services.html">服务项目</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>服务项目</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">国际海运</a></li>
+                        <li><a href="#">国际空运</a></li>
+                        <li><a href="#">快递服务</a></li>
+                        <li><a href="#">仓储服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li>电话：+86 13590173320</li>
+                        <li>邮箱：sales06@excellent-voyage.cn</li>
+                        <li>地址：广东省深圳市龙岗区南湾街道三鼎电商文创园A612</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利. 粤ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 表单提交处理
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 获取表单数据
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // 简单验证
+            if(!data.name || !data.phone || !data.email || !data.message) {
+                alert('请填写所有必填项！');
+                return;
+            }
+            
+            // 模拟提交成功
+            alert('感谢您的咨询！我们的工作人员将在24小时内与您联系。');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
