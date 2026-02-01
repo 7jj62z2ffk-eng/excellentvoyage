@@ -5,6 +5,8 @@
 ## 网站信息
 - **网站名称**: 深圳市嘉旅国际物流有限公司官网
 - **网站描述**: 专业国际物流服务提供商，提供海运、空运、快递、仓储、报关等一站式国际物流解决方案
+- **官方网址**: https://excellent-voyage.cn
+- **GitHub Pages**: https://7JJ62Z2FFK-ENG.github.io
 - **联系信息**:
   - 电话: +86 13590173320
   - 邮箱: sales06@excellent-voyage.cn
@@ -16,6 +18,7 @@
 - 快速加载速度
 - 移动设备兼容
 - SEO优化结构
+- 自定义域名支持
 
 ## 页面结构
 - **首页 (index.html)**: 公司概览和主要服务介绍
@@ -25,12 +28,18 @@
 - **新闻资讯 (news.html)**: 最新动态和行业资讯
 - **网站地图 (sitemap.html)**: 网站导航
 
+## 自定义域名配置
+此网站已配置自定义域名 excellent-voyage.cn，可通过以下地址访问：
+- https://excellent-voyage.cn (推荐)
+- https://7JJ62Z2FFK-ENG.github.io (备用)
+
 ## 技术规格
 - 纯HTML/CSS/JavaScript开发
 - 无需服务器端支持
 - 所有样式和脚本内嵌
 - SVG图像优化
 - 移动优先设计
+- 支持自定义域名
 
 ## 联系方式
 - 电话: +86 13590173320
