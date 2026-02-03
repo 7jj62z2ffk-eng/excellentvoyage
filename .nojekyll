@@ -1,0 +1,3 @@
+# Disable Jekyll processing of files
+# This prevents GitHub Pages from trying to build the site with Jekyll
+# which can cause issues with custom HTML files
