@@ -888,6 +888,225 @@
                 font-size: 0.88rem;
             }
         }
+
+        /* ========== Industry News Feed ========== */
+        .industry-news-section {
+            background: var(--bg-section);
+        }
+
+        .news-feed-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .feed-tab {
+            padding: 8px 20px;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            background: var(--bg-white);
+            color: var(--text-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .feed-tab:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .feed-tab.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .feed-refresh {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            background: var(--bg-white);
+            color: var(--text-light);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .feed-refresh:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .feed-refresh.spinning svg {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .news-feed-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            min-height: 200px;
+        }
+
+        .feed-loading {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+            gap: 16px;
+        }
+
+        .loading-spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .feed-error {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+            gap: 12px;
+            text-align: center;
+        }
+
+        .feed-retry-btn {
+            margin-top: 8px;
+            padding: 10px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .feed-retry-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        .feed-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .feed-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .feed-card-source {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .feed-source-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .feed-source-name {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .feed-card-date {
+            margin-left: auto;
+            font-size: 0.78rem;
+            color: var(--text-light);
+        }
+
+        .feed-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.5;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+
+        .feed-card:hover h4 {
+            color: var(--accent);
+        }
+
+        .feed-card-read {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 500;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .feed-card-read span {
+            transition: var(--transition);
+        }
+
+        .feed-card:hover .feed-card-read span {
+            transform: translateX(3px);
+        }
+
+        @media (max-width: 1024px) {
+            .news-feed-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .news-feed-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feed-refresh {
+                margin-left: 0;
+                margin-top: 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1061,6 +1280,38 @@
                     下一页
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry News Feed (Auto-updated) -->
+    <section class="section industry-news-section" id="industryNews">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">实时要闻</div>
+                <h2 class="section-title">国际物流行业动态</h2>
+                <p class="section-desc">自动聚合全球物流行业最新资讯，实时更新</p>
+            </div>
+            <div class="news-feed-controls animate-on-scroll">
+                <button class="feed-tab active" data-feed="logistics">国际物流</button>
+                <button class="feed-tab" data-feed="shipping">海运货代</button>
+                <button class="feed-tab" data-feed="aircargo">航空货运</button>
+                <button class="feed-tab" data-feed="supplychain">供应链</button>
+                <button class="feed-refresh" id="feedRefresh" title="刷新">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                    刷新
+                </button>
+            </div>
+            <div class="news-feed-grid" id="newsFeedGrid">
+                <div class="feed-loading" id="feedLoading">
+                    <div class="loading-spinner"></div>
+                    <p>正在加载最新行业资讯...</p>
+                </div>
+            </div>
+            <div class="feed-error" id="feedError" style="display:none;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <p>暂时无法加载新闻，请稍后重试</p>
+                <button class="feed-retry-btn" id="feedRetry">重新加载</button>
             </div>
         </div>
     </section>
@@ -1273,6 +1524,146 @@
                 });
             });
         });
+
+        // ========== Auto News Feed (Google News RSS via rss2json) ==========
+        const RSS2JSON_API = 'https://api.rss2json.com/v1/api.json';
+        const FEED_TOPICS = {
+            logistics: { query: '国际物流', label: '国际物流' },
+            shipping: { query: '海运 货代', label: '海运货代' },
+            aircargo: { query: '航空货运 物流', label: '航空货运' },
+            supplychain: { query: '供应链管理', label: '供应链' }
+        };
+        let currentFeed = 'logistics';
+
+        const feedGrid = document.getElementById('newsFeedGrid');
+        const feedLoading = document.getElementById('feedLoading');
+        const feedError = document.getElementById('feedError');
+        const feedRefresh = document.getElementById('feedRefresh');
+        const feedRetry = document.getElementById('feedRetry');
+        const feedTabs = document.querySelectorAll('.feed-tab');
+
+        function getRssUrl(topic) {
+            const q = encodeURIComponent(FEED_TOPICS[topic].query);
+            return `https://news.google.com/rss/search?q=${q}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans`;
+        }
+
+        function formatDate(pubDate) {
+            try {
+                const d = new Date(pubDate);
+                const now = new Date();
+                const diff = now - d;
+                const mins = Math.floor(diff / 60000);
+                const hours = Math.floor(diff / 3600000);
+                const days = Math.floor(diff / 86400000);
+                if (mins < 60) return `${Math.max(1, mins)}分钟前`;
+                if (hours < 24) return `${hours}小时前`;
+                if (days < 7) return `${days}天前`;
+                return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+            } catch (e) {
+                return '';
+            }
+        }
+
+        function extractSource(title) {
+            if (!title) return '新闻资讯';
+            const match = title.match(/\s*[-–—|]\s*([^-\–—|]+)$/);
+            return match ? match[1].trim() : '新闻资讯';
+        }
+
+        function cleanTitle(title) {
+            if (!title) return '';
+            return title.replace(/\s*[-–—|]\s*[^-\–—|]+$/, '').trim();
+        }
+
+        function renderFeedCards(items) {
+            feedGrid.innerHTML = '';
+            if (!items || items.length === 0) {
+                feedGrid.innerHTML = '<div class="feed-error"><p>暂无相关新闻</p></div>';
+                return;
+            }
+            items.slice(0, 9).forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'feed-card animate-on-scroll';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.onclick = () => window.open(item.link, '_blank', 'noopener,noreferrer');
+
+                const source = extractSource(item.title);
+                const title = cleanTitle(item.title);
+                const date = formatDate(item.pubDate);
+
+                card.innerHTML = `
+                    <div class="feed-card-source">
+                        <span class="feed-source-dot"></span>
+                        <span class="feed-source-name">${source}</span>
+                        <span class="feed-card-date">${date}</span>
+                    </div>
+                    <h4>${title}</h4>
+                    <div class="feed-card-read">阅读原文 <span>&#8594;</span></div>
+                `;
+
+                feedGrid.appendChild(card);
+
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 80);
+            });
+        }
+
+        async function loadNewsFeed(topic) {
+            feedLoading.style.display = '';
+            feedError.style.display = 'none';
+            feedGrid.innerHTML = '';
+            feedGrid.appendChild(feedLoading);
+
+            const rssUrl = getRssUrl(topic);
+
+            try {
+                const response = await fetch(`${RSS2JSON_API}?rss_url=${encodeURIComponent(rssUrl)}`);
+                if (!response.ok) throw new Error('Network error');
+
+                const data = await response.json();
+
+                if (data.status === 'ok' && data.items && data.items.length > 0) {
+                    renderFeedCards(data.items);
+                } else {
+                    feedGrid.innerHTML = '<div class="feed-error"><p>暂无相关新闻，请稍后再试</p></div>';
+                }
+            } catch (error) {
+                console.error('Failed to load news feed:', error);
+                feedGrid.innerHTML = '';
+                feedError.style.display = '';
+                feedGrid.appendChild(feedError);
+            }
+        }
+
+        // Tab switching
+        feedTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                feedTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentFeed = tab.dataset.feed;
+                loadNewsFeed(currentFeed);
+            });
+        });
+
+        // Refresh button
+        feedRefresh.addEventListener('click', () => {
+            feedRefresh.classList.add('spinning');
+            loadNewsFeed(currentFeed).finally(() => {
+                setTimeout(() => feedRefresh.classList.remove('spinning'), 1000);
+            });
+        });
+
+        // Retry button
+        feedRetry.addEventListener('click', () => {
+            loadNewsFeed(currentFeed);
+        });
+
+        // Initial load
+        loadNewsFeed(currentFeed);
     </script>
 </body>
 </html>
