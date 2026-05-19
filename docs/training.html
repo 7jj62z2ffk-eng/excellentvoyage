@@ -3,320 +3,1678 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>国际物流专业知识培训 - 深圳市嘉旅国际物流有限公司</title>
-    <meta name="description" content="深圳市嘉旅国际物流有限公司提供专业的国际物流知识培训资料">
+    <title>国际物流培训资料 - 深圳市嘉旅国际物流有限公司 | 物流专业知识库</title>
+    <meta name="description" content="深圳市嘉旅国际物流有限公司国际物流专业知识培训资料库，涵盖基础知识、运输方式、专业技能、管理策略、技术应用、业务发展等全面物流培训内容。">
+    <meta name="keywords" content="国际物流培训,物流知识库,海运培训,空运培训,报关培训,物流管理,供应链培训,嘉旅物流,excellent-voyage">
+    <meta name="author" content="深圳市嘉旅国际物流有限公司">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://excellent-voyage.cn/training.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="国际物流培训资料 - 深圳市嘉旅国际物流有限公司 | 物流专业知识库">
+    <meta property="og:description" content="全面的国际物流专业知识库，涵盖基础知识、运输方式、专业技能、管理策略、技术应用、业务发展等培训内容，助力行业发展。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://excellent-voyage.cn/training.html">
+    <meta property="og:site_name" content="嘉旅国际物流">
+    <meta property="og:locale" content="zh_CN">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="国际物流培训资料 - 深圳市嘉旅国际物流有限公司">
+    <meta name="twitter:description" content="全面的国际物流专业知识库，涵盖基础知识、运输方式、专业技能、管理策略、技术应用、业务发展等培训内容。">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "国际物流专业知识培训",
+        "description": "深圳市嘉旅国际物流有限公司国际物流专业知识培训资料库",
+        "url": "https://excellent-voyage.cn/training.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "嘉旅国际物流",
+            "url": "https://excellent-voyage.cn"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "深圳市嘉旅国际物流有限公司",
+            "telephone": "+8613590173320",
+            "email": "sales06@excellent-voyage.cn"
+        }
+    }
+    </script>
     <style>
-        * {
+        /* ========== CSS Reset & Base ========== */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        :root {
+            --primary: #0A2540;
+            --primary-light: #1A3A5C;
+            --accent: #0066FF;
+            --accent-hover: #0052CC;
+            --accent-light: #E8F0FE;
+            --gold: #C8A96E;
+            --gold-light: #F5EFE0;
+            --text-dark: #1A1A2E;
+            --text-body: #4A5568;
+            --text-light: #718096;
+            --bg-white: #FFFFFF;
+            --bg-light: #F7F9FC;
+            --bg-section: #F0F4F8;
+            --border: #E2E8F0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
         body {
-            font-family: 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-body);
+            background-color: var(--bg-white);
+            overflow-x: hidden;
         }
-        
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 24px;
         }
-        
-        .header-content {
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* ========== Header & Navigation ========== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 37, 64, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background: rgba(10, 37, 64, 0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 72px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        
+
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, #00A3FF 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -1px;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: var(--gold);
+        }
+
         nav ul {
             display: flex;
             list-style: none;
+            gap: 4px;
         }
-        
-        nav li {
-            margin-left: 2rem;
-        }
-        
+
         nav a {
+            color: rgba(255,255,255,0.75);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
             color: white;
-            text-decoration: none;
-            transition: color 0.3s;
+            background: rgba(255,255,255,0.1);
         }
-        
-        nav a:hover {
-            color: #3498db;
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 1px;
         }
-        
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 4rem 0;
-            margin-bottom: 2rem;
+
+        .header-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 8px 20px !important;
+            border-radius: var(--radius-sm) !important;
+            font-weight: 600 !important;
         }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+
+        .header-cta:hover {
+            background: var(--accent-hover) !important;
+            transform: translateY(-1px);
         }
-        
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
         }
-        
-        .training-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .training-card {
+
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
             background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 2px;
+            transition: var(--transition);
         }
-        
-        .training-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
         }
-        
-        .training-card h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ========== Page Banner ========== */
+        .page-banner {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, #0D3158 40%, #0A2540 100%);
+            padding: 140px 0 80px;
+            overflow: hidden;
+        }
+
+        .page-banner::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(0,102,255,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(200,169,110,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, -30px); }
+        }
+
+        .banner-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .banner-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,102,255,0.15);
+            border: 1px solid rgba(0,102,255,0.3);
+            color: #60A5FA;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .banner-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #60A5FA;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .page-banner h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-banner h1 .highlight {
+            background: linear-gradient(135deg, var(--accent) 0%, #00A3FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-banner p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.6);
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ========== Search / Filter Bar ========== */
+        .search-section {
+            position: relative;
+            z-index: 10;
+            margin-top: -40px;
+            margin-bottom: 60px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 8px;
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .search-bar .search-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            color: var(--text-light);
+            flex-shrink: 0;
             font-size: 1.2rem;
         }
-        
-        .training-card p {
-            color: #666;
-            margin-bottom: 1rem;
+
+        .search-bar input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            color: var(--text-dark);
+            background: transparent;
+            font-family: inherit;
+        }
+
+        .search-bar input::placeholder {
+            color: var(--text-light);
+        }
+
+        .search-bar .search-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            white-space: nowrap;
+        }
+
+        .search-bar .search-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .filter-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .filter-tag {
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+            background: var(--bg-white);
+            color: var(--text-body);
+        }
+
+        .filter-tag:hover, .filter-tag.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* ========== Section Common ========== */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .section-label::before, .section-label::after {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ========== Category Cards (6 main) ========== */
+        .categories-section {
+            background: var(--bg-white);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .category-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), #00A3FF);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .category-icon.blue { background: var(--accent-light); color: var(--accent); }
+        .category-icon.gold { background: var(--gold-light); color: var(--gold); }
+        .category-icon.green { background: #E6FFFA; color: #38B2AC; }
+        .category-icon.purple { background: #FAF5FF; color: #805AD5; }
+        .category-icon.red { background: #FFF5F5; color: #E53E3E; }
+        .category-icon.teal { background: #E6FFFA; color: #319795; }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .category-card > p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .category-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .category-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 14px;
+            background: var(--bg-section);
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-body);
+            transition: var(--transition);
+        }
+
+        .category-link:hover {
+            background: var(--accent-light);
+            color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .category-link .arrow {
+            font-size: 0.7rem;
+            transition: transform 0.2s ease;
+        }
+
+        .category-link:hover .arrow {
+            transform: translateX(2px);
+        }
+
+        /* ========== Additional Materials Grid ========== */
+        .materials-section {
+            background: var(--bg-section);
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .material-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .material-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .material-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .material-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .material-icon.blue { background: var(--accent-light); color: var(--accent); }
+        .material-icon.gold { background: var(--gold-light); color: var(--gold); }
+        .material-icon.green { background: #E6FFFA; color: #38B2AC; }
+        .material-icon.purple { background: #FAF5FF; color: #805AD5; }
+        .material-icon.red { background: #FFF5F5; color: #E53E3E; }
+        .material-icon.teal { background: #E6FFFA; color: #319795; }
+        .material-icon.orange { background: #FFFAF0; color: #DD6B20; }
+        .material-icon.pink { background: #FFF5F7; color: #D53F8C; }
+
+        .material-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .material-card p {
+            color: var(--text-light);
+            font-size: 0.88rem;
+            line-height: 1.7;
+            flex: 1;
+            margin-bottom: 16px;
+        }
+
+        .material-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            font-size: 0.88rem;
+            font-weight: 600;
+            align-self: flex-start;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .material-btn:hover {
+            background: var(--accent-light);
+            gap: 10px;
+        }
+
+        .material-btn .btn-arrow {
+            transition: transform 0.2s ease;
+            font-size: 0.8rem;
+        }
+
+        .material-btn:hover .btn-arrow {
+            transform: translateX(3px);
+        }
+
+        /* ========== CTA Section ========== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #0D3158 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0,102,255,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cta-inner h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta-inner p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 36px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: white;
+            padding: 14px 32px;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,102,255,0.4);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: white;
+            padding: 14px 32px;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+
+        .cta-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            margin-top: 24px;
+        }
+
+        .cta-phone a {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+
+        .cta-phone a:hover {
+            color: #D4B87A;
+        }
+
+        /* ========== Footer ========== */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-top: 16px;
+            max-width: 300px;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 4px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
             font-size: 0.9rem;
         }
-        
-        .training-link {
-            display: inline-block;
-            background: #3498db;
+
+        .footer-contact-item .icon {
+            color: var(--accent);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ========== Back to Top ========== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
             color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,102,255,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 999;
         }
-        
-        .training-link:hover {
-            background: #2980b9;
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
-        
-        footer {
-            background-color: #34495e;
+
+        .back-to-top:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+        }
+
+        /* ========== Floating Contact ========== */
+        .floating-contact {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 998;
+        }
+
+        .float-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .float-btn.phone-btn {
+            background: #25D366;
             color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
         }
-        
-        .contact-info {
-            margin-top: 1rem;
+
+        .float-btn.wechat-btn {
+            background: #07C160;
+            color: white;
         }
-        
-        .contact-info p {
-            margin: 0.3rem 0;
+
+        .float-btn .tooltip {
+            position: absolute;
+            right: 60px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            pointer-events: none;
         }
-        
+
+        .float-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ========== Animations on Scroll ========== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger animation delays */
+        .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+        .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+        .animate-on-scroll:nth-child(4) { transition-delay: 0.1s; }
+        .animate-on-scroll:nth-child(5) { transition-delay: 0.2s; }
+        .animate-on-scroll:nth-child(6) { transition-delay: 0.3s; }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 1024px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .materials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
+            .menu-toggle {
+                display: flex;
             }
-            
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--primary);
+                padding: 80px 24px 24px;
+                transition: right 0.3s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+            }
+
+            nav.open {
+                right: 0;
+            }
+
             nav ul {
-                margin-top: 1rem;
-                justify-content: center;
+                flex-direction: column;
+                gap: 4px;
             }
-            
-            nav li {
-                margin: 0 1rem;
+
+            nav a {
+                display: block;
+                padding: 12px 16px;
+                font-size: 1rem;
             }
-            
-            .hero h1 {
+
+            .page-banner h1 {
                 font-size: 2rem;
             }
-            
-            .training-grid {
+
+            .page-banner {
+                padding: 120px 0 60px;
+            }
+
+            .search-bar {
+                flex-direction: column;
+                padding: 12px;
+            }
+
+            .search-bar .search-icon {
+                display: none;
+            }
+
+            .search-bar input {
+                width: 100%;
+                padding: 8px 12px;
+            }
+
+            .search-bar .search-btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .categories-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .floating-contact {
+                bottom: 80px;
+                right: 16px;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-banner h1 {
+                font-size: 1.7rem;
+            }
+
+            .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-outline {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">深圳市嘉旅国际物流有限公司</div>
-            <nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">EV</div>
+                <div class="logo-text">嘉旅国际<span>物流</span></div>
+            </a>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="index.html">首页</a></li>
                     <li><a href="about.html">关于我们</a></li>
                     <li><a href="services.html">服务项目</a></li>
-                    <li><a href="training.html">培训资料</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="training.html" class="active">培训资料</a></li>
                     <li><a href="news.html">新闻资讯</a></li>
+                    <li><a href="contact.html" class="header-cta">联系我们</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-grid"></div>
         <div class="container">
-            <h1>国际物流专业知识培训</h1>
-            <p>全面的物流专业知识库，助力行业发展</p>
+            <div class="banner-content">
+                <div class="banner-badge">专业知识培训中心</div>
+                <h1>国际物流<span class="highlight">专业知识培训</span></h1>
+                <p>全面的物流专业知识库，助力行业发展，从入门到精通，系统化提升物流专业能力</p>
+            </div>
         </div>
     </section>
 
-    <div class="container">
-        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">培训资料分类</h2>
-        
-        <div class="training-grid">
-            <div class="training-card">
-                <h3>基础知识类</h3>
-                <p>国际物流的基础概念和理论</p>
-                <a href="basic-concepts.html" class="training-link">查看详情</a>
-                <a href="trade-terms.html" class="training-link">贸易术语</a>
+    <!-- Search & Filter Bar -->
+    <div class="search-section">
+        <div class="container">
+            <div class="search-bar animate-on-scroll">
+                <span class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input type="text" id="searchInput" placeholder="搜索培训资料，如：海运、报关、供应链管理..." aria-label="搜索培训资料">
+                <button class="search-btn" id="searchBtn">搜索</button>
             </div>
-            
-            <div class="training-card">
-                <h3>运输方式类</h3>
-                <p>不同运输方式的特点和应用</p>
-                <a href="ocean-freight.html" class="training-link">海运操作</a>
-                <a href="air-cargo.html" class="training-link">空运实务</a>
-                <a href="rail-transport.html" class="training-link">铁路运输</a>
-            </div>
-            
-            <div class="training-card">
-                <h3>专业技能类</h3>
-                <p>物流操作的专业技能和实务</p>
-                <a href="customs-clearance.html" class="training-link">报关实务</a>
-                <a href="documentation.html" class="training-link">单证操作</a>
-                <a href="cargo-insurance.html" class="training-link">货物保险</a>
-            </div>
-            
-            <div class="training-card">
-                <h3>管理策略类</h3>
-                <p>物流管理和运营策略</p>
-                <a href="cost-control.html" class="training-link">成本控制</a>
-                <a href="performance-metrics.html" class="training-link">绩效指标</a>
-                <a href="quality-management.html" class="training-link">质量管理</a>
-            </div>
-            
-            <div class="training-card">
-                <h3>技术应用类</h3>
-                <p>现代物流技术和应用</p>
-                <a href="logistics-it.html" class="training-link">物流IT</a>
-                <a href="tracking-systems.html" class="training-link">追踪系统</a>
-                <a href="automation.html" class="training-link">自动化</a>
-            </div>
-            
-            <div class="training-card">
-                <h3>业务发展类</h3>
-                <p>客户开发和业务拓展</p>
-                <a href="client-dev.html" class="training-link">客户开发</a>
-                <a href="market-analysis.html" class="training-link">市场分析</a>
-                <a href="negotiation.html" class="training-link">商务谈判</a>
-            </div>
-        </div>
-        
-        <h3 style="color: #2c3e50; margin: 2rem 0;">全部培训资料</h3>
-        <div class="training-grid">
-            <div class="training-card">
-                <h3>区块链技术</h3>
-                <a href="blockchain.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>大数据应用</h3>
-                <a href="big-data.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>AI与IoT</h3>
-                <a href="ai-iot.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>多式联运</h3>
-                <a href="multimodal-transport.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>快递配送</h3>
-                <a href="express-delivery.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>包装技术</h3>
-                <a href="packaging-tech.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>仓储管理</h3>
-                <a href="warehouse-management.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>供应链管理</h3>
-                <a href="supply-chain.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>法规合规</h3>
-                <a href="regulations.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>合同撰写</h3>
-                <a href="contract-writing.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>争议解决</h3>
-                <a href="dispute-resolution.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>客户服务</h3>
-                <a href="customer-service.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>运费定价</h3>
-                <a href="freight-pricing.html" class="training-link">查看详情</a>
-            </div>
-            <div class="training-card">
-                <h3>新兴趋势</h3>
-                <a href="emerging-trends.html" class="training-link">查看详情</a>
+            <div class="filter-tags animate-on-scroll">
+                <span class="filter-tag active" data-filter="all">全部</span>
+                <span class="filter-tag" data-filter="basic">基础知识</span>
+                <span class="filter-tag" data-filter="transport">运输方式</span>
+                <span class="filter-tag" data-filter="skill">专业技能</span>
+                <span class="filter-tag" data-filter="management">管理策略</span>
+                <span class="filter-tag" data-filter="tech">技术应用</span>
+                <span class="filter-tag" data-filter="business">业务发展</span>
             </div>
         </div>
     </div>
 
+    <!-- Main Category Cards -->
+    <section class="section categories-section" id="categories">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">核心分类</div>
+                <h2 class="section-title">六大专业培训模块</h2>
+                <p class="section-desc">系统化的课程体系，覆盖国际物流全链条专业知识</p>
+            </div>
+            <div class="categories-grid">
+                <!-- 1. 基础知识类 -->
+                <div class="category-card animate-on-scroll" data-category="basic">
+                    <div class="category-icon blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <h3>基础知识类</h3>
+                    <p>掌握国际物流核心概念与贸易规则，构建扎实的专业基础。</p>
+                    <div class="category-links">
+                        <a href="basic-concepts.html" class="category-link">基础概念 <span class="arrow">&#8594;</span></a>
+                        <a href="trade-terms.html" class="category-link">贸易术语 <span class="arrow">&#8594;</span></a>
+                    </div>
+                </div>
+
+                <!-- 2. 运输方式类 -->
+                <div class="category-card animate-on-scroll" data-category="transport">
+                    <div class="category-icon gold">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3>运输方式类</h3>
+                    <p>深入了解海运、空运、铁路等各运输方式的操作流程与实务要点。</p>
+                    <div class="category-links">
+                        <a href="ocean-freight.html" class="category-link">海运操作 <span class="arrow">&#8594;</span></a>
+                        <a href="air-cargo.html" class="category-link">空运实务 <span class="arrow">&#8594;</span></a>
+                        <a href="rail-transport.html" class="category-link">铁路运输 <span class="arrow">&#8594;</span></a>
+                    </div>
+                </div>
+
+                <!-- 3. 专业技能类 -->
+                <div class="category-card animate-on-scroll" data-category="skill">
+                    <div class="category-icon green">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3>专业技能类</h3>
+                    <p>精通报关、单证、保险等核心操作技能，提升业务处理能力。</p>
+                    <div class="category-links">
+                        <a href="customs-clearance.html" class="category-link">报关实务 <span class="arrow">&#8594;</span></a>
+                        <a href="documentation.html" class="category-link">单证操作 <span class="arrow">&#8594;</span></a>
+                        <a href="cargo-insurance.html" class="category-link">货物保险 <span class="arrow">&#8594;</span></a>
+                    </div>
+                </div>
+
+                <!-- 4. 管理策略类 -->
+                <div class="category-card animate-on-scroll" data-category="management">
+                    <div class="category-icon purple">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <h3>管理策略类</h3>
+                    <p>学习成本控制、绩效管理和质量管理方法，提升运营效率。</p>
+                    <div class="category-links">
+                        <a href="cost-control.html" class="category-link">成本控制 <span class="arrow">&#8594;</span></a>
+                        <a href="performance-metrics.html" class="category-link">绩效指标 <span class="arrow">&#8594;</span></a>
+                        <a href="quality-management.html" class="category-link">质量管理 <span class="arrow">&#8594;</span></a>
+                    </div>
+                </div>
+
+                <!-- 5. 技术应用类 -->
+                <div class="category-card animate-on-scroll" data-category="tech">
+                    <div class="category-icon red">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>技术应用类</h3>
+                    <p>掌握物流信息化、追踪系统和自动化技术，驱动数字化转型。</p>
+                    <div class="category-links">
+                        <a href="logistics-it.html" class="category-link">物流IT <span class="arrow">&#8594;</span></a>
+                        <a href="tracking-systems.html" class="category-link">追踪系统 <span class="arrow">&#8594;</span></a>
+                        <a href="automation.html" class="category-link">自动化 <span class="arrow">&#8594;</span></a>
+                    </div>
+                </div>
+
+                <!-- 6. 业务发展类 -->
+                <div class="category-card animate-on-scroll" data-category="business">
+                    <div class="category-icon teal">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>业务发展类</h3>
+                    <p>提升客户开发、市场分析和商务谈判能力，拓展业务版图。</p>
+                    <div class="category-links">
+                        <a href="client-dev.html" class="category-link">客户开发 <span class="arrow">&#8594;</span></a>
+                        <a href="market-analysis.html" class="category-link">市场分析 <span class="arrow">&#8594;</span></a>
+                        <a href="negotiation.html" class="category-link">商务谈判 <span class="arrow">&#8594;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Materials -->
+    <section class="section materials-section" id="materials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">拓展学习</div>
+                <h2 class="section-title">更多专业培训资料</h2>
+                <p class="section-desc">前沿技术与综合知识，持续提升专业竞争力</p>
+            </div>
+            <div class="materials-grid">
+                <!-- 区块链技术 -->
+                <div class="material-card animate-on-scroll" data-category="tech">
+                    <div class="material-header">
+                        <div class="material-icon purple">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="8" height="12" rx="1"/><rect x="15" y="6" width="8" height="12" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
+                        </div>
+                        <h4>区块链技术</h4>
+                    </div>
+                    <p>了解区块链在国际物流中的应用，包括智能合约、货物溯源和供应链透明化。</p>
+                    <a href="blockchain.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 大数据应用 -->
+                <div class="material-card animate-on-scroll" data-category="tech">
+                    <div class="material-header">
+                        <div class="material-icon blue">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h4>大数据应用</h4>
+                    </div>
+                    <p>学习如何利用大数据分析优化物流路线、预测需求和提升运营效率。</p>
+                    <a href="big-data.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- AI与IoT -->
+                <div class="material-card animate-on-scroll" data-category="tech">
+                    <div class="material-header">
+                        <div class="material-icon orange">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4z"/><circle cx="20" cy="10" r="2"/><line x1="22" y1="10" x2="22" y2="10.01"/></svg>
+                        </div>
+                        <h4>AI与IoT</h4>
+                    </div>
+                    <p>探索人工智能和物联网在智能仓储、自动驾驶和预测性维护中的前沿应用。</p>
+                    <a href="ai-iot.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 多式联运 -->
+                <div class="material-card animate-on-scroll" data-category="transport">
+                    <div class="material-header">
+                        <div class="material-icon gold">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <h4>多式联运</h4>
+                    </div>
+                    <p>掌握海铁联运、公铁联运等多式联运模式，实现运输效率最大化。</p>
+                    <a href="multimodal-transport.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 快递配送 -->
+                <div class="material-card animate-on-scroll" data-category="transport">
+                    <div class="material-header">
+                        <div class="material-icon green">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16h6v-6l-4-4H4a2 2 0 0 0-2 2v8h6"/><circle cx="18" cy="18" r="2"/><circle cx="8" cy="18" r="2"/></svg>
+                        </div>
+                        <h4>快递配送</h4>
+                    </div>
+                    <p>了解国际快递网络运作模式、末端配送优化和跨境快递操作流程。</p>
+                    <a href="express-delivery.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 包装技术 -->
+                <div class="material-card animate-on-scroll" data-category="skill">
+                    <div class="material-header">
+                        <div class="material-icon teal">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        </div>
+                        <h4>包装技术</h4>
+                    </div>
+                    <p>学习国际运输包装标准、危险品包装规范和绿色包装技术发展趋势。</p>
+                    <a href="packaging-tech.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 仓储管理 -->
+                <div class="material-card animate-on-scroll" data-category="management">
+                    <div class="material-header">
+                        <div class="material-icon blue">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <h4>仓储管理</h4>
+                    </div>
+                    <p>掌握现代仓储管理方法，包括库存优化、WMS系统和智能仓储解决方案。</p>
+                    <a href="warehouse-management.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 供应链管理 -->
+                <div class="material-card animate-on-scroll" data-category="management">
+                    <div class="material-header">
+                        <div class="material-icon purple">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></svg>
+                        </div>
+                        <h4>供应链管理</h4>
+                    </div>
+                    <p>从全局视角学习供应链规划、协同管理和风险控制，打造高效供应链体系。</p>
+                    <a href="supply-chain.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 法规合规 -->
+                <div class="material-card animate-on-scroll" data-category="skill">
+                    <div class="material-header">
+                        <div class="material-icon red">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h4>法规合规</h4>
+                    </div>
+                    <p>系统了解国际贸易法规、海关政策和合规要求，规避法律风险。</p>
+                    <a href="regulations.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 合同撰写 -->
+                <div class="material-card animate-on-scroll" data-category="business">
+                    <div class="material-header">
+                        <div class="material-icon gold">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h4>合同撰写</h4>
+                    </div>
+                    <p>学习国际物流合同条款设计、风险防范和标准合同模板使用方法。</p>
+                    <a href="contract-writing.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 争议解决 -->
+                <div class="material-card animate-on-scroll" data-category="business">
+                    <div class="material-header">
+                        <div class="material-icon pink">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        </div>
+                        <h4>争议解决</h4>
+                    </div>
+                    <p>掌握物流纠纷处理机制、索赔流程和仲裁诉讼等争议解决途径。</p>
+                    <a href="dispute-resolution.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 客户服务 -->
+                <div class="material-card animate-on-scroll" data-category="business">
+                    <div class="material-header">
+                        <div class="material-icon green">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <h4>客户服务</h4>
+                    </div>
+                    <p>提升客户沟通技巧、投诉处理能力和客户满意度管理，打造优质服务体验。</p>
+                    <a href="customer-service.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 运费定价 -->
+                <div class="material-card animate-on-scroll" data-category="management">
+                    <div class="material-header">
+                        <div class="material-icon orange">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h4>运费定价</h4>
+                    </div>
+                    <p>深入了解海运费、空运费定价机制，掌握报价策略和利润分析方法。</p>
+                    <a href="freight-pricing.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+
+                <!-- 新兴趋势 -->
+                <div class="material-card animate-on-scroll" data-category="tech">
+                    <div class="material-header">
+                        <div class="material-icon blue">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        </div>
+                        <h4>新兴趋势</h4>
+                    </div>
+                    <p>关注绿色物流、碳中和、无人机配送等行业前沿趋势，把握未来发展方向。</p>
+                    <a href="emerging-trends.html" class="material-btn">查看详情 <span class="btn-arrow">&#8594;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner animate-on-scroll">
+                <h2>需要定制化的物流培训方案?</h2>
+                <p>我们可根据企业需求提供专业的物流培训服务，助力团队能力提升</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-primary">
+                        联系我们
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="services.html" class="btn-outline">查看服务详情</a>
+                </div>
+                <div class="cta-phone">
+                    &#x1F4DE; 或直接拨打：<a href="tel:+8613590173320">+86 13590173320</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <h3>深圳市嘉旅国际物流有限公司</h3>
-            <div class="contact-info">
-                <p>电话: +86 13590173320</p>
-                <p>邮箱: sales06@excellent-voyage.cn</p>
-                <p>地址: 广东省深圳市龙岗区南湾街道三鼎电商文创园A612</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="margin-bottom: 8px;">
+                        <div class="logo-icon">EV</div>
+                        <div class="logo-text">嘉旅国际<span>物流</span></div>
+                    </a>
+                    <p>深圳市嘉旅国际物流有限公司，专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="services.html">服务项目</a></li>
+                        <li><a href="training.html">培训资料</a></li>
+                        <li><a href="news.html">新闻资讯</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">服务项目</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">国际海运</a></li>
+                        <li><a href="services.html">国际空运</a></li>
+                        <li><a href="services.html">快递服务</a></li>
+                        <li><a href="services.html">仓储服务</a></li>
+                        <li><a href="services.html">报关服务</a></li>
+                        <li><a href="services.html">供应链管理</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">联系我们</h4>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F4DE;</span>
+                        <span>+86 13590173320</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x2709;&#xFE0F;</span>
+                        <span>sales06@excellent-voyage.cn</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F4CD;</span>
+                        <span>广东省深圳市龙岗区<br>南湾街道三鼎电商文创园A612</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F554;</span>
+                        <span>周一至周五 9:00-18:00<br>周六 9:00-12:00</span>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2026 深圳市嘉旅国际物流有限公司. 版权所有.</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利.</span>
+                <span>粤ICP备XXXXXXXX号</span>
+            </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">&#8593;</button>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <button class="float-btn phone-btn" onclick="window.open('tel:+8613590173320')">
+            &#x1F4DE;
+            <span class="tooltip">拨打电话</span>
+        </button>
+        <button class="float-btn wechat-btn" onclick="alert('微信号：DavisLuo_JL')">
+            &#x1F4AC;
+            <span class="tooltip">微信咨询</span>
+        </button>
+    </div>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('open');
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const allCards = document.querySelectorAll('.category-card, .material-card');
+
+        function performSearch() {
+            const query = searchInput.value.trim().toLowerCase();
+            if (!query) {
+                // Reset all cards
+                allCards.forEach(card => {
+                    card.style.display = '';
+                    card.style.opacity = '1';
+                });
+                return;
+            }
+
+            allCards.forEach(card => {
+                const title = card.querySelector('h3, h4').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                const links = card.querySelectorAll('a');
+                let linkText = '';
+                links.forEach(link => { linkText += link.textContent.toLowerCase() + ' '; });
+
+                const match = title.includes(query) || desc.includes(query) || linkText.includes(query);
+                card.style.display = match ? '' : 'none';
+                card.style.opacity = match ? '1' : '0';
+            });
+        }
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        // Live search with debounce
+        let searchTimeout;
+        searchInput.addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(performSearch, 300);
+        });
+
+        // Filter tags functionality
+        const filterTags = document.querySelectorAll('.filter-tag');
+
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                // Update active state
+                filterTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+
+                const filter = tag.dataset.filter;
+
+                // Reset search
+                searchInput.value = '';
+
+                allCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = '';
+                        card.style.opacity = '1';
+                    } else {
+                        const cardCategory = card.dataset.category;
+                        const match = cardCategory === filter;
+                        card.style.display = match ? '' : 'none';
+                        card.style.opacity = match ? '1' : '0';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

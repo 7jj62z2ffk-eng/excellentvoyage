@@ -3,536 +3,1274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新闻资讯 - 深圳市嘉旅国际物流有限公司</title>
-    <meta name="description" content="深圳市嘉旅国际物流有限公司新闻资讯，包括行业动态、公司新闻、物流资讯等内容">
+    <title>新闻资讯 - 深圳市嘉旅国际物流有限公司 | 物流行业动态</title>
+    <meta name="description" content="深圳市嘉旅国际物流有限公司新闻资讯，关注行业动态、公司新闻、政策法规与物流资讯，为您提供最新的国际物流行业发展趋势与公司动态。">
+    <meta name="keywords" content="物流新闻,国际物流动态,嘉旅物流新闻,行业资讯,物流政策法规,海运空运资讯,深圳物流公司">
+    <meta name="author" content="深圳市嘉旅国际物流有限公司">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://excellent-voyage.cn/news.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="新闻资讯 - 深圳市嘉旅国际物流有限公司 | 物流行业动态">
+    <meta property="og:description" content="关注国际物流行业动态、公司新闻、政策法规与物流资讯，了解嘉旅国际物流最新发展。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://excellent-voyage.cn/news.html">
+    <meta property="og:site_name" content="嘉旅国际物流">
+    <meta property="og:locale" content="zh_CN">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="新闻资讯 - 深圳市嘉旅国际物流有限公司 | 物流行业动态">
+    <meta name="twitter:description" content="关注国际物流行业动态、公司新闻、政策法规与物流资讯，了解嘉旅国际物流最新发展。">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "新闻资讯 - 深圳市嘉旅国际物流有限公司",
+        "description": "嘉旅国际物流新闻资讯，涵盖公司新闻、行业动态、政策法规、物流资讯",
+        "url": "https://excellent-voyage.cn/news.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "深圳市嘉旅国际物流有限公司",
+            "url": "https://excellent-voyage.cn"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "深圳市嘉旅国际物流有限公司",
+            "url": "https://excellent-voyage.cn"
+        }
+    }
+    </script>
     <style>
-        * {
+        /* ========== CSS Reset & Base ========== */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+
+        :root {
+            --primary: #0A2540;
+            --primary-light: #1A3A5C;
+            --accent: #0066FF;
+            --accent-hover: #0052CC;
+            --accent-light: #E8F0FE;
+            --gold: #C8A96E;
+            --gold-light: #F5EFE0;
+            --text-dark: #1A1A2E;
+            --text-body: #4A5568;
+            --text-light: #718096;
+            --bg-white: #FFFFFF;
+            --bg-light: #F7F9FC;
+            --bg-section: #F0F4F8;
+            --border: #E2E8F0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-body);
+            background-color: var(--bg-white);
+            overflow-x: hidden;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        
-        /* 头部样式 */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* ========== Header & Navigation ========== */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(10, 37, 64, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            transition: var(--transition);
         }
-        
-        .header-content {
+
+        header.scrolled {
+            background: rgba(10, 37, 64, 0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 72px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
-        
+
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, #00A3FF 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -1px;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: var(--gold);
+        }
+
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 4px;
         }
-        
+
         nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255,255,255,0.1);
-        }
-        
-        /* 页面标题 */
-        .page-header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%234a90e2" width="1200" height="400"/><path fill="%23357abd" d="M0,200 Q600,0 1200,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-        }
-        
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .page-header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        /* 新闻内容 */
-        .news-content {
-            padding: 4rem 0;
-            background: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
+            color: rgba(255,255,255,0.75);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: var(--transition);
             position: relative;
         }
-        
-        .section-title::after {
+
+        nav a:hover, nav a.active {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        nav a.active::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: 2px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
+            width: 20px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 1px;
         }
-        
-        /* 新闻分类 */
-        .news-categories {
+
+        .header-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 8px 20px !important;
+            border-radius: var(--radius-sm) !important;
+            font-weight: 600 !important;
+        }
+
+        .header-cta:hover {
+            background: var(--accent-hover) !important;
+            transform: translateY(-1px);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ========== Page Banner ========== */
+        .page-banner {
+            position: relative;
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, #0D3158 40%, #0A2540 100%);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .page-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,102,255,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, -30px); }
+        }
+
+        .page-banner .banner-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        }
+
+        .page-banner .banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-banner .banner-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,102,255,0.15);
+            border: 1px solid rgba(0,102,255,0.3);
+            color: #60A5FA;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .page-banner h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .page-banner .banner-desc {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.6);
+            max-width: 500px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.15s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========== News Section ========== */
+        .news-section {
+            padding: 80px 0 100px;
+            background: var(--bg-section);
+            min-height: 60vh;
+        }
+
+        /* Category Filter */
+        .category-filter {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 10px;
+            margin-bottom: 48px;
             flex-wrap: wrap;
         }
-        
-        .category-btn {
-            padding: 0.8rem 1.5rem;
-            background: #e9ecef;
-            color: #495057;
-            border: none;
-            border-radius: 25px;
+
+        .filter-btn {
+            padding: 10px 24px;
+            border: 1px solid var(--border);
+            background: var(--bg-white);
+            color: var(--text-body);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: var(--transition);
+            outline: none;
         }
-        
-        .category-btn.active, .category-btn:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .filter-btn.active {
+            background: var(--accent);
             color: white;
+            border-color: var(--accent);
+            box-shadow: 0 4px 15px rgba(0,102,255,0.3);
         }
-        
-        /* 新闻列表 */
+
+        /* News List */
         .news-list {
             max-width: 800px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
-        
-        .news-item {
-            background: white;
-            margin-bottom: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+        .news-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: var(--transition);
+            position: relative;
         }
-        
-        .news-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
         }
-        
-        .news-image {
-            height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .news-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .news-card[data-category="公司新闻"]::before { background: linear-gradient(90deg, var(--accent), #00A3FF); }
+        .news-card[data-category="行业动态"]::before { background: linear-gradient(90deg, var(--gold), #D4B87A); }
+        .news-card[data-category="政策法规"]::before { background: linear-gradient(90deg, #805AD5, #A78BFA); }
+        .news-card[data-category="物流资讯"]::before { background: linear-gradient(90deg, #38B2AC, #4FD1C5); }
+
+        .news-card-inner {
+            display: flex;
+            gap: 24px;
+            padding: 28px;
+        }
+
+        .news-icon-wrap {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 3rem;
+            font-size: 1.5rem;
+            flex-shrink: 0;
         }
-        
-        .news-content-wrapper {
-            padding: 1.5rem;
+
+        .news-card[data-category="公司新闻"] .news-icon-wrap {
+            background: var(--accent-light);
         }
-        
+
+        .news-card[data-category="行业动态"] .news-icon-wrap {
+            background: var(--gold-light);
+        }
+
+        .news-card[data-category="政策法规"] .news-icon-wrap {
+            background: #FAF5FF;
+        }
+
+        .news-card[data-category="物流资讯"] .news-icon-wrap {
+            background: #E6FFFA;
+        }
+
+        .news-body {
+            flex: 1;
+            min-width: 0;
+        }
+
         .news-meta {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #e9ecef;
+            gap: 12px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
         }
-        
+
         .news-date {
-            color: #6c757d;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
         }
-        
-        .news-category {
-            background: #e9ecef;
-            color: #495057;
-            padding: 0.2rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
+
+        .news-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 12px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
         }
-        
+
+        .news-card[data-category="公司新闻"] .news-badge {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .news-card[data-category="行业动态"] .news-badge {
+            background: var(--gold-light);
+            color: var(--gold);
+        }
+
+        .news-card[data-category="政策法规"] .news-badge {
+            background: #FAF5FF;
+            color: #805AD5;
+        }
+
+        .news-card[data-category="物流资讯"] .news-badge {
+            background: #E6FFFA;
+            color: #38B2AC;
+        }
+
         .news-title {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #333;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            line-height: 1.5;
+            transition: var(--transition);
         }
-        
+
+        .news-card:hover .news-title {
+            color: var(--accent);
+        }
+
         .news-excerpt {
-            color: #666;
+            font-size: 0.92rem;
+            color: var(--text-light);
             line-height: 1.7;
-            margin-bottom: 1rem;
+            margin-bottom: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
-        
-        .news-read-more {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+
+        .news-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
         }
-        
-        .news-read-more:hover {
-            color: #764ba2;
+
+        .news-link:hover {
+            gap: 10px;
+            color: var(--accent-hover);
         }
-        
-        /* 分页 */
+
+        /* ========== Pagination ========== */
         .pagination {
             display: flex;
             justify-content: center;
-            margin-top: 3rem;
-            gap: 0.5rem;
+            align-items: center;
+            gap: 8px;
+            margin-top: 56px;
         }
-        
+
         .page-btn {
-            padding: 0.8rem 1.2rem;
-            background: white;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            background: var(--bg-white);
+            color: var(--text-body);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: var(--transition);
+            outline: none;
         }
-        
-        .page-btn.active, .page-btn:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        .page-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .page-btn.active {
+            background: var(--accent);
             color: white;
-            border-color: transparent;
+            border-color: var(--accent);
+            box-shadow: 0 4px 15px rgba(0,102,255,0.3);
         }
-        
-        /* 页脚 */
+
+        .page-btn.next-btn {
+            width: auto;
+            padding: 0 20px;
+            gap: 6px;
+        }
+
+        /* ========== Footer ========== */
         footer {
-            background: #333;
-            color: white;
-            padding: 3rem 0 1rem;
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 80px 0 0;
         }
-        
-        .footer-content {
+
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
         }
-        
-        .footer-section h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #fff;
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-top: 16px;
+            max-width: 300px;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
             position: relative;
+            padding-bottom: 12px;
         }
-        
-        .footer-section h4::after {
+
+        .footer-title::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: 0;
             left: 0;
-            width: 40px;
+            width: 24px;
             height: 2px;
-            background: #667eea;
+            background: var(--accent);
+            border-radius: 1px;
         }
-        
+
         .footer-links {
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-        
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-        
+
         .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            transition: var(--transition);
         }
-        
+
         .footer-links a:hover {
-            color: #667eea;
+            color: white;
+            padding-left: 4px;
         }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #555;
-            color: #aaa;
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
             font-size: 0.9rem;
         }
-        
-        /* 响应式设计 */
+
+        .footer-contact-item .icon {
+            color: var(--accent);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ========== Back to Top ========== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,102,255,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+        }
+
+        /* ========== Floating Contact ========== */
+        .floating-contact {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 998;
+        }
+
+        .float-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .float-btn.phone-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .float-btn.wechat-btn {
+            background: #07C160;
+            color: white;
+        }
+
+        .float-btn .tooltip {
+            position: absolute;
+            right: 60px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .float-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ========== Animations on Scroll ========== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
+            .menu-toggle {
+                display: flex;
             }
-            
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--primary);
+                padding: 80px 24px 24px;
+                transition: right 0.3s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+            }
+
+            nav.open {
+                right: 0;
+            }
+
             nav ul {
-                gap: 1rem;
-            }
-            
-            .page-header h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .news-item {
-                margin-bottom: 1.5rem;
-            }
-            
-            .news-meta {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
+                gap: 4px;
+            }
+
+            nav a {
+                display: block;
+                padding: 12px 16px;
+                font-size: 1rem;
+            }
+
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+
+            .page-banner {
+                padding: 120px 0 60px;
+            }
+
+            .news-card-inner {
+                padding: 20px;
+                gap: 16px;
+            }
+
+            .news-icon-wrap {
+                width: 48px;
+                height: 48px;
+                font-size: 1.3rem;
+            }
+
+            .news-title {
+                font-size: 1.05rem;
+            }
+
+            .category-filter {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 8px 18px;
+                font-size: 0.85rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .floating-contact {
+                bottom: 80px;
+                right: 16px;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-banner h1 {
+                font-size: 1.7rem;
+            }
+
+            .news-card-inner {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .news-icon-wrap {
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+
+            .pagination {
+                gap: 6px;
+            }
+
+            .page-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 0.88rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 头部 -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">深圳市嘉旅国际物流有限公司</div>
-            <nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">EV</div>
+                <div class="logo-text">嘉旅国际<span>物流</span></div>
+            </a>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="index.html">首页</a></li>
                     <li><a href="about.html">关于我们</a></li>
                     <li><a href="services.html">服务项目</a></li>
                     <li><a href="training.html">培训资料</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
-                    <li><a href="news.html">新闻资讯</a></li>
+                    <li><a href="news.html" class="active">新闻资讯</a></li>
+                    <li><a href="contact.html" class="header-cta">联系我们</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
-    <!-- 页面标题 -->
-    <section class="page-header">
-        <div class="container">
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-grid"></div>
+        <div class="banner-content">
+            <div class="banner-label">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 4l6-2 6 2v5c0 3.5-3 5.5-6 7-3-1.5-6-3.5-6-7V4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Excellent Voyage News
+            </div>
             <h1>新闻资讯</h1>
-            <p>行业动态 · 公司新闻 · 物流资讯</p>
+            <p class="banner-desc">行业动态 · 公司新闻 · 物流资讯</p>
         </div>
     </section>
 
-    <!-- 新闻内容 -->
-    <section class="news-content">
+    <!-- News Section -->
+    <section class="news-section">
         <div class="container">
-            <h2 class="section-title">最新资讯</h2>
-            
-            <!-- 新闻分类 -->
-            <div class="news-categories">
-                <button class="category-btn active">全部</button>
-                <button class="category-btn">公司新闻</button>
-                <button class="category-btn">行业动态</button>
-                <button class="category-btn">政策法规</button>
-                <button class="category-btn">物流资讯</button>
+            <!-- Category Filter -->
+            <div class="category-filter animate-on-scroll">
+                <button class="filter-btn active" data-filter="全部">全部</button>
+                <button class="filter-btn" data-filter="公司新闻">公司新闻</button>
+                <button class="filter-btn" data-filter="行业动态">行业动态</button>
+                <button class="filter-btn" data-filter="政策法规">政策法规</button>
+                <button class="filter-btn" data-filter="物流资讯">物流资讯</button>
             </div>
-            
-            <!-- 新闻列表 -->
-            <div class="news-list">
-                <!-- 新闻项 1 -->
-                <article class="news-item">
-                    <div class="news-image">📰</div>
-                    <div class="news-content-wrapper">
-                        <div class="news-meta">
-                            <span class="news-date">2026-01-30</span>
-                            <span class="news-category">公司新闻</span>
+
+            <!-- News List -->
+            <div class="news-list" id="newsList">
+                <!-- Article 1 -->
+                <article class="news-card animate-on-scroll" data-category="公司新闻">
+                    <div class="news-card-inner">
+                        <div class="news-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                         </div>
-                        <h3 class="news-title">深圳市嘉旅国际物流有限公司荣获"2025年度优秀物流企业"称号</h3>
-                        <p class="news-excerpt">近日，在深圳市物流行业协会举办的年度评选活动中，我司凭借优质的服务质量和良好的市场口碑，荣获"2025年度优秀物流企业"称号。这一荣誉是对我们全体员工辛勤工作的肯定，也是我们继续前进的动力。</p>
-                        <a href="#" class="news-read-more">查看详情 →</a>
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <span class="news-date">2026-01-30</span>
+                                <span class="news-badge">公司新闻</span>
+                            </div>
+                            <h3 class="news-title">嘉旅国际物流荣获"2025年度优秀物流企业"称号</h3>
+                            <p class="news-excerpt">在2025年度物流行业评选中，嘉旅国际物流凭借卓越的服务品质、创新的物流解决方案和良好的客户口碑，荣获"2025年度优秀物流企业"荣誉称号，彰显了公司在国际物流领域的综合实力。</p>
+                            <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        </div>
                     </div>
                 </article>
-                
-                <!-- 新闻项 2 -->
-                <article class="news-item">
-                    <div class="news-image">🚢</div>
-                    <div class="news-content-wrapper">
-                        <div class="news-meta">
-                            <span class="news-date">2026-01-28</span>
-                            <span class="news-category">行业动态</span>
+
+                <!-- Article 2 -->
+                <article class="news-card animate-on-scroll" data-category="行业动态">
+                    <div class="news-card-inner">
+                        <div class="news-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                         </div>
-                        <h3 class="news-title">全球海运市场复苏，2026年有望迎来新机遇</h3>
-                        <p class="news-excerpt">随着全球经济逐步复苏，国际贸易需求回升，全球海运市场呈现出积极的发展态势。业内专家预测，2026年海运市场将迎来新的发展机遇，同时数字化转型将成为行业发展的重要驱动力。</p>
-                        <a href="#" class="news-read-more">查看详情 →</a>
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <span class="news-date">2026-01-28</span>
+                                <span class="news-badge">行业动态</span>
+                            </div>
+                            <h3 class="news-title">全球海运市场复苏，2026年有望迎来新机遇</h3>
+                            <p class="news-excerpt">随着全球贸易持续回暖，海运市场运力供需逐步改善，运价指数稳步回升。业内专家预测，2026年全球海运市场将迎来新一轮增长机遇，新兴市场航线需求尤为旺盛。</p>
+                            <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        </div>
                     </div>
                 </article>
-                
-                <!-- 新闻项 3 -->
-                <article class="news-item">
-                    <div class="news-image">✈️</div>
-                    <div class="news-content-wrapper">
-                        <div class="news-meta">
-                            <span class="news-date">2026-01-25</span>
-                            <span class="news-category">物流资讯</span>
+
+                <!-- Article 3 -->
+                <article class="news-card animate-on-scroll" data-category="物流资讯">
+                    <div class="news-card-inner">
+                        <div class="news-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38B2AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
                         </div>
-                        <h3 class="news-title">航空货运市场持续增长，跨境电商物流需求旺盛</h3>
-                        <p class="news-excerpt">根据最新数据显示，全球航空货运市场继续保持增长势头，特别是在跨境电商领域，对快速、可靠的航空货运服务需求持续旺盛。这为航空货运企业带来了新的发展机遇。</p>
-                        <a href="#" class="news-read-more">查看详情 →</a>
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <span class="news-date">2026-01-25</span>
+                                <span class="news-badge">物流资讯</span>
+                            </div>
+                            <h3 class="news-title">航空货运市场持续增长，跨境电商物流需求旺盛</h3>
+                            <p class="news-excerpt">跨境电商蓬勃发展带动航空货运需求持续攀升，全球航空货运量同比增长12%。亚太地区成为增长最快的市场，深圳、上海等枢纽机场货运量创历史新高。</p>
+                            <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        </div>
                     </div>
                 </article>
-                
-                <!-- 新闻项 4 -->
-                <article class="news-item">
-                    <div class="news-image">📋</div>
-                    <div class="news-content-wrapper">
-                        <div class="news-meta">
-                            <span class="news-date">2026-01-20</span>
-                            <span class="news-category">政策法规</span>
+
+                <!-- Article 4 -->
+                <article class="news-card animate-on-scroll" data-category="政策法规">
+                    <div class="news-card-inner">
+                        <div class="news-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#805AD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
-                        <h3 class="news-title">新版《国际物流管理办法》正式实施，行业规范化程度进一步提升</h3>
-                        <p class="news-excerpt">为规范国际物流市场秩序，提升服务质量，国家相关部门发布了新版《国际物流管理办法》，对物流企业的资质要求、服务标准、安全管理等方面提出了更明确的要求。这标志着我国国际物流行业进入更加规范化的发展阶段。</p>
-                        <a href="#" class="news-read-more">查看详情 →</a>
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <span class="news-date">2026-01-20</span>
+                                <span class="news-badge">政策法规</span>
+                            </div>
+                            <h3 class="news-title">新版《国际物流管理办法》正式实施</h3>
+                            <p class="news-excerpt">新版《国际物流管理办法》于2026年1月正式实施，对国际货运代理、跨境物流通关流程、物流企业资质管理等方面进行了全面修订，旨在进一步规范行业秩序，提升物流效率。</p>
+                            <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        </div>
                     </div>
                 </article>
-                
-                <!-- 新闻项 5 -->
-                <article class="news-item">
-                    <div class="news-image">💡</div>
-                    <div class="news-content-wrapper">
-                        <div class="news-meta">
-                            <span class="news-date">2026-01-15</span>
-                            <span class="news-category">公司新闻</span>
+
+                <!-- Article 5 -->
+                <article class="news-card animate-on-scroll" data-category="公司新闻">
+                    <div class="news-card-inner">
+                        <div class="news-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                         </div>
-                        <h3 class="news-title">嘉旅物流推出全新智能物流管理系统，提升客户体验</h3>
-                        <p class="news-excerpt">为更好地服务客户，我司投入大量资源开发的全新智能物流管理系统正式上线。该系统实现了订单管理、货物追踪、数据分析等功能的一体化，大大提升了操作效率和客户体验。</p>
-                        <a href="#" class="news-read-more">查看详情 →</a>
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <span class="news-date">2026-01-15</span>
+                                <span class="news-badge">公司新闻</span>
+                            </div>
+                            <h3 class="news-title">嘉旅物流推出全新智能物流管理系统</h3>
+                            <p class="news-excerpt">嘉旅国际物流正式发布全新一代智能物流管理系统，集成AI智能调度、实时货物追踪、自动化报关等功能，为客户提供更加透明、高效、智能的一站式物流管理体验。</p>
+                            <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        </div>
                     </div>
                 </article>
-                
-                <!-- 新闻项 6 -->
-                <article class="news-item">
-                    <div class="news-image">🌍</div>
-                    <div class="news-content-wrapper">
-                        <div class="news-meta">
-                            <span class="news-date">2026-01-10</span>
-                            <span class="news-category">行业动态</span>
+
+                <!-- Article 6 -->
+                <article class="news-card animate-on-scroll" data-category="行业动态">
+                    <div class="news-card-inner">
+                        <div class="news-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
-                        <h3 class="news-title">绿色物流成为发展趋势，企业积极践行可持续发展</h3>
-                        <p class="news-excerpt">在全球环保意识日益增强的背景下，绿色物流成为行业发展的重要趋势。越来越多的物流企业开始采用新能源车辆、优化运输路线、推广绿色包装等措施，积极践行可持续发展理念。</p>
-                        <a href="#" class="news-read-more">查看详情 →</a>
+                        <div class="news-body">
+                            <div class="news-meta">
+                                <span class="news-date">2026-01-10</span>
+                                <span class="news-badge">行业动态</span>
+                            </div>
+                            <h3 class="news-title">绿色物流成为发展趋势</h3>
+                            <p class="news-excerpt">在全球碳中和目标推动下，绿色物流成为行业发展新趋势。新能源运输车辆、可循环包装材料、智能化仓储管理等绿色物流技术加速普及，多家头部企业已制定明确的碳减排路线图。</p>
+                            <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        </div>
                     </div>
                 </article>
             </div>
-            
-            <!-- 分页 -->
-            <div class="pagination">
-                <button class="page-btn active">1</button>
-                <button class="page-btn">2</button>
-                <button class="page-btn">3</button>
-                <button class="page-btn">下一页 →</button>
+
+            <!-- Pagination -->
+            <div class="pagination animate-on-scroll" id="pagination">
+                <button class="page-btn active" data-page="1">1</button>
+                <button class="page-btn" data-page="2">2</button>
+                <button class="page-btn" data-page="3">3</button>
+                <button class="page-btn next-btn" data-page="next">
+                    下一页
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>深圳市嘉旅国际物流</h4>
-                    <p>专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="margin-bottom: 8px;">
+                        <div class="logo-icon">EV</div>
+                        <div class="logo-text">嘉旅国际<span>物流</span></div>
+                    </a>
+                    <p>深圳市嘉旅国际物流有限公司，专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
                 </div>
-                <div class="footer-section">
-                    <h4>快速链接</h4>
+                <div>
+                    <h4 class="footer-title">快速链接</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">首页</a></li>
                         <li><a href="about.html">关于我们</a></li>
                         <li><a href="services.html">服务项目</a></li>
                         <li><a href="training.html">培训资料</a></li>
-                        <li><a href="contact.html">联系我们</a></li>
                         <li><a href="news.html">新闻资讯</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>服务项目</h4>
+                <div>
+                    <h4 class="footer-title">服务项目</h4>
                     <ul class="footer-links">
-                        <li><a href="#">国际海运</a></li>
-                        <li><a href="#">国际空运</a></li>
-                        <li><a href="#">快递服务</a></li>
-                        <li><a href="#">仓储服务</a></li>
+                        <li><a href="services.html">国际海运</a></li>
+                        <li><a href="services.html">国际空运</a></li>
+                        <li><a href="services.html">快递服务</a></li>
+                        <li><a href="services.html">仓储服务</a></li>
+                        <li><a href="services.html">报关服务</a></li>
+                        <li><a href="services.html">供应链管理</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>联系我们</h4>
-                    <ul class="footer-links">
-                        <li>电话：+86 13590173320</li>
-                        <li>邮箱：sales06@excellent-voyage.cn</li>
-                        <li>地址：广东省深圳市龙岗区南湾街道三鼎电商文创园A612</li>
-                    </ul>
+                <div>
+                    <h4 class="footer-title">联系我们</h4>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F4DE;</span>
+                        <span>+86 13590173320</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x2709;&#xFE0F;</span>
+                        <span>sales06@excellent-voyage.cn</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F4CD;</span>
+                        <span>广东省深圳市龙岗区<br>南湾街道三鼎电商文创园A612</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F554;</span>
+                        <span>周一至周五 9:00-18:00<br>周六 9:00-12:00</span>
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利. 粤ICP备XXXXXXXX号</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利.</span>
+                <span>粤ICP备XXXXXXXX号</span>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">&#8593;</button>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <button class="float-btn phone-btn" onclick="window.open('tel:+8613590173320')">
+            &#x1F4DE;
+            <span class="tooltip">拨打电话</span>
+        </button>
+        <button class="float-btn wechat-btn" onclick="alert('微信号：DavisLuo_JL')">
+            &#x1F4AC;
+            <span class="tooltip">微信咨询</span>
+        </button>
+    </div>
+
     <script>
-        // 分类按钮交互
-        const categoryBtns = document.querySelectorAll('.category-btn');
-        categoryBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                categoryBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('open');
             });
         });
-        
-        // 分页按钮交互
-        const pageBtns = document.querySelectorAll('.page-btn');
-        pageBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                if(this.textContent !== '下一页 →') {
-                    pageBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
         });
-        
-        // 新闻详情链接处理
-        const newsLinks = document.querySelectorAll('.news-read-more');
-        newsLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('这是示例新闻，详细内容将在正式网站中展示。');
+
+        // Category filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const newsCards = document.querySelectorAll('.news-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                // Filter news cards with animation
+                newsCards.forEach((card, index) => {
+                    const category = card.dataset.category;
+                    const shouldShow = filter === '全部' || category === filter;
+
+                    if (shouldShow) {
+                        card.style.display = '';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, index * 80);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Pagination
+        const pageBtns = document.querySelectorAll('.page-btn');
+        const totalPages = 3;
+        let currentPage = 1;
+
+        pageBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const page = btn.dataset.page;
+
+                if (page === 'next') {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                    } else {
+                        return;
+                    }
+                } else {
+                    currentPage = parseInt(page);
+                }
+
+                // Update active page button
+                pageBtns.forEach(b => b.classList.remove('active'));
+                if (page === 'next') {
+                    document.querySelector(`.page-btn[data-page="${currentPage}"]`).classList.add('active');
+                } else {
+                    btn.classList.add('active');
+                }
+
+                // Scroll to top of news list smoothly
+                const newsSection = document.querySelector('.news-section');
+                const headerHeight = 72;
+                const targetPosition = newsSection.offsetTop - headerHeight;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+
+                // Animate cards on page change
+                newsCards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
             });
         });
     </script>

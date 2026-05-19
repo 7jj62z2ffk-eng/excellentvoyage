@@ -3,622 +3,1471 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>服务项目 - 深圳市嘉旅国际物流有限公司</title>
-    <meta name="description" content="深圳市嘉旅国际物流有限公司提供海运、空运、快递、仓储、报关等一站式国际物流服务">
+    <title>服务项目 - 深圳市嘉旅国际物流有限公司 | 海运空运快递仓储报关</title>
+    <meta name="description" content="嘉旅国际物流提供专业国际物流服务：国际海运整箱拼箱、国际空运、快递DDP/DDU、仓储管理、进出口报关、供应链管理。覆盖全球50+国家，15年行业经验，电话：+86 13590173320。">
+    <meta name="keywords" content="国际海运,国际空运,快递服务,仓储服务,报关服务,供应链管理,整箱运输,拼箱运输,DDP,DDU,危险品运输,冷链物流,嘉旅物流,深圳物流,excellent-voyage">
+    <meta name="author" content="深圳市嘉旅国际物流有限公司">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://excellent-voyage.cn/services.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="服务项目 - 深圳市嘉旅国际物流有限公司 | 海运空运快递仓储报关">
+    <meta property="og:description" content="专业国际物流服务：海运整箱/拼箱、空运、快递、仓储、报关、供应链管理。覆盖全球50+国家，15年行业经验。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://excellent-voyage.cn/services.html">
+    <meta property="og:site_name" content="嘉旅国际物流">
+    <meta property="og:locale" content="zh_CN">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="服务项目 - 深圳市嘉旅国际物流有限公司">
+    <meta name="twitter:description" content="专业国际物流服务：海运、空运、快递、仓储、报关、供应链管理。覆盖全球50+国家。">
+    <!-- Structured Data - Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "国际物流服务",
+        "provider": {
+            "@type": "LogisticsCompany",
+            "name": "深圳市嘉旅国际物流有限公司",
+            "alternateName": "Excellent Voyage Logistics",
+            "url": "https://excellent-voyage.cn",
+            "logo": "https://excellent-voyage.cn/logo.png",
+            "telephone": "+8613590173320",
+            "email": "sales06@excellent-voyage.cn",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "三鼎电商文创园A612",
+                "addressLocality": "深圳市",
+                "addressRegion": "广东省",
+                "addressCountry": "CN"
+            }
+        },
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "国际物流服务",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "国际海运",
+                        "description": "整箱/拼箱运输，危险品运输，冷链物流，门到门服务"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "国际空运",
+                        "description": "常规航班/包机运输，加急空运，危险品空运"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "快递服务",
+                        "description": "DDP/DDU双清包税，文件快递，包裹快递，全程追踪"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "仓储服务",
+                        "description": "现代化仓库，分拣包装，WMS仓储管理系统"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "报关服务",
+                        "description": "进出口报关，商检代理，产地证/保险代办"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "供应链管理",
+                        "description": "供应链咨询，流程优化，供应商管理"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
     <style>
-        * {
+        /* ========== CSS Reset & Base ========== */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+
+        :root {
+            --primary: #0A2540;
+            --primary-light: #1A3A5C;
+            --accent: #0066FF;
+            --accent-hover: #0052CC;
+            --accent-light: #E8F0FE;
+            --gold: #C8A96E;
+            --gold-light: #F5EFE0;
+            --text-dark: #1A1A2E;
+            --text-body: #4A5568;
+            --text-light: #718096;
+            --bg-white: #FFFFFF;
+            --bg-light: #F7F9FC;
+            --bg-section: #F0F4F8;
+            --border: #E2E8F0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-body);
+            background-color: var(--bg-white);
+            overflow-x: hidden;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        
-        /* 头部样式 */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* ========== Header & Navigation ========== */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(10, 37, 64, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            transition: var(--transition);
         }
-        
-        .header-content {
+
+        header.scrolled {
+            background: rgba(10, 37, 64, 0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 72px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
-        
+
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, #00A3FF 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -1px;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: var(--gold);
+        }
+
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 4px;
         }
-        
+
         nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255,255,255,0.1);
-        }
-        
-        /* 页面标题 */
-        .page-header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%234a90e2" width="1200" height="400"/><path fill="%23357abd" d="M0,200 Q600,0 1200,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-        }
-        
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .page-header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        /* 服务详情 */
-        .services-detail {
-            padding: 4rem 0;
-            background: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
+            color: rgba(255,255,255,0.75);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: var(--transition);
             position: relative;
         }
-        
-        .section-title::after {
+
+        nav a:hover, nav a.active {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        nav a.active::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: 2px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 20px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 1px;
+        }
+
+        .header-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 8px 20px !important;
+            border-radius: var(--radius-sm) !important;
+            font-weight: 600 !important;
+        }
+
+        .header-cta:hover {
+            background: var(--accent-hover) !important;
+            transform: translateY(-1px);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: white;
             border-radius: 2px;
+            transition: var(--transition);
         }
-        
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
         }
-        
-        .service-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 5px solid #667eea;
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
         }
-        
-        .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
         }
-        
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-        }
-        
-        .service-item h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .service-item h4 {
-            font-size: 1.2rem;
-            margin: 1.5rem 0 1rem 0;
-            color: #667eea;
-            border-bottom: 2px solid #e1e5e9;
-            padding-bottom: 0.5rem;
-        }
-        
-        .service-item p {
-            margin-bottom: 1rem;
-            color: #666;
-            line-height: 1.8;
-        }
-        
-        .service-features {
-            list-style: none;
-            margin: 1rem 0;
-        }
-        
-        .service-features li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
+
+        /* ========== Page Banner ========== */
+        .page-banner {
             position: relative;
-        }
-        
-        .service-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #4caf50;
-            font-weight: bold;
-        }
-        
-        .benefits-list {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1rem 0;
-        }
-        
-        /* 优势特色 */
-        .advantages {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-        
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .advantage-card {
+            padding: 160px 0 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, #0D3158 40%, #0A2540 100%);
+            overflow: hidden;
             text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
-        
-        .advantage-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-        }
-        
-        .advantage-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        /* 页脚 */
-        footer {
-            background: #333;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #fff;
-            position: relative;
-        }
-        
-        .footer-section h4::after {
+
+        .page-banner::before {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background: #667eea;
+            top: -40%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,102,255,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
         }
-        
+
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, -30px); }
+        }
+
+        .banner-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .banner-content p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.65);
+            max-width: 500px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.15s both;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+            animation: fadeInUp 0.8s ease-out 0.05s both;
+        }
+
+        .breadcrumb a {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .breadcrumb a:hover {
+            color: white;
+        }
+
+        .breadcrumb .sep {
+            color: rgba(255,255,255,0.3);
+        }
+
+        .breadcrumb .current {
+            color: var(--accent);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========== Section Common ========== */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .section-label::before, .section-label::after {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ========== Service Detail Cards ========== */
+        .services-detail {
+            background: var(--bg-white);
+        }
+
+        .services-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .service-detail-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 40px 36px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), #00A3FF);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-detail-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service-detail-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-detail-card:nth-child(even)::before {
+            background: linear-gradient(90deg, var(--gold), #D4B87A);
+        }
+
+        .sdc-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .sdc-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            flex-shrink: 0;
+        }
+
+        .sdc-icon.blue { background: var(--accent-light); }
+        .sdc-icon.gold { background: var(--gold-light); }
+        .sdc-icon.green { background: #E6FFFA; }
+        .sdc-icon.purple { background: #FAF5FF; }
+        .sdc-icon.red { background: #FFF5F5; }
+        .sdc-icon.teal { background: #E6FFFA; }
+
+        .sdc-header h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .sdc-header h3 small {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        .sdc-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Service Features List */
+        .sdc-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .sdc-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.92rem;
+            color: var(--text-body);
+        }
+
+        .sdc-features li .check {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            flex-shrink: 0;
+            font-weight: 700;
+        }
+
+        .service-detail-card:nth-child(even) .sdc-features li .check {
+            background: var(--gold-light);
+            color: var(--gold);
+        }
+
+        /* Benefits Tag */
+        .sdc-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .sdc-benefits span {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--bg-section);
+            color: var(--text-body);
+            font-size: 0.82rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 50px;
+        }
+
+        .sdc-benefits span::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .service-detail-card:nth-child(even) .sdc-benefits span::before {
+            background: var(--gold);
+        }
+
+        /* ========== Advantages Section ========== */
+        .advantages {
+            background: var(--bg-section);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .advantage-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .advantage-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, #00A3FF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 20px;
+            color: white;
+        }
+
+        .advantage-card:nth-child(2) .advantage-icon {
+            background: linear-gradient(135deg, var(--gold) 0%, #D4B87A 100%);
+        }
+
+        .advantage-card:nth-child(3) .advantage-icon {
+            background: linear-gradient(135deg, #38B2AC 0%, #4FD1C5 100%);
+        }
+
+        .advantage-card:nth-child(4) .advantage-icon {
+            background: linear-gradient(135deg, #805AD5 0%, #9F7AEA 100%);
+        }
+
+        .advantage-card h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .advantage-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ========== CTA Section ========== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #0D3158 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0,102,255,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cta-inner h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta-inner p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 36px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: white;
+            padding: 14px 32px;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,102,255,0.4);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: white;
+            padding: 14px 32px;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+
+        .cta-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            margin-top: 24px;
+        }
+
+        .cta-phone a {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+
+        .cta-phone a:hover {
+            color: #D4B87A;
+        }
+
+        /* ========== Footer ========== */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-top: 16px;
+            max-width: 300px;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 1px;
+        }
+
         .footer-links {
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-        
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-        
+
         .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            transition: var(--transition);
         }
-        
+
         .footer-links a:hover {
-            color: #667eea;
+            color: white;
+            padding-left: 4px;
         }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #555;
-            color: #aaa;
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
             font-size: 0.9rem;
         }
-        
-        /* 响应式设计 */
+
+        .footer-contact-item .icon {
+            color: var(--accent);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ========== Back to Top ========== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,102,255,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+        }
+
+        /* ========== Floating Contact ========== */
+        .floating-contact {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 998;
+        }
+
+        .float-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .float-btn.phone-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .float-btn.wechat-btn {
+            background: #07C160;
+            color: white;
+        }
+
+        .float-btn .tooltip {
+            position: absolute;
+            right: 60px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .float-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ========== Animations on Scroll ========== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 1024px) {
+            .services-detail-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .advantages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .banner-content h1 {
+                font-size: 2.4rem;
+            }
+        }
+
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
+            .menu-toggle {
+                display: flex;
             }
-            
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--primary);
+                padding: 80px 24px 24px;
+                transition: right 0.3s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+            }
+
+            nav.open {
+                right: 0;
+            }
+
             nav ul {
-                gap: 1rem;
+                flex-direction: column;
+                gap: 4px;
             }
-            
-            .page-header h1 {
-                font-size: 2rem;
+
+            nav a {
+                display: block;
+                padding: 12px 16px;
+                font-size: 1rem;
             }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .service-grid {
+
+            .services-detail-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .page-banner {
+                padding: 130px 0 60px;
+            }
+
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .floating-contact {
+                bottom: 80px;
+                right: 16px;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-banner {
+                padding: 120px 0 50px;
+            }
+
+            .banner-content h1 {
+                font-size: 1.7rem;
+            }
+
+            .banner-content p {
+                font-size: 1rem;
+            }
+
+            .service-detail-card {
+                padding: 28px 24px;
+            }
+
+            .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-outline {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 头部 -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">深圳市嘉旅国际物流有限公司</div>
-            <nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">EV</div>
+                <div class="logo-text">嘉旅国际<span>物流</span></div>
+            </a>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="index.html">首页</a></li>
                     <li><a href="about.html">关于我们</a></li>
-                    <li><a href="services.html">服务项目</a></li>
+                    <li><a href="services.html" class="active">服务项目</a></li>
                     <li><a href="training.html">培训资料</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
                     <li><a href="news.html">新闻资讯</a></li>
+                    <li><a href="contact.html" class="header-cta">联系我们</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
-    <!-- 页面标题 -->
-    <section class="page-header">
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-grid"></div>
         <div class="container">
-            <h1>我们的服务</h1>
-            <p>专业、高效、可靠的国际物流解决方案</p>
-        </div>
-    </section>
-
-    <!-- 服务详情 -->
-    <section class="services-detail">
-        <div class="container">
-            <h2 class="section-title">专业物流服务</h2>
-            <div class="service-grid">
-                <!-- 国际海运 -->
-                <div class="service-item">
-                    <div class="service-icon">🚢</div>
-                    <h3>国际海运</h3>
-                    <p>我们提供全球主要港口间的海运服务，包括整箱(FCL)和拼箱(LCL)，专业处理各类货物运输需求。</p>
-                    
-                    <h4>服务范围</h4>
-                    <ul class="service-features">
-                        <li>全球主要港口直达航线</li>
-                        <li>整箱(FCL)和拼箱(LCL)服务</li>
-                        <li>危险品、超大件货物运输</li>
-                        <li>冷链运输服务</li>
-                        <li>门到门运输服务</li>
-                    </ul>
-                    
-                    <h4>服务优势</h4>
-                    <div class="benefits-list">
-                        <ul class="service-features">
-                            <li>成本效益高，适合大批量货物</li>
-                            <li>与多家船公司建立合作关系</li>
-                            <li>专业的海运操作团队</li>
-                            <li>完善的货物跟踪系统</li>
-                            <li>灵活的运费结算方式</li>
-                        </ul>
-                    </div>
-                    
-                    <h4>适用货物</h4>
-                    <ul class="service-features">
-                        <li>机械设备、工业产品</li>
-                        <li>大宗商品、原材料</li>
-                        <li>家具家电、消费品</li>
-                        <li>化工产品、危险品</li>
-                        <li>大型工程设备</li>
-                    </ul>
+            <div class="banner-content">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a>
+                    <span class="sep">/</span>
+                    <span class="current">服务项目</span>
                 </div>
-                
-                <!-- 国际空运 -->
-                <div class="service-item">
-                    <div class="service-icon">✈️</div>
-                    <h3>国际空运</h3>
-                    <p>快速可靠的空运服务，覆盖全球主要城市，确保高价值货物的安全准时到达。</p>
-                    
-                    <h4>服务范围</h4>
-                    <ul class="service-features">
-                        <li>全球主要机场空运服务</li>
-                        <li>定期航班和包机服务</li>
-                        <li>快递空运服务</li>
-                        <li>危险品空运</li>
-                        <li>鲜活易腐货物运输</li>
-                    </ul>
-                    
-                    <h4>服务优势</h4>
-                    <div class="benefits-list">
-                        <ul class="service-features">
-                            <li>运输时效快，通常1-7天到达</li>
-                            <li>与多家航空公司合作</li>
-                            <li>专业的空运操作团队</li>
-                            <li>实时货物跟踪服务</li>
-                            <li>灵活的运输方案选择</li>
-                        </ul>
-                    </div>
-                    
-                    <h4>适用货物</h4>
-                    <ul class="service-features">
-                        <li>高价值电子产品</li>
-                        <li>精密仪器设备</li>
-                        <li>鲜活易腐商品</li>
-                        <li>医疗用品、药品</li>
-                        <li>紧急补货、样品</li>
-                    </ul>
-                </div>
-                
-                <!-- 快递服务 -->
-                <div class="service-item">
-                    <div class="service-icon">📦</div>
-                    <h3>快递服务</h3>
-                    <p>与国际知名快递公司合作，提供门到门的快速配送服务，满足紧急货物运输需求。</p>
-                    
-                    <h4>服务范围</h4>
-                    <ul class="service-features">
-                        <li>国际快递门到门服务</li>
-                        <li>文件和小包裹快递</li>
-                        <li>大件物品快递</li>
-                        <li>限时达快递服务</li>
-                        <li>签收服务和追踪</li>
-                    </ul>
-                    
-                    <h4>服务优势</h4>
-                    <div class="benefits-list">
-                        <ul class="service-features">
-                            <li>全球网络覆盖广泛</li>
-                            <li>快速可靠的配送服务</li>
-                            <li>实时在线追踪系统</li>
-                            <li>专业的客户服务团队</li>
-                            <li>灵活的计费方式</li>
-                        </ul>
-                    </div>
-                    
-                    <h4>适用货物</h4>
-                    <ul class="service-features">
-                        <li>商务文件、合同</li>
-                        <li>样品、礼品</li>
-                        <li>电商包裹</li>
-                        <li>个人物品</li>
-                        <li>紧急替换件</li>
-                    </ul>
-                </div>
-                
-                <!-- 仓储服务 -->
-                <div class="service-item">
-                    <div class="service-icon">🏭</div>
-                    <h3>仓储服务</h3>
-                    <p>现代化仓储设施，提供货物存储、分拣、包装、配送等一站式仓储物流服务。</p>
-                    
-                    <h4>服务范围</h4>
-                    <ul class="service-features">
-                        <li>干仓、冷库仓储服务</li>
-                        <li>货物分拣、包装</li>
-                        <li>库存管理</li>
-                        <li>订单处理</li>
-                        <li>配送服务</li>
-                    </ul>
-                    
-                    <h4>服务优势</h4>
-                    <div class="benefits-list">
-                        <ul class="service-features">
-                            <li>现代化仓储设施</li>
-                            <li>先进的WMS系统</li>
-                            <li>专业的仓储管理团队</li>
-                            <li>灵活的仓储方案</li>
-                            <li>高效的订单处理能力</li>
-                        </ul>
-                    </div>
-                    
-                    <h4>服务特色</h4>
-                    <ul class="service-features">
-                        <li>B2B仓储服务</li>
-                        <li>电商仓储服务</li>
-                        <li>定制化包装服务</li>
-                        <li>库存优化建议</li>
-                        <li>逆向物流服务</li>
-                    </ul>
-                </div>
-                
-                <!-- 报关服务 -->
-                <div class="service-item">
-                    <div class="service-icon">📋</div>
-                    <h3>报关服务</h3>
-                    <p>专业报关团队，熟悉各国海关法规，提供高效便捷的进出口报关服务。</p>
-                    
-                    <h4>服务范围</h4>
-                    <ul class="service-features">
-                        <li>进出口报关代理</li>
-                        <li>商检、卫检代理</li>
-                        <li>原产地证办理</li>
-                        <li>ATA单证册办理</li>
-                        <li>海关查验陪同</li>
-                    </ul>
-                    
-                    <h4>服务优势</h4>
-                    <div class="benefits-list">
-                        <ul class="service-features">
-                            <li>专业的报关团队</li>
-                            <li>丰富的报关经验</li>
-                            <li>高效的报关流程</li>
-                            <li>合规的风险控制</li>
-                            <li>快速的清关时效</li>
-                        </ul>
-                    </div>
-                    
-                    <h4>服务国家</h4>
-                    <ul class="service-features">
-                        <li>东南亚国家</li>
-                        <li>欧美发达国家</li>
-                        <li>日韩等亚洲国家</li>
-                        <li>中东地区国家</li>
-                        <li>其他主要贸易国家</li>
-                    </ul>
-                </div>
-                
-                <!-- 供应链管理 -->
-                <div class="service-item">
-                    <div class="service-icon">🌐</div>
-                    <h3>供应链管理</h3>
-                    <p>为客户提供定制化的供应链解决方案，优化物流流程，降低运营成本。</p>
-                    
-                    <h4>服务范围</h4>
-                    <ul class="service-features">
-                        <li>供应链咨询规划</li>
-                        <li>物流网络优化</li>
-                        <li>供应商管理</li>
-                        <li>库存优化</li>
-                        <li>成本控制分析</li>
-                    </ul>
-                    
-                    <h4>服务优势</h4>
-                    <div class="benefits-list">
-                        <ul class="service-features">
-                            <li>专业的供应链团队</li>
-                            <li>先进的管理系统</li>
-                            <li>数据驱动的优化</li>
-                            <li>定制化的解决方案</li>
-                            <li>持续的改进服务</li>
-                        </ul>
-                    </div>
-                    
-                    <h4>解决方案</h4>
-                    <ul class="service-features">
-                        <li>采购物流优化</li>
-                        <li>生产物流规划</li>
-                        <li>销售物流设计</li>
-                        <li>逆向物流管理</li>
-                        <li>端到端可视化</li>
-                    </ul>
-                </div>
+                <h1>服务项目</h1>
+                <p>专业、高效、可靠的国际物流解决方案</p>
             </div>
         </div>
     </section>
 
-    <!-- 服务优势 -->
-    <section class="advantages">
+    <!-- Services Detail Section -->
+    <section class="section services-detail" id="services">
         <div class="container">
-            <h2 class="section-title">我们的优势</h2>
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">核心服务</div>
+                <h2 class="section-title">六大核心服务板块</h2>
+                <p class="section-desc">从海运到空运，从仓储到报关，我们提供全方位的专业物流服务，满足您不同的国际贸易需求</p>
+            </div>
+            <div class="services-detail-grid">
+
+                <!-- 1. 国际海运 -->
+                <div class="service-detail-card animate-on-scroll">
+                    <div class="sdc-header">
+                        <div class="sdc-icon blue">&#x1F6A2;</div>
+                        <h3>国际海运 <small>Ocean Freight</small></h3>
+                    </div>
+                    <p class="sdc-desc">依托全球主要港口航线网络，提供整箱(FCL)和拼箱(LCL)海运服务，灵活满足不同货量需求。专业团队可处理危险品、冷链等特种货物运输，并提供门到门全程物流解决方案。</p>
+                    <ul class="sdc-features">
+                        <li><span class="check">&#x2713;</span>整箱(FCL)与拼箱(LCL)灵活选择</li>
+                        <li><span class="check">&#x2713;</span>危险品海运专业操作</li>
+                        <li><span class="check">&#x2713;</span>冷链物流温控运输</li>
+                        <li><span class="check">&#x2713;</span>门到门全程物流服务</li>
+                        <li><span class="check">&#x2713;</span>覆盖全球主要港口航线</li>
+                    </ul>
+                    <div class="sdc-benefits">
+                        <span>运量大成本低</span>
+                        <span>航线覆盖广</span>
+                        <span>特种货物保障</span>
+                    </div>
+                </div>
+
+                <!-- 2. 国际空运 -->
+                <div class="service-detail-card animate-on-scroll">
+                    <div class="sdc-header">
+                        <div class="sdc-icon gold">&#x2708;&#xFE0F;</div>
+                        <h3>国际空运 <small>Air Freight</small></h3>
+                    </div>
+                    <p class="sdc-desc">与多家国际航空公司建立长期战略合作，提供稳定的舱位保障和极具竞争力的运价。涵盖常规航班、包机运输及加急空运服务，确保高价值、时效性强的货物安全准时送达。</p>
+                    <ul class="sdc-features">
+                        <li><span class="check">&#x2713;</span>常规航班与包机运输</li>
+                        <li><span class="check">&#x2713;</span>加急空运快速通道</li>
+                        <li><span class="check">&#x2713;</span>危险品空运资质齐全</li>
+                        <li><span class="check">&#x2713;</span>高价值货物专项保障</li>
+                        <li><span class="check">&#x2713;</span>全球主要机场直达</li>
+                    </ul>
+                    <div class="sdc-benefits">
+                        <span>时效快</span>
+                        <span>安全可靠</span>
+                        <span>舱位保障</span>
+                    </div>
+                </div>
+
+                <!-- 3. 快递服务 -->
+                <div class="service-detail-card animate-on-scroll">
+                    <div class="sdc-header">
+                        <div class="sdc-icon green">&#x1F4E6;</div>
+                        <h3>快递服务 <small>Express Delivery</small></h3>
+                    </div>
+                    <p class="sdc-desc">与国际知名快递品牌深度合作，提供DDP(双清包税到门)和DDU(双清不包税)等多种服务模式。涵盖文件快递、包裹快递及电商小包，全程物流追踪，让每一件货物都尽在掌握。</p>
+                    <ul class="sdc-features">
+                        <li><span class="check">&#x2713;</span>DDP/DDU双清包税到门</li>
+                        <li><span class="check">&#x2713;</span>文件快递加急服务</li>
+                        <li><span class="check">&#x2713;</span>包裹及电商小包专线</li>
+                        <li><span class="check">&#x2713;</span>全程物流实时追踪</li>
+                        <li><span class="check">&#x2713;</span>多渠道比价最优方案</li>
+                    </ul>
+                    <div class="sdc-benefits">
+                        <span>门到门便捷</span>
+                        <span>全程可追踪</span>
+                        <span>多渠道选择</span>
+                    </div>
+                </div>
+
+                <!-- 4. 仓储服务 -->
+                <div class="service-detail-card animate-on-scroll">
+                    <div class="sdc-header">
+                        <div class="sdc-icon purple">&#x1F3ED;</div>
+                        <h3>仓储服务 <small>Warehousing</small></h3>
+                    </div>
+                    <p class="sdc-desc">拥有现代化仓储设施，配备WMS智能仓储管理系统，实现库存精准管理。提供入库验收、分拣配货、包装贴标、库存盘点等一站式仓储服务，灵活满足不同客户的个性化需求。</p>
+                    <ul class="sdc-features">
+                        <li><span class="check">&#x2713;</span>现代化仓储设施</li>
+                        <li><span class="check">&#x2713;</span>WMS智能仓储管理系统</li>
+                        <li><span class="check">&#x2713;</span>专业分拣与包装服务</li>
+                        <li><span class="check">&#x2713;</span>库存管理与盘点</li>
+                        <li><span class="check">&#x2713;</span>定制化仓储解决方案</li>
+                    </ul>
+                    <div class="sdc-benefits">
+                        <span>智能管理</span>
+                        <span>灵活高效</span>
+                        <span>降低库存成本</span>
+                    </div>
+                </div>
+
+                <!-- 5. 报关服务 -->
+                <div class="service-detail-card animate-on-scroll">
+                    <div class="sdc-header">
+                        <div class="sdc-icon red">&#x1F4CB;</div>
+                        <h3>报关服务 <small>Customs Clearance</small></h3>
+                    </div>
+                    <p class="sdc-desc">专业报关团队熟悉各国海关法规和进出口政策，提供高效的进出口报关、商检代理、产地证代办及货运保险等服务。与海关保持良好沟通，确保货物快速通关，降低通关风险。</p>
+                    <ul class="sdc-features">
+                        <li><span class="check">&#x2713;</span>进出口报关代理</li>
+                        <li><span class="check">&#x2713;</span>商检/卫检/动植检代理</li>
+                        <li><span class="check">&#x2713;</span>产地证/保险代办</li>
+                        <li><span class="check">&#x2713;</span>海关政策咨询与指导</li>
+                        <li><span class="check">&#x2713;</span>特殊商品归类与合规</li>
+                    </ul>
+                    <div class="sdc-benefits">
+                        <span>专业高效</span>
+                        <span>合规保障</span>
+                        <span>快速通关</span>
+                    </div>
+                </div>
+
+                <!-- 6. 供应链管理 -->
+                <div class="service-detail-card animate-on-scroll">
+                    <div class="sdc-header">
+                        <div class="sdc-icon teal">&#x1F310;</div>
+                        <h3>供应链管理 <small>Supply Chain</small></h3>
+                    </div>
+                    <p class="sdc-desc">为客户提供端到端的供应链管理解决方案，涵盖供应链咨询诊断、流程优化设计、供应商管理协调等。通过数据驱动和精细化管理，帮助客户降低整体物流成本，提升供应链运营效率。</p>
+                    <ul class="sdc-features">
+                        <li><span class="check">&#x2713;</span>供应链咨询与诊断</li>
+                        <li><span class="check">&#x2713;</span>物流流程优化设计</li>
+                        <li><span class="check">&#x2713;</span>供应商管理与协调</li>
+                        <li><span class="check">&#x2713;</span>数据驱动决策支持</li>
+                        <li><span class="check">&#x2713;</span>持续改进与成本优化</li>
+                    </ul>
+                    <div class="sdc-benefits">
+                        <span>端到端管理</span>
+                        <span>数据驱动</span>
+                        <span>持续优化</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section advantages" id="advantages">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">核心优势</div>
+                <h2 class="section-title">为什么选择嘉旅物流</h2>
+                <p class="section-desc">15年行业深耕，我们以专业、高效、安全的服务赢得全球客户的信赖</p>
+            </div>
             <div class="advantages-grid">
-                <div class="advantage-card">
-                    <div class="advantage-icon">🌍</div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon">&#x1F30D;</div>
                     <h4>全球网络</h4>
-                    <p>覆盖全球主要贸易国家和地区，提供全方位的国际物流服务</p>
+                    <p>覆盖全球50多个国家和地区，与众多国际知名物流企业建立长期战略合作，确保货物安全准时到达世界每个角落。</p>
                 </div>
-                <div class="advantage-card">
-                    <div class="advantage-icon">⚡</div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon">&#x26A1;</div>
                     <h4>高效快捷</h4>
-                    <p>优化的物流流程和先进的信息系统，确保货物快速安全到达</p>
+                    <p>优化的物流流程和先进的信息系统，7x24小时在线服务，确保第一时间响应客户需求，让物流更高效。</p>
                 </div>
-                <div class="advantage-card">
-                    <div class="advantage-icon">💰</div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon">&#x1F4B0;</div>
                     <h4>成本优化</h4>
-                    <p>规模化运营和精细化管理，为客户提供最具竞争力的价格</p>
+                    <p>规模化运营和精细化管理，为客户提供最具竞争力的价格方案，持续优化物流成本，提升贸易竞争力。</p>
                 </div>
-                <div class="advantage-card">
-                    <div class="advantage-icon">🔒</div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon">&#x1F512;</div>
                     <h4>安全可靠</h4>
-                    <p>完善的质量管理体系和风险控制措施，确保货物运输安全</p>
+                    <p>完善的质量管理体系和风险控制措施，ISO9001认证，全程货物保险保障，让每一次运输都安心无忧。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner animate-on-scroll">
+                <h2>立即获取专属物流方案</h2>
+                <p>我们的专业团队将在24小时内为您提供定制化的物流解决方案和最优报价</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-primary">
+                        在线咨询
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="contact.html" class="btn-outline">查看联系方式</a>
+                </div>
+                <div class="cta-phone">
+                    &#x1F4DE; 或直接拨打：<a href="tel:+8613590173320">+86 13590173320</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>深圳市嘉旅国际物流</h4>
-                    <p>专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="margin-bottom: 8px;">
+                        <div class="logo-icon">EV</div>
+                        <div class="logo-text">嘉旅国际<span>物流</span></div>
+                    </a>
+                    <p>深圳市嘉旅国际物流有限公司，专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
                 </div>
-                <div class="footer-section">
-                    <h4>快速链接</h4>
+                <div>
+                    <h4 class="footer-title">快速链接</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">首页</a></li>
                         <li><a href="about.html">关于我们</a></li>
                         <li><a href="services.html">服务项目</a></li>
                         <li><a href="training.html">培训资料</a></li>
-                        <li><a href="contact.html">联系我们</a></li>
                         <li><a href="news.html">新闻资讯</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>服务项目</h4>
+                <div>
+                    <h4 class="footer-title">服务项目</h4>
                     <ul class="footer-links">
-                        <li><a href="#">国际海运</a></li>
-                        <li><a href="#">国际空运</a></li>
-                        <li><a href="#">快递服务</a></li>
-                        <li><a href="#">仓储服务</a></li>
+                        <li><a href="ocean-freight.html">国际海运</a></li>
+                        <li><a href="air-cargo.html">国际空运</a></li>
+                        <li><a href="express-delivery.html">快递服务</a></li>
+                        <li><a href="warehouse-management.html">仓储服务</a></li>
+                        <li><a href="customs-clearance.html">报关服务</a></li>
+                        <li><a href="supply-chain.html">供应链管理</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>联系我们</h4>
-                    <ul class="footer-links">
-                        <li>电话：+86 13590173320</li>
-                        <li>邮箱：sales06@excellent-voyage.cn</li>
-                        <li>地址：广东省深圳市龙岗区南湾街道三鼎电商文创园A612</li>
-                    </ul>
+                <div>
+                    <h4 class="footer-title">联系我们</h4>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F4DE;</span>
+                        <span>+86 13590173320</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x2709;&#xFE0F;</span>
+                        <span>sales06@excellent-voyage.cn</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F4CD;</span>
+                        <span>广东省深圳市龙岗区<br>南湾街道三鼎电商文创园A612</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="icon">&#x1F554;</span>
+                        <span>周一至周五 9:00-18:00<br>周六 9:00-12:00</span>
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利. 粤ICP备XXXXXXXX号</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利.</span>
+                <span>粤ICP备XXXXXXXX号</span>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">&#8593;</button>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <button class="float-btn phone-btn" onclick="window.open('tel:+8613590173320')">
+            &#x1F4DE;
+            <span class="tooltip">拨打电话</span>
+        </button>
+        <button class="float-btn wechat-btn" onclick="alert('微信号：DavisLuo_JL')">
+            &#x1F4AC;
+            <span class="tooltip">微信咨询</span>
+        </button>
+    </div>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('open');
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
