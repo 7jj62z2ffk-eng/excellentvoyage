@@ -747,9 +747,23 @@
             document.getElementById('mainNav').classList.toggle('active');
         }
 
-        // Google Sheets API Configuration
-        // 请替换为您的 Google Apps Script Web App URL
-        const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+        // JSON Data File
+        const TRACKING_DATA_URL = 'tracking-data.json';
+        let allShipments = null;
+
+        // Load tracking data
+        async function loadTrackingData() {
+            if (allShipments) return allShipments;
+            try {
+                const response = await fetch(TRACKING_DATA_URL);
+                const data = await response.json();
+                allShipments = data.shipments;
+                return allShipments;
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                return null;
+            }
+        }
 
         // Tracking Form Handler
         document.getElementById('trackingForm').addEventListener('submit', async function(e) {
@@ -765,15 +779,23 @@
             document.getElementById('searchBtn').disabled = true;
 
             try {
-                // Fetch data from Google Sheets
-                const response = await fetch(`${GOOGLE_SHEETS_API_URL}?trackingNumber=${encodeURIComponent(trackingNumber)}`);
-                const data = await response.json();
-
+                const shipments = await loadTrackingData();
+                
                 document.getElementById('loading').classList.remove('show');
                 document.getElementById('searchBtn').disabled = false;
 
-                if (data.found) {
-                    displayResult(data);
+                if (!shipments) {
+                    alert('数据加载失败，请稍后重试');
+                    return;
+                }
+
+                // Search by tracking number
+                const found = shipments.find(s => 
+                    s.trackingNumber.toLowerCase() === trackingNumber.toLowerCase()
+                );
+
+                if (found) {
+                    displayResult(found);
                 } else {
                     document.getElementById('notFound').classList.add('show');
                 }

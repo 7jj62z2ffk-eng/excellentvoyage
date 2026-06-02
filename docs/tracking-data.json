@@ -1,0 +1,100 @@
+{
+  "shipments": [
+    {
+      "trackingNumber": "EV2024001",
+      "cargoName": "电子产品",
+      "origin": "深圳",
+      "destination": "洛杉矶",
+      "transportMode": "海运整箱",
+      "currentLocation": "太平洋航行中",
+      "eta": "2025-01-15",
+      "status": "transit",
+      "timeline": [
+        {
+          "time": "2024-12-28 14:30",
+          "title": "海上运输中",
+          "description": "货物已离开深圳盐田港，预计15天到达洛杉矶"
+        },
+        {
+          "time": "2024-12-25 09:00",
+          "title": "已装船",
+          "description": "货物已装上 COSCO SHIPPING STAR 号船，开往洛杉矶"
+        },
+        {
+          "time": "2024-12-23 16:00",
+          "title": "已完成报关",
+          "description": "出口报关手续已完成，等待装船"
+        },
+        {
+          "time": "2024-12-22 10:00",
+          "title": "已进港",
+          "description": "集装箱已运抵深圳盐田港码头"
+        },
+        {
+          "time": "2024-12-20 08:00",
+          "title": "已提柜装货",
+          "description": "已从堆场提取空柜，在深圳工厂完成装柜"
+        }
+      ]
+    },
+    {
+      "trackingNumber": "EV2024002",
+      "cargoName": "服装面料",
+      "origin": "广州",
+      "destination": "汉堡",
+      "transportMode": "空运",
+      "currentLocation": "已到达目的港",
+      "eta": "2024-12-20",
+      "status": "delivered",
+      "timeline": [
+        {
+          "time": "2024-12-20 11:00",
+          "title": "已签收",
+          "description": "收货人已签收，货物完好"
+        },
+        {
+          "time": "2024-12-19 08:00",
+          "title": "到达目的港",
+          "description": "货物已到达汉堡机场，等待清关提货"
+        },
+        {
+          "time": "2024-12-18 15:00",
+          "title": "已清关",
+          "description": "进口清关手续已完成"
+        },
+        {
+          "time": "2024-12-17 10:00",
+          "title": "航班到达中转",
+          "description": "经法兰克福中转，飞往汉堡"
+        },
+        {
+          "time": "2024-12-16 22:00",
+          "title": "已起飞",
+          "description": "货物已从广州白云机场起飞"
+        }
+      ]
+    },
+    {
+      "trackingNumber": "EV2024003",
+      "cargoName": "机械设备配件",
+      "origin": "宁波",
+      "destination": "鹿特丹",
+      "transportMode": "海运拼箱",
+      "currentLocation": "等待装船",
+      "eta": "2025-01-25",
+      "status": "pending",
+      "timeline": [
+        {
+          "time": "2024-12-28 10:00",
+          "title": "仓库集货中",
+          "description": "货物已在宁波仓库等待拼箱"
+        },
+        {
+          "time": "2024-12-26 14:00",
+          "title": "已接收委托",
+          "description": "已收到客户委托，安排订舱"
+        }
+      ]
+    }
+  ]
+}
