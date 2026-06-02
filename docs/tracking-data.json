@@ -95,6 +95,23 @@
           "description": "已收到客户委托，安排订舱"
         }
       ]
+    },
+    {
+      "trackingNumber": "SE2605X010",
+      "cargoName": "扒胎机、平衡机",
+      "origin": "深圳",
+      "destination": "瑞典 Burea",
+      "transportMode": "海运",
+      "currentLocation": "已预报，等待发货",
+      "eta": "2025-06-15",
+      "status": "pending",
+      "timeline": [
+        {
+          "time": "2025-05-28 10:00",
+          "title": "已预报",
+          "description": "货物信息已录入系统，等待安排发货"
+        }
+      ]
     }
   ]
 }
