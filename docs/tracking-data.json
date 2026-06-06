@@ -111,6 +111,11 @@
       "referenceNumber": "60602102",
       "timeline": [
         {
+          "time": "2026-06-06",
+          "title": "预计开船",
+          "description": "预计6月14日开船"
+        },
+        {
           "time": "2026-06-05 11:57:56",
           "title": "收货扫描",
           "description": "货物已在深圳福永站点完成收货扫描，实重524kg，计费重567kg，2件"
