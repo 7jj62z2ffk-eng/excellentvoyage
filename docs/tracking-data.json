@@ -102,14 +102,21 @@
       "origin": "深圳",
       "destination": "瑞典 Burea",
       "transportMode": "欧洲海运超大件",
-      "currentLocation": "已收货扫描，深圳福永站点",
+      "currentLocation": "已开船，海上运输中",
       "eta": "2025-07-15",
       "status": "transit",
       "weight": "524kg",
       "volume": "3.40方",
       "pieces": 2,
       "referenceNumber": "60602102",
+      "vessel": "EVER GLOBE",
+      "voyage": "1404-026W",
       "timeline": [
+        {
+          "time": "2026-06-14 23:30",
+          "title": "已开船",
+          "description": "货物已装船 EVER GLOBE/1404-026W，正式开船"
+        },
         {
           "time": "2026-06-06",
           "title": "预计开船",
