@@ -86,6 +86,61 @@
 
             // Breadcrumb
             breadcrumb_home: '首页',
+
+            // Home Page - Hero Section
+            hero_badge: '专业国际物流服务商',
+            hero_title_line1: '连接全球贸易',
+            hero_title_line2: '高效物流解决方案',
+            hero_desc: '深圳市嘉旅国际物流有限公司，为您提供海运、空运、快递、仓储、报关一站式国际物流服务，覆盖全球50+国家和地区。',
+            hero_stat_years: '年行业经验',
+            hero_stat_countries: '覆盖国家',
+            hero_stat_volume: '年货运量(TEU)',
+            hero_stat_satisfaction: '客户满意度',
+            hero_float_routes: '全球航线覆盖',
+            hero_float_tracking: '实时货物追踪',
+            hero_card_title: '实时货运追踪',
+            hero_card_status: '系统运行中',
+            hero_route_ocean: '深圳 → 洛杉矶',
+            hero_route_ocean_desc: '海运整箱 · 预计15天到达',
+            hero_route_air: '深圳 → 法兰克福',
+            hero_route_air_desc: '空运直飞 · 预计3天到达',
+            hero_route_express: '深圳 → 东京',
+            hero_route_express_desc: '快递门到门 · 预计2天到达',
+            hero_route_status_transit: '运输中',
+            hero_route_status_customs: '已报关',
+            hero_route_status_delivered: '已签收',
+
+            // Home Page - Services Section
+            services_label: '核心服务',
+            services_title: '一站式国际物流解决方案',
+            services_desc: '从海运到空运，从仓储到报关，我们提供全方位的专业物流服务',
+            service_ocean_desc: '全球主要港口直达航线，整箱/拼箱灵活选择，专业处理各类货物运输需求。',
+            service_air_desc: '快速可靠的空运服务，覆盖全球主要城市，确保高价值货物安全准时到达。',
+            service_express_desc: '与国际知名快递公司合作，门到门快速配送，满足紧急货物运输需求。',
+            service_warehouse_desc: '现代化仓储设施，专业库存管理，灵活配送方案，满足不同客户需求。',
+            service_customs_desc: '专业报关团队，熟悉各国海关法规，提供高效便捷的进出口报关服务。',
+            service_supply_desc: '定制化供应链解决方案，优化物流流程，降低运营成本，提升效率。',
+
+            // Home Page - Why Choose Us
+            whyus_label: '为什么选择我们',
+            whyus_title: '值得信赖的物流合作伙伴',
+            whyus_desc: '10年行业深耕，我们以专业和诚信赢得客户信赖',
+            whyus_network_title: '全球服务网络',
+            whyus_network_desc: '覆盖全球50多个国家和地区，与众多国际知名物流企业建立长期合作关系，确保货物安全准时到达。',
+            whyus_efficiency_title: '高效快捷响应',
+            whyus_efficiency_desc: '优化的物流流程和先进的信息系统，7×24小时在线服务，确保第一时间响应客户需求。',
+            whyus_cost_title: '成本优化方案',
+            whyus_cost_desc: '规模化运营和精细化管理，为客户提供最具竞争力的价格，持续优化物流成本。',
+            whyus_security_title: '安全可靠保障',
+            whyus_security_desc: '完善的质量管理体系和风险控制措施，ISO9001认证，全程货物保险保障。',
+
+            // Home Page - CTA Section
+            cta_title: '立即获取专属物流方案',
+            cta_desc: '我们的专业团队将在24小时内为您提供定制化的物流解决方案和最优报价',
+            cta_or_call: '或直接拨打：',
+
+            // Home Page - Footer brand
+            footer_brand_desc: '深圳市嘉旅国际物流有限公司，专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。',
         },
         en: {
             // Navigation
@@ -161,6 +216,61 @@
 
             // Breadcrumb
             breadcrumb_home: 'Home',
+
+            // Home Page - Hero Section
+            hero_badge: 'Professional International Logistics',
+            hero_title_line1: 'Connecting Global Trade',
+            hero_title_line2: 'Efficient Logistics Solutions',
+            hero_desc: 'Shenzhen Excellent Voyage Logistics provides one-stop international logistics services including ocean freight, air freight, express delivery, warehousing, and customs clearance, covering 50+ countries and regions worldwide.',
+            hero_stat_years: 'Years Experience',
+            hero_stat_countries: 'Countries Covered',
+            hero_stat_volume: 'Annual Volume (TEU)',
+            hero_stat_satisfaction: 'Client Satisfaction',
+            hero_float_routes: 'Global Route Coverage',
+            hero_float_tracking: 'Real-time Cargo Tracking',
+            hero_card_title: 'Real-time Freight Tracking',
+            hero_card_status: 'System Online',
+            hero_route_ocean: 'Shenzhen → Los Angeles',
+            hero_route_ocean_desc: 'FCL Ocean Freight · ETA 15 days',
+            hero_route_air: 'Shenzhen → Frankfurt',
+            hero_route_air_desc: 'Direct Air Freight · ETA 3 days',
+            hero_route_express: 'Shenzhen → Tokyo',
+            hero_route_express_desc: 'Door-to-Door Express · ETA 2 days',
+            hero_route_status_transit: 'In Transit',
+            hero_route_status_customs: 'Customs Cleared',
+            hero_route_status_delivered: 'Delivered',
+
+            // Home Page - Services Section
+            services_label: 'Core Services',
+            services_title: 'One-Stop International Logistics Solutions',
+            services_desc: 'From ocean to air, from warehousing to customs clearance, we provide comprehensive professional logistics services',
+            service_ocean_desc: 'Direct routes to major global ports, flexible FCL/LCL options, professional handling of all cargo types.',
+            service_air_desc: 'Fast and reliable air freight services covering major cities worldwide, ensuring safe and on-time delivery of high-value cargo.',
+            service_express_desc: 'Partnered with world-renowned express companies, providing door-to-door fast delivery for urgent shipments.',
+            service_warehouse_desc: 'Modern warehousing facilities with professional inventory management and flexible distribution solutions.',
+            service_customs_desc: 'Professional customs team familiar with regulations worldwide, providing efficient import/export customs clearance.',
+            service_supply_desc: 'Customized supply chain solutions to optimize logistics processes, reduce costs, and improve efficiency.',
+
+            // Home Page - Why Choose Us
+            whyus_label: 'Why Choose Us',
+            whyus_title: 'Your Trusted Logistics Partner',
+            whyus_desc: '10 years of industry expertise, earning client trust through professionalism and integrity',
+            whyus_network_title: 'Global Service Network',
+            whyus_network_desc: 'Covering 50+ countries and regions, with long-term partnerships with renowned international logistics companies, ensuring safe and on-time delivery.',
+            whyus_efficiency_title: 'Fast & Efficient Response',
+            whyus_efficiency_desc: 'Optimized logistics processes and advanced information systems, 7×24 online service, ensuring immediate response to client needs.',
+            whyus_cost_title: 'Cost Optimization',
+            whyus_cost_desc: 'Large-scale operations and refined management, providing the most competitive prices while continuously optimizing logistics costs.',
+            whyus_security_title: 'Safe & Reliable',
+            whyus_security_desc: 'Comprehensive quality management system and risk control measures, ISO9001 certified, with full cargo insurance coverage.',
+
+            // Home Page - CTA Section
+            cta_title: 'Get Your Custom Logistics Solution',
+            cta_desc: 'Our professional team will provide you with customized logistics solutions and the best quote within 24 hours',
+            cta_or_call: 'Or call us at: ',
+
+            // Home Page - Footer brand
+            footer_brand_desc: 'Shenzhen Excellent Voyage Logistics Co., Ltd. is a professional international logistics service provider, dedicated to delivering efficient, safe, and reliable logistics solutions to clients worldwide.',
         }
     };
 
