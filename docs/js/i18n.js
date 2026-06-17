@@ -84,6 +84,13 @@
             tracking_status_pending: '待发货',
             tracking_status_exception: '异常',
 
+            // Tracking page - additional keys
+            tracking_page_title: '货物追踪 - 深圳市嘉旅国际物流有限公司 | 查询货物位置',
+            tracking_breadcrumb_current: '货物追踪',
+            tracking_search_desc: '请输入您的运单号或提单号进行查询',
+            tracking_result_title_prefix: '运单号：',
+            tracking_footer_copyright: '深圳市嘉旅国际物流有限公司. 保留所有权利.',
+
             // Breadcrumb
             breadcrumb_home: '首页',
 
@@ -438,6 +445,13 @@
             tracking_status_pending: 'Pending',
             tracking_status_exception: 'Exception',
 
+            // Tracking page - additional keys
+            tracking_page_title: 'Cargo Tracking - Shenzhen Excellent Voyage Logistics | Track Your Shipment',
+            tracking_breadcrumb_current: 'Tracking',
+            tracking_search_desc: 'Please enter your tracking number or B/L number to search',
+            tracking_result_title_prefix: 'Tracking No.: ',
+            tracking_footer_copyright: 'Shenzhen Excellent Voyage Logistics Co., Ltd. All Rights Reserved.',
+
             // Breadcrumb
             breadcrumb_home: 'Home',
 
@@ -623,7 +637,7 @@
             about_timeline_2023_title: 'HQ Relocated to Shenzhen',
             about_timeline_2023_desc: 'Headquarters relocated to Longgang District, Shenzhen, with additional branch offices in Shanghai and Tianjin, business covering over 50 countries and regions worldwide.',
             about_timeline_2025_title: 'Continuous Growth',
-            about_timeline_2025_desc: 'Became a well-known comprehensive logistics service provider in the industry, with continuously growing annual cargo volume and clients遍布全球。',
+            about_timeline_2025_desc: 'Became a well-known comprehensive logistics service provider in the industry, with continuously growing annual cargo volume and clients worldwide.',
             about_cta_title: 'Partner with Us to Create the Future',
             about_cta_desc: 'Whether you need ocean freight, air freight, or comprehensive logistics solutions, our professional team is ready to serve you',
             about_cta_contact: 'Contact Us Now',
@@ -753,10 +767,15 @@
             const value = t(key);
 
             if (attr) {
-                el.setAttribute(attr, value);
+                // Handle specific attribute translations (placeholder, aria-label, etc.)
+                if (attr === 'placeholder' && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA')) {
+                    el.placeholder = value;
+                } else {
+                    el.setAttribute(attr, value);
+                }
             } else {
-                // For input placeholders
-                if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+                // For input placeholders without explicit data-i18n-attr
+                if ((el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') && el.hasAttribute('placeholder')) {
                     el.placeholder = value;
                 } else if (el.tagName === 'META') {
                     el.content = value;
@@ -794,10 +813,26 @@
         document.documentElement.lang = getLanguage() === 'zh' ? 'zh-CN' : 'en';
 
         // Apply translations on DOM ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', applyTranslations);
-        } else {
+        function onReady() {
             applyTranslations();
+            updateLangSwitcherUI();
+
+            // Bind click events to language switcher buttons (event delegation)
+            document.querySelectorAll('.lang-switcher .lang-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    if (lang && translations[lang]) {
+                        setLanguage(lang);
+                    }
+                });
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', onReady);
+        } else {
+            onReady();
         }
     }
 

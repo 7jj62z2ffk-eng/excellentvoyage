@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>货物追踪 - 深圳市嘉旅国际物流有限公司 | 查询货物位置</title>
+    <title data-i18n-title="tracking_page_title">货物追踪 - 深圳市嘉旅国际物流有限公司 | 查询货物位置</title>
     <meta name="description" content="查询您的货物运输状态，实时追踪货物位置。深圳市嘉旅国际物流有限公司提供海运、空运、快递全程追踪服务。">
     <meta name="keywords" content="货物追踪,物流查询,运单查询,货物位置,海运追踪,空运追踪">
     <meta name="author" content="深圳市嘉旅国际物流有限公司">
@@ -131,6 +131,33 @@
         nav a:hover, nav a.active {
             color: white;
             background: rgba(255,255,255,0.1);
+        }
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: 8px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.75);
+            padding: 4px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .lang-btn:hover {
+            border-color: rgba(255,255,255,0.6);
+            color: white;
+        }
+        .lang-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
         }
         .menu-toggle {
             display: none;
@@ -548,6 +575,11 @@
                 flex-direction: column;
                 gap: 8px;
             }
+            .lang-switcher {
+                margin-left: 0;
+                margin-top: 8px;
+                justify-content: center;
+            }
             .page-banner {
                 padding: 120px 0 60px;
             }
@@ -595,13 +627,17 @@
             </div>
             <nav id="mainNav">
                 <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="about.html">关于我们</a></li>
-                    <li><a href="services.html">服务项目</a></li>
-                    <li><a href="news.html">新闻资讯</a></li>
-                    <li><a href="tracking.html" class="active">货物追踪</a></li>
-                    <li><a href="training.html">培训资料</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">服务项目</a></li>
+                    <li><a href="tracking.html" class="active" data-i18n="nav_tracking">货物追踪</a></li>
+                    <li><a href="training.html" data-i18n="nav_training">培训资料</a></li>
+                    <li><a href="news.html" data-i18n="nav_news">新闻资讯</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li>
+                    <li class="lang-switcher">
+                        <button class="lang-btn" data-lang="zh">中</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -612,12 +648,12 @@
         <div class="banner-grid"></div>
         <div class="container">
             <div class="banner-content">
-                <h1>货物追踪</h1>
-                <p>输入运单号，实时查询您的货物运输状态和位置</p>
+                <h1 data-i18n="tracking_title">货物追踪</h1>
+                <p data-i18n="tracking_subtitle">输入运单号，实时查询您的货物运输状态和位置</p>
                 <div class="breadcrumb">
-                    <a href="index.html">首页</a>
+                    <a href="index.html" data-i18n="breadcrumb_home">首页</a>
                     <span class="separator">/</span>
-                    <span class="current">货物追踪</span>
+                    <span class="current" data-i18n="tracking_breadcrumb_current">货物追踪</span>
                 </div>
             </div>
         </div>
@@ -629,12 +665,12 @@
             <div class="tracking-container">
                 <!-- Search Box -->
                 <div class="search-box">
-                    <h2>🔍 查询货物</h2>
-                    <p>请输入您的运单号或提单号进行查询</p>
+                    <h2 data-i18n="tracking_search_title">🔍 查询货物</h2>
+                    <p data-i18n="tracking_search_desc">请输入您的运单号或提单号进行查询</p>
                     <form class="search-form" id="trackingForm">
-                        <input type="text" class="search-input" id="trackingNumber" placeholder="请输入运单号 / 提单号 / 柜号" required>
+                        <input type="text" class="search-input" id="trackingNumber" placeholder="请输入运单号 / 提单号 / 柜号" data-i18n="tracking_search_placeholder" data-i18n-attr="placeholder" required>
                         <button type="submit" class="search-btn" id="searchBtn">
-                            <span>查询</span>
+                            <span data-i18n="tracking_search_btn">查询</span>
                         </button>
                     </form>
                 </div>
@@ -642,44 +678,44 @@
                 <!-- Loading -->
                 <div class="loading" id="loading">
                     <div class="spinner"></div>
-                    <p>正在查询...</p>
+                    <p data-i18n="tracking_loading">正在查询...</p>
                 </div>
 
                 <!-- Tracking Result -->
                 <div class="tracking-result" id="trackingResult">
                     <div class="result-header">
-                        <div class="result-title">运单号：<span id="resultTrackingNumber"></span></div>
-                        <span class="status-badge" id="statusBadge">运输中</span>
+                        <div class="result-title"><span data-i18n="tracking_result_title_prefix">运单号：</span><span id="resultTrackingNumber"></span></div>
+                        <span class="status-badge" id="statusBadge" data-i18n="tracking_status_transit">运输中</span>
                     </div>
-                    
+
                     <div class="info-grid">
                         <div class="info-item">
-                            <div class="info-label">货物名称</div>
+                            <div class="info-label" data-i18n="tracking_cargo_name">货物名称</div>
                             <div class="info-value" id="cargoName">-</div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">起运地</div>
+                            <div class="info-label" data-i18n="tracking_origin">起运地</div>
                             <div class="info-value" id="origin">-</div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">目的地</div>
+                            <div class="info-label" data-i18n="tracking_destination">目的地</div>
                             <div class="info-value" id="destination">-</div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">运输方式</div>
+                            <div class="info-label" data-i18n="tracking_transport">运输方式</div>
                             <div class="info-value" id="transportMode">-</div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">当前位置</div>
+                            <div class="info-label" data-i18n="tracking_location">当前位置</div>
                             <div class="info-value" id="currentLocation">-</div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">预计到达</div>
+                            <div class="info-label" data-i18n="tracking_eta">预计到达</div>
                             <div class="info-value" id="eta">-</div>
                         </div>
                     </div>
 
-                    <h3 style="margin-bottom: 20px; color: var(--text-dark);">运输轨迹</h3>
+                    <h3 style="margin-bottom: 20px; color: var(--text-dark);" data-i18n="tracking_timeline">运输轨迹</h3>
                     <div class="timeline" id="timeline">
                         <!-- Timeline items will be inserted here -->
                     </div>
@@ -688,9 +724,9 @@
                 <!-- Not Found -->
                 <div class="not-found" id="notFound">
                     <div class="not-found-icon">📦</div>
-                    <h3>未找到该运单</h3>
-                    <p>请检查运单号是否正确，或联系客服查询</p>
-                    <a href="contact.html" class="contact-link">联系客服 →</a>
+                    <h3 data-i18n="tracking_not_found_title">未找到该运单</h3>
+                    <p data-i18n="tracking_not_found_desc">请检查运单号是否正确，或联系客服查询</p>
+                    <a href="contact.html" class="contact-link" data-i18n="tracking_contact_service">联系客服 →</a>
                 </div>
             </div>
         </div>
@@ -705,42 +741,43 @@
                         <div class="logo-icon">EV</div>
                         <div class="logo-text">嘉旅<span>国际物流</span></div>
                     </a>
-                    <p>深圳市嘉旅国际物流有限公司，专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
+                    <p data-i18n="footer_brand_desc">深圳市嘉旅国际物流有限公司，专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。</p>
                 </div>
                 <div class="footer-nav">
-                    <h4 class="footer-title">快速链接</h4>
+                    <h4 class="footer-title" data-i18n="footer_quick_links">快速链接</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="about.html">关于我们</a></li>
-                        <li><a href="services.html">服务项目</a></li>
-                        <li><a href="news.html">新闻资讯</a></li>
-                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">服务项目</a></li>
+                        <li><a href="news.html" data-i18n="nav_news">新闻资讯</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-nav">
-                    <h4 class="footer-title">服务项目</h4>
+                    <h4 class="footer-title" data-i18n="footer_services">服务项目</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">国际海运</a></li>
-                        <li><a href="services.html">国际空运</a></li>
-                        <li><a href="services.html">快递服务</a></li>
-                        <li><a href="services.html">仓储服务</a></li>
-                        <li><a href="services.html">报关服务</a></li>
+                        <li><a href="services.html" data-i18n="service_ocean">国际海运</a></li>
+                        <li><a href="services.html" data-i18n="service_air">国际空运</a></li>
+                        <li><a href="services.html" data-i18n="service_express">快递服务</a></li>
+                        <li><a href="services.html" data-i18n="service_warehouse">仓储服务</a></li>
+                        <li><a href="services.html" data-i18n="service_customs">报关服务</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4 class="footer-title">联系我们</h4>
+                    <h4 class="footer-title" data-i18n="footer_contact_us">联系我们</h4>
                     <p>📞 +86 13590173320</p>
                     <p>✉️ sales06@excellent-voyage.cn</p>
                     <p>📍 广东省深圳市龙岗区南湾街道三鼎电商文创园A612</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 深圳市嘉旅国际物流有限公司 版权所有</p>
+                <p data-i18n="tracking_footer_copyright">&copy; 2024 深圳市嘉旅国际物流有限公司 版权所有</p>
                 <p>专业国际物流服务提供商 | <a href="https://www.excellent-voyage.cn" style="color: rgba(255,255,255,0.7);">www.excellent-voyage.cn</a></p>
             </div>
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script>
         // Mobile Menu Toggle
         function toggleMenu() {
@@ -820,13 +857,13 @@
             // Status Badge
             const statusBadge = document.getElementById('statusBadge');
             const statusMap = {
-                'transit': { text: '运输中', class: 'status-transit' },
-                'delivered': { text: '已签收', class: 'status-delivered' },
-                'pending': { text: '待发货', class: 'status-pending' },
-                'exception': { text: '异常', class: 'status-exception' }
+                'transit': { key: 'tracking_status_transit', class: 'status-transit' },
+                'delivered': { key: 'tracking_status_delivered', class: 'status-delivered' },
+                'pending': { key: 'tracking_status_pending', class: 'status-pending' },
+                'exception': { key: 'tracking_status_exception', class: 'status-exception' }
             };
             const status = statusMap[data.status] || statusMap['transit'];
-            statusBadge.textContent = status.text;
+            statusBadge.textContent = window.EVI18n ? EVI18n.t(status.key) : status.key;
             statusBadge.className = 'status-badge ' + status.class;
 
             // Timeline
