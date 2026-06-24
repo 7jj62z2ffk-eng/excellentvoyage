@@ -1,0 +1,7 @@
+﻿# robots.txt for 深圳市嘉旅国际物流有限公司官网
+# https://excellent-voyage.cn
+
+User-agent: *
+Allow: /
+
+Sitemap: https://excellent-voyage.cn/sitemap.xml
