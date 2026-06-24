@@ -539,31 +539,6 @@
             ]
         }
     };
-        'SE2605X010': {
-            waybill: 'SE2605X010',
-            cargo: '扒胎机',
-            origin: '深圳 (Shenzhen)',
-            destination: '欧洲 (Europe)',
-            transport: '欧洲海运超大件',
-            status: 'sailed',
-            statusText: '已开船',
-            eta: '2026-07-20',
-            weight: '567KG',
-            channel: '欧洲海运超大件',
-            customs: '其它',
-            vessel: 'EVER GLOBE/1404-026W',
-            etaOriginal: '预计7月20日到港，以实际到港为准',
-            sailDate: '预计6月15日开船，以实际开船为准',
-            timeline: [
-                { time: '2026-06-15', location: '深圳港', event: '预计开船', status: 'upcoming' },
-                { time: '2026-06-14', location: '深圳港', event: '装船完成，已离港', status: 'upcoming' },
-                { time: '2026-06-13', location: '深圳港', event: '货物已报关放行（其它方式）', status: 'upcoming' },
-                { time: '2026-06-12', location: '深圳港', event: '货物到港，等待装船', status: 'upcoming' },
-                { time: '2026-06-11', location: '工厂仓库', event: '货物已提货出发', status: 'upcoming' },
-                { time: '2026-06-10', location: '深圳', event: '订舱确认 · 计费重 567KG', status: 'upcoming' },
-            ]
-        },
-
 
     // ==================== 追踪功能 ====================
     function fillSample(e, waybill) {
@@ -604,103 +579,30 @@
         }, 1200);
     }
 
-    function showResult(data) {
+        function showResult(data) {
         const result = document.getElementById('trackingResult');
         const resultTitle = document.getElementById('resultTitle');
         const resultWaybill = document.getElementById('resultWaybill');
         const resultStatus = document.getElementById('resultStatus');
         const resultInfo = document.getElementById('resultInfo');
         const resultTimeline = document.getElementById('resultTimeline');
-
-        // Header
         resultTitle.textContent = data.cargo;
         resultWaybill.textContent = data.waybill;
-
-        const statusClass = data.status === 'delivered' ? 'status-delivered' :
-                           data.status === 'transit' ? 'status-transit' : 'status-pending';
-        resultStatus.innerHTML = <span class="result-status "></span>;
-
-        // Info grid
-        const statusLabel = data.status === 'delivered' ? '已签收' :
-                           data.status === 'transit' ? '运输中' : '待发货';
-        resultInfo.innerHTML = 
-            <div class="info-item">
-                <div class="label">运单号</div>
-                <div class="value"></div>
-            </div>
-            <div class="info-item">
-                <div class="label">货物名称</div>
-                <div class="value"></div>
-            </div>
-            <div class="info-item">
-                <div class="label">起运地</div>
-                <div class="value"></div>
-            </div>
-            <div class="info-item">
-                <div class="label">目的地</div>
-                <div class="value highlight"></div>
-            </div>
-            <div class="info-item">
-                <div class="label">运输方式</div>
-                <div class="value"></div>
-            </div>
-            <div class="info-item">
-                <div class="label">预计到达</div>
-                <div class="value"></div>
-            </div>
-        ;
-
-        // Timeline
+        const statusClass = data.status === 'delivered' ? 'status-delivered' : data.status === 'transit' ? 'status-transit' : data.status === 'sailed' ? 'status-sailed' : 'status-pending';
+        resultStatus.innerHTML = \<span class="result-status \">\</span>\;
+        let infoHTML = \<div class="info-item"><div class="label">运单号</div><div class="value">\</div></div><div class="info-item"><div class="label">货物名称</div><div class="value">\</div></div><div class="info-item"><div class="label">起运地</div><div class="value">\</div></div><div class="info-item"><div class="label">目的地</div><div class="value highlight">\</div></div><div class="info-item"><div class="label">运输方式</div><div class="value">\</div></div><div class="info-item"><div class="label">预计到达</div><div class="value">\</div></div>\;
+        if (data.weight) { infoHTML += \<div class="info-item"><div class="label">计费重量</div><div class="value">\</div></div>\; }
+        if (data.vessel) { infoHTML += \<div class="info-item"><div class="label">船名航次</div><div class="value">\</div></div>\; }
+        if (data.channel) { infoHTML += \<div class="info-item"><div class="label">渠道</div><div class="value">\</div></div>\; }
+        if (data.customs) { infoHTML += \<div class="info-item"><div class="label">报关方式</div><div class="value">\</div></div>\; }
+        if (data.etaOriginal) { infoHTML += \<div class="info-item" style="grid-column: 1 / -1;"><div class="label">备注</div><div class="value" style="font-size: 0.85rem; color: #718096;">\</div></div>\; }
+        resultInfo.innerHTML = infoHTML;
         resultTimeline.innerHTML = data.timeline.map((item, idx) => {
-            const isLast = idx === data.timeline.length - 1;
-            const statusClass = isLast ? 'current' : 'completed';
-            return 
-                <div class="timeline-item ">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h5></h5>
-                        <p></p>
-                        <div class="time"></div>
-                    </div>
-                </div>
-            ;
+            const dotClass = item.status === 'completed' ? 'completed' : item.status === 'current' ? 'current' : 'upcoming';
+            return \<div class="timeline-item \"><div class="timeline-dot"></div><div class="timeline-content"><h5>\</h5><p>\</p><div class="time">\</div></div></div>\;
         }).join('');
-
         result.classList.add('show');
         result.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    // Enter key support
-    document.getElementById('trackingInput').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') trackCargo();
-    });
-
-    // ==================== 页面交互 ====================
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        mainNav.classList.toggle('open');
-    });
-    mainNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            mainNav.classList.remove('open');
-        });
-    });
-
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        backToTop.classList.toggle('visible', window.scrollY > 400);
-    });
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    </script>
+    }</script>
 </body>
 </html>
