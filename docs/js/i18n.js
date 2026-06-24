@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Excellent Voyage Logistics - Internationalization (i18n) System
  * Supports Chinese (zh) and English (en) bilingual switching
  */
@@ -849,3 +849,4 @@
     // Auto-init
     init();
 })();
+
