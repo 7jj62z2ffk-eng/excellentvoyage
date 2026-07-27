@@ -534,51 +534,6 @@
             color: var(--accent-hover);
         }
 
-        /* ========== Pagination ========== */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            margin-top: 56px;
-        }
-
-        .page-btn {
-            width: 42px;
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border);
-            background: var(--bg-white);
-            color: var(--text-body);
-            border-radius: var(--radius-sm);
-            font-size: 0.95rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-            outline: none;
-        }
-
-        .page-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background: var(--accent-light);
-        }
-
-        .page-btn.active {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-            box-shadow: 0 4px 15px rgba(0,102,255,0.3);
-        }
-
-        .page-btn.next-btn {
-            width: auto;
-            padding: 0 20px;
-            gap: 6px;
-        }
-
         /* ========== Footer ========== */
         footer {
             background: var(--primary);
@@ -878,235 +833,8 @@
                 font-size: 1.2rem;
             }
 
-            .pagination {
-                gap: 6px;
-            }
-
-            .page-btn {
-                width: 38px;
-                height: 38px;
-                font-size: 0.88rem;
-            }
         }
 
-        /* ========== Industry News Feed ========== */
-        .industry-news-section {
-            background: var(--bg-section);
-        }
-
-        .news-feed-controls {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-
-        .feed-tab {
-            padding: 8px 20px;
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            background: var(--bg-white);
-            color: var(--text-body);
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .feed-tab:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .feed-tab.active {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-        }
-
-        .feed-refresh {
-            margin-left: auto;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            background: var(--bg-white);
-            color: var(--text-light);
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .feed-refresh:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .feed-refresh.spinning svg {
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .news-feed-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            min-height: 200px;
-        }
-
-        .feed-loading {
-            grid-column: 1 / -1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            color: var(--text-light);
-            gap: 16px;
-        }
-
-        .loading-spinner {
-            width: 36px;
-            height: 36px;
-            border: 3px solid var(--border);
-            border-top-color: var(--accent);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-
-        .feed-error {
-            grid-column: 1 / -1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            color: var(--text-light);
-            gap: 12px;
-            text-align: center;
-        }
-
-        .feed-retry-btn {
-            margin-top: 8px;
-            padding: 10px 24px;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: var(--radius-sm);
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .feed-retry-btn:hover {
-            background: var(--accent-hover);
-        }
-
-        .feed-card {
-            background: var(--bg-white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 24px;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .feed-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: transparent;
-        }
-
-        .feed-card-source {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .feed-source-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .feed-source-name {
-            font-size: 0.78rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .feed-card-date {
-            margin-left: auto;
-            font-size: 0.78rem;
-            color: var(--text-light);
-        }
-
-        .feed-card h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            line-height: 1.5;
-            margin-bottom: 10px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            flex-grow: 1;
-        }
-
-        .feed-card:hover h4 {
-            color: var(--accent);
-        }
-
-        .feed-card-read {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            color: var(--accent);
-            font-size: 0.82rem;
-            font-weight: 500;
-            margin-top: auto;
-            padding-top: 12px;
-            border-top: 1px solid var(--border);
-        }
-
-        .feed-card-read span {
-            transition: var(--transition);
-        }
-
-        .feed-card:hover .feed-card-read span {
-            transform: translateX(3px);
-        }
-
-        @media (max-width: 1024px) {
-            .news-feed-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .news-feed-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .feed-refresh {
-                margin-left: 0;
-                margin-top: 8px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -1163,7 +891,7 @@
             <!-- News List -->
             <div class="news-list" id="newsList">
             <!-- Article 1 -->
-            <article class="news-card animate-on-scroll" data-category="公司新闻">
+            <article class="news-card animate-on-scroll" data-category="公司新闻" data-id="n1">
                 <div class="news-card-inner">
                     <div class="news-icon-wrap">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
@@ -1175,13 +903,13 @@
                         </div>
                         <h3 class="news-title">嘉旅国际物流获无船承运人（NVOCC）资质备案</h3>
                         <p class="news-excerpt">2025年11月19日，公司通过深圳市交通运输局无船承运业务备案，备案编号 GD20251119163617，正式具备无船承运人经营资质，可合规开展海运提单签发与国际货运代理业务。</p>
-                        <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        <a href="javascript:void(0)" class="news-link" onclick="openNews('n1')">查看详情 <span>&#8594;</span></a>
                     </div>
                 </div>
             </article>
 
             <!-- Article 2 -->
-            <article class="news-card animate-on-scroll" data-category="行业动态">
+            <article class="news-card animate-on-scroll" data-category="行业动态" data-id="n2">
                 <div class="news-card-inner">
                     <div class="news-icon-wrap">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -1193,13 +921,13 @@
                         </div>
                         <h3 class="news-title">集装箱运价攀旺季高位，Drewry WCI 指数环比上涨 9%</h3>
                         <p class="news-excerpt">据 Drewry 与行业简报，受旺季提前、班轮公司运力管控影响，跨太平洋与亚欧航线即期运价持续走强，上海—洛杉矶、上海—纽约等航线涨幅显著，预计高位延续至传统旺季。</p>
-                        <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        <a href="javascript:void(0)" class="news-link" onclick="openNews('n2')">查看详情 <span>&#8594;</span></a>
                     </div>
                 </div>
             </article>
 
             <!-- Article 3 -->
-            <article class="news-card animate-on-scroll" data-category="物流资讯">
+            <article class="news-card animate-on-scroll" data-category="物流资讯" data-id="n3">
                 <div class="news-card-inner">
                     <div class="news-icon-wrap">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38B2AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
@@ -1211,13 +939,13 @@
                         </div>
                         <h3 class="news-title">中国出口集装箱运价持续上涨，SCFI 升至 2726.48 点</h3>
                         <p class="news-excerpt">据航运界网，截至6月5日上海出口集装箱综合运价指数（SCFI）报 2726.48 点，欧地、北美航线普涨；机构指出旺季叠加补库需求，运价上涨动能预计持续至7月底。</p>
-                        <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        <a href="javascript:void(0)" class="news-link" onclick="openNews('n3')">查看详情 <span>&#8594;</span></a>
                     </div>
                 </div>
             </article>
 
             <!-- Article 4 -->
-            <article class="news-card animate-on-scroll" data-category="政策法规">
+            <article class="news-card animate-on-scroll" data-category="政策法规" data-id="n4">
                 <div class="news-card-inner">
                     <div class="news-icon-wrap">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#805AD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
@@ -1229,13 +957,13 @@
                         </div>
                         <h3 class="news-title">IMO 温室气体减排战略第二阶段生效，航运脱碳目标收紧</h3>
                         <p class="news-excerpt">国际海事组织（IMO）修订后的温室气体减排战略第二阶段正式生效，设定更严格的短期措施并加速 2050 脱碳路径；同期自主航行船舶规则进入自愿实施，行业监管日历趋紧。</p>
-                        <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        <a href="javascript:void(0)" class="news-link" onclick="openNews('n4')">查看详情 <span>&#8594;</span></a>
                     </div>
                 </div>
             </article>
 
             <!-- Article 5 -->
-            <article class="news-card animate-on-scroll" data-category="行业动态">
+            <article class="news-card animate-on-scroll" data-category="行业动态" data-id="n5">
                 <div class="news-card-inner">
                     <div class="news-icon-wrap">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -1247,13 +975,13 @@
                         </div>
                         <h3 class="news-title">红海绕航持续，运力与时效承压、运价获支撑</h3>
                         <p class="news-excerpt">据 MarineLink，红海航线经好望角绕行仍普遍，运输时间延长、有效运力被吸收，持续对全球供应链韧性与运价形成上行压力，地缘政治风险仍是航运核心变量。</p>
-                        <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        <a href="javascript:void(0)" class="news-link" onclick="openNews('n5')">查看详情 <span>&#8594;</span></a>
                     </div>
                 </div>
             </article>
 
             <!-- Article 6 -->
-            <article class="news-card animate-on-scroll" data-category="物流资讯">
+            <article class="news-card animate-on-scroll" data-category="物流资讯" data-id="n6">
                 <div class="news-card-inner">
                     <div class="news-icon-wrap">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38B2AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
@@ -1265,7 +993,7 @@
                         </div>
                         <h3 class="news-title">东南亚物流强劲增长，电商与基建双轮驱动</h3>
                         <p class="news-excerpt">据 MarineLink，2026 年初东南亚物流业在跨境电商扩张与各国基建投资推动下保持强劲增长，区域有望成为全球贸易增长引擎，利好中国—东南亚跨境物流需求。</p>
-                        <a href="#" class="news-link">查看详情 <span>&#8594;</span></a>
+                        <a href="javascript:void(0)" class="news-link" onclick="openNews('n6')">查看详情 <span>&#8594;</span></a>
                     </div>
                 </div>
             </article>
@@ -1436,191 +1164,65 @@
             });
         });
 
-        // Pagination
-        const pageBtns = document.querySelectorAll('.page-btn');
-        const totalPages = 3;
-        let currentPage = 1;
 
-        pageBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const page = btn.dataset.page;
-
-                if (page === 'next') {
-                    if (currentPage < totalPages) {
-                        currentPage++;
-                    } else {
-                        return;
-                    }
-                } else {
-                    currentPage = parseInt(page);
-                }
-
-                // Update active page button
-                pageBtns.forEach(b => b.classList.remove('active'));
-                if (page === 'next') {
-                    document.querySelector(`.page-btn[data-page="${currentPage}"]`).classList.add('active');
-                } else {
-                    btn.classList.add('active');
-                }
-
-                // Scroll to top of news list smoothly
-                const newsSection = document.querySelector('.news-section');
-                const headerHeight = 72;
-                const targetPosition = newsSection.offsetTop - headerHeight;
-                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-
-                // Animate cards on page change
-                newsCards.forEach((card, index) => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, index * 100);
-                });
-            });
-        });
-
-        // ========== Auto News Feed (Google News RSS via rss2json) ==========
-        const RSS2JSON_API = 'https://api.rss2json.com/v1/api.json';
-        const FEED_TOPICS = {
-            logistics: { query: '国际物流', label: '国际物流' },
-            shipping: { query: '海运 货代', label: '海运货代' },
-            aircargo: { query: '航空货运 物流', label: '航空货运' },
-            supplychain: { query: '供应链管理', label: '供应链' }
-        };
-        let currentFeed = 'logistics';
-
-        const feedGrid = document.getElementById('newsFeedGrid');
-        const feedLoading = document.getElementById('feedLoading');
-        const feedError = document.getElementById('feedError');
-        const feedRefresh = document.getElementById('feedRefresh');
-        const feedRetry = document.getElementById('feedRetry');
-        const feedTabs = document.querySelectorAll('.feed-tab');
-
-        function getRssUrl(topic) {
-            const q = encodeURIComponent(FEED_TOPICS[topic].query);
-            return `https://news.google.com/rss/search?q=${q}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans`;
-        }
-
-        function formatDate(pubDate) {
-            try {
-                const d = new Date(pubDate);
-                const now = new Date();
-                const diff = now - d;
-                const mins = Math.floor(diff / 60000);
-                const hours = Math.floor(diff / 3600000);
-                const days = Math.floor(diff / 86400000);
-                if (mins < 60) return `${Math.max(1, mins)}分钟前`;
-                if (hours < 24) return `${hours}小时前`;
-                if (days < 7) return `${days}天前`;
-                return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-            } catch (e) {
-                return '';
-            }
-        }
-
-        function extractSource(title) {
-            if (!title) return '新闻资讯';
-            const match = title.match(/\s*[-–—|]\s*([^-\–—|]+)$/);
-            return match ? match[1].trim() : '新闻资讯';
-        }
-
-        function cleanTitle(title) {
-            if (!title) return '';
-            return title.replace(/\s*[-–—|]\s*[^-\–—|]+$/, '').trim();
-        }
-
-        function renderFeedCards(items) {
-            feedGrid.innerHTML = '';
-            if (!items || items.length === 0) {
-                feedGrid.innerHTML = '<div class="feed-error"><p>暂无相关新闻</p></div>';
-                return;
-            }
-            items.slice(0, 9).forEach((item, index) => {
-                const card = document.createElement('div');
-                card.className = 'feed-card animate-on-scroll';
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.onclick = () => window.open(item.link, '_blank', 'noopener,noreferrer');
-
-                const source = extractSource(item.title);
-                const title = cleanTitle(item.title);
-                const date = formatDate(item.pubDate);
-
-                card.innerHTML = `
-                    <div class="feed-card-source">
-                        <span class="feed-source-dot"></span>
-                        <span class="feed-source-name">${source}</span>
-                        <span class="feed-card-date">${date}</span>
-                    </div>
-                    <h4>${title}</h4>
-                    <div class="feed-card-read">阅读原文 <span>&#8594;</span></div>
-                `;
-
-                feedGrid.appendChild(card);
-
-                setTimeout(() => {
-                    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 80);
-            });
-        }
-
-        async function loadNewsFeed(topic) {
-            feedLoading.style.display = '';
-            feedError.style.display = 'none';
-            feedGrid.innerHTML = '';
-            feedGrid.appendChild(feedLoading);
-
-            const rssUrl = getRssUrl(topic);
-
-            try {
-                const response = await fetch(`${RSS2JSON_API}?rss_url=${encodeURIComponent(rssUrl)}`);
-                if (!response.ok) throw new Error('Network error');
-
-                const data = await response.json();
-
-                if (data.status === 'ok' && data.items && data.items.length > 0) {
-                    renderFeedCards(data.items);
-                } else {
-                    feedGrid.innerHTML = '<div class="feed-error"><p>暂无相关新闻，请稍后再试</p></div>';
-                }
-            } catch (error) {
-                console.error('Failed to load news feed:', error);
-                feedGrid.innerHTML = '';
-                feedError.style.display = '';
-                feedGrid.appendChild(feedError);
-            }
-        }
-
-        // Tab switching
-        feedTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                feedTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                currentFeed = tab.dataset.feed;
-                loadNewsFeed(currentFeed);
-            });
-        });
-
-        // Refresh button
-        feedRefresh.addEventListener('click', () => {
-            feedRefresh.classList.add('spinning');
-            loadNewsFeed(currentFeed).finally(() => {
-                setTimeout(() => feedRefresh.classList.remove('spinning'), 1000);
-            });
-        });
-
-        // Retry button
-        feedRetry.addEventListener('click', () => {
-            loadNewsFeed(currentFeed);
-        });
-
-        // Initial load
-        loadNewsFeed(currentFeed);
     </script>
+
+    <!-- News Detail Modal -->
+    <style>
+        .news-modal{position:fixed;inset:0;z-index:1200;display:none;}
+        .news-modal.show{display:block;}
+        .news-modal-overlay{position:absolute;inset:0;background:rgba(15,23,42,.55);}
+        .news-modal-content{position:relative;max-width:680px;width:92%;margin:9vh auto;background:#fff;border-radius:14px;padding:36px 32px;max-height:80vh;overflow:auto;box-shadow:0 24px 70px rgba(0,0,0,.35);animation:newsModalIn .25s ease;}
+        @keyframes newsModalIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+        .news-modal-close{position:absolute;top:12px;right:18px;font-size:30px;line-height:1;background:none;border:none;cursor:pointer;color:#a0aec0;}
+        .news-modal-close:hover{color:#4a5568;}
+        .news-modal-meta{font-size:13px;color:#8a94a6;margin-bottom:10px;}
+        .news-modal-meta .m-badge{display:inline-block;background:#eef2ff;color:#3b5bdb;padding:2px 10px;border-radius:999px;margin-left:10px;font-size:12px;}
+        .news-modal-content h3{margin:0 0 18px;font-size:21px;color:#1a202c;line-height:1.4;}
+        .news-modal-body{line-height:1.9;color:#2d3748;font-size:15px;}
+        .news-modal-body p{margin:0 0 14px;}
+        @media (max-width:600px){.news-modal-content{padding:28px 20px;margin:6vh auto;}.news-modal-content h3{font-size:18px;}}
+    </style>
+    <div class="news-modal" id="newsModal">
+        <div class="news-modal-overlay" onclick="closeNews()"></div>
+        <div class="news-modal-content">
+            <button class="news-modal-close" onclick="closeNews()" aria-label="关闭">&times;</button>
+            <div class="news-modal-meta"><span id="modalDate"></span><span class="m-badge" id="modalBadge"></span></div>
+            <h3 id="modalTitle"></h3>
+            <div class="news-modal-body" id="modalBody"></div>
+        </div>
+    </div>
+    <script>
+        const newsData = {
+            n1: { date: '2025-11-19', badge: '公司新闻', title: '嘉旅国际物流获无船承运人（NVOCC）资质备案',
+                body: '<p>2025年11月19日，深圳市嘉旅国际物流有限公司正式通过深圳市交通运输局无船承运业务（NVOCC）备案，备案编号为 <strong>GD20251119163617</strong>。</p><p>无船承运人（Non-Vessel Operating Common Carrier，NVOCC）是指自身不拥有船舶，但以承运人身份接受货主托运、向实际承运船公司订舱，并可向客户签发海运提单（HBL）的国际货运代理企业。</p><p>取得该资质后，公司可合规地向客户签发提单、提供"门到门"一站式国际物流服务，进一步夯实操作合规性与客户信任，为拓展海运主营业务提供资质支撑。</p>' },
+            n2: { date: '2026-07', badge: '行业动态', title: '集装箱运价攀旺季高位，Drewry WCI 指数环比上涨 9%',
+                body: '<p>据 Drewry 与世界航运业简报，受传统旺季提前、班轮公司严格的运力管控（GRI/FAK 上调及 PSS 旺季附加费）影响，跨太平洋与亚欧航线即期运价持续走强。</p><p>Drewry 世界集装箱运价指数（WCI）在 7 月初环比上涨 9%，至 <strong>4,530 美元/FEU</strong>。具体航线：上海—纽约上涨 11% 至 7,902 美元/FEU，上海—洛杉矶上涨 10% 至 6,349 美元/FEU；亚欧方向上海—热那亚上涨 10% 至 6,360 美元/FEU，上海—鹿特丹上涨 7% 至 4,682 美元/FEU。</p><p>机构普遍预计，在补库需求与运力收紧背景下，运价高位将延续至传统旺季，建议货主提前规划出运与订舱节奏。</p>' },
+            n3: { date: '2026-06-08', badge: '物流资讯', title: '中国出口集装箱运价持续上涨，SCFI 升至 2726.48 点',
+                body: '<p>据航运界网报道，截至 2026 年 6 月 5 日，上海出口集装箱综合运价指数（SCFI）报 <strong>2,726.48 点</strong>，较上期上涨 6.0%。</p><p>分航线：欧洲基本港 2,605 美元/TEU（+5.3%），地中海基本港 3,832 美元/TEU（+2.2%）；北美方向美西 4,552 美元/FEU（+9.7%），美东 5,741 美元/FEU（+7.7%）。同期 Drewry 世界集装箱运价指数（WCI）跳涨 23% 至 3,433 美元/FEU。</p><p>德迅等机构指出，今年旺季较往年提前，零售商提前补库以迎接年中大促，叠加红海绕航与燃油附加费，运价上涨动能预计持续至 7 月底。</p>' },
+            n4: { date: '2026-07', badge: '政策法规', title: 'IMO 温室气体减排战略第二阶段生效，航运脱碳目标收紧',
+                body: '<p>国际海事组织（IMO）修订后的温室气体（GHG）减排战略第二阶段于 2026 年正式生效，引入更严格的短期措施，并加速行业迈向 2050 年脱碳目标。</p><p>同期，IMO《MASS 规则》（自主水面船舶规则）于 7 月 1 日进入自愿实施，为自主航行船舶提供首个正式监管框架；Net-Zero Framework（净零框架）的关键决定预计于 10 月特别会议作出，EU ETS 履约截止日为 9 月 30 日。</p><p>对货主而言，脱碳合规将逐步推高合规成本，绿色航运与碳足迹管理将成为供应链选型的重要考量。</p>' },
+            n5: { date: '2026-05', badge: '行业动态', title: '红海绕航持续，运力与时效承压、运价获支撑',
+                body: '<p>据 MarineLink，红海航线经好望角绕行仍属普遍现象，运输时间明显延长，有效运力被持续吸收，对全球供应链韧性与运价形成上行压力。</p><p>尽管各方努力推动航线正常化，地缘局势仍是航运业的核心风险变量；绕航带来的运力消耗与燃油成本，使班轮公司得以维持较高即期运价水平。</p><p>建议涉及相关航线的货主预留更长的运输时效，并在合同中充分考虑时效与成本波动。</p>' },
+            n6: { date: '2026-03', badge: '物流资讯', title: '东南亚物流强劲增长，电商与基建双轮驱动',
+                body: '<p>据 MarineLink，2026 年初东南亚物流业在跨境电商持续扩张与各国基础设施投资推动下保持强劲增长，区域有望成为全球贸易增长引擎。</p><p>电商渗透率提升带动仓配、尾程与跨境干线需求，区域内互联互通项目（港口、公路、园区）进一步完善节点能力。</p><p>该趋势利好中国—东南亚跨境物流与产业带出海，公司可依托深圳与华南制造优势，为两地贸易提供稳定高效的物流通道。</p>' }
+        };
+        function openNews(id){
+            const d = newsData[id];
+            if(!d) return;
+            document.getElementById('modalDate').textContent = d.date;
+            document.getElementById('modalBadge').textContent = d.badge;
+            document.getElementById('modalTitle').textContent = d.title;
+            document.getElementById('modalBody').innerHTML = d.body;
+            document.getElementById('newsModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeNews(){
+            document.getElementById('newsModal').classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNews(); });
+    </script>
+
 </body>
 </html>
