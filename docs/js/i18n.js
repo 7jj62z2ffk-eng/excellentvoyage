@@ -31,7 +31,7 @@
             footer_services: '服务项目',
             footer_contact_us: '联系我们',
             footer_copyright: '深圳市嘉旅国际物流有限公司. 保留所有权利.',
-            footer_icp: '粤ICP备XXXXXXXX号',
+            footer_icp: '',
 
             // Floating buttons
             float_call: '拨打电话',
@@ -57,7 +57,7 @@
             // Contact info
             contact_phone: '+86 13590173320',
             contact_email: 'sales06@excellent-voyage.cn',
-            contact_address: '广东省深圳市龙岗区\n南湾街道三鼎电商文创园A612',
+            contact_address: '注册地址：广东省深圳市龙岗区\n南湾街道南岭村社区南新路31号求水山产业园C栋101\n办公地址：广东省深圳市龙岗区\n南湾街道三鼎电商文创园A612',
             contact_hours: '周一至周五 9:00-18:00\n周六 9:00-12:00',
 
             // Tracking page
@@ -98,7 +98,7 @@
             hero_title_line1: '连接全球贸易',
             hero_title_line2: '高效物流解决方案',
             hero_desc: '深圳市嘉旅国际物流有限公司，为您提供海运、空运、快递、仓储、报关一站式国际物流服务，覆盖全球50+国家和地区。',
-            hero_stat_years: '年行业经验',
+            hero_stat_years: '团队经验',
             hero_stat_countries: '覆盖国家',
             hero_stat_volume: '年货运量(TEU)',
             hero_stat_satisfaction: '客户满意度',
@@ -130,7 +130,7 @@
             // Home Page - Why Choose Us
             whyus_label: '为什么选择我们',
             whyus_title: '值得信赖的物流合作伙伴',
-            whyus_desc: '10年行业深耕，我们以专业和诚信赢得客户信赖',
+            whyus_desc: '公司成立于2022年，专业团队拥有10年以上行业经验，以专业和诚信赢得客户信赖',
             whyus_network_title: '全球服务网络',
             whyus_network_desc: '覆盖全球50多个国家和地区，与众多国际知名物流企业建立长期合作关系，确保货物安全准时到达。',
             whyus_efficiency_title: '高效快捷响应',
@@ -138,7 +138,7 @@
             whyus_cost_title: '成本优化方案',
             whyus_cost_desc: '规模化运营和精细化管理，为客户提供最具竞争力的价格，持续优化物流成本。',
             whyus_security_title: '安全可靠保障',
-            whyus_security_desc: '完善的质量管理体系和风险控制措施，ISO9001认证，全程货物保险保障。',
+            whyus_security_desc: '完善的质量管理体系和风险控制措施，全程货物保险保障。',
 
             // Home Page - CTA Section
             cta_title: '立即获取专属物流方案',
@@ -159,7 +159,7 @@
             contact_info_company_name: '深圳市嘉旅国际物流有限公司',
             contact_info_company_en: 'Excellent Voyage Logistics',
             contact_info_address_label: '公司地址',
-            contact_info_address_value: '广东省深圳市龙岗区南湾街道\n三鼎电商文创园A612',
+            contact_info_address_value: '注册地址：广东省深圳市龙岗区南湾街道\n南岭村社区南新路31号求水山产业园C栋101\n办公地址：广东省深圳市龙岗区南湾街道\n三鼎电商文创园A612',
             contact_info_phone_label: '联系电话',
             contact_info_phone_value: '销售总监 罗龙明 Davis\n+86 19128604658\n+86 13590173320',
             contact_info_email_label: '电子邮箱',
@@ -203,13 +203,13 @@
             contact_success_desc: '感谢您的咨询，我们的业务经理将在24小时内与您联系。',
             contact_success_reset: '继续咨询',
             contact_map_title: '公司位置',
-            contact_map_address: '广东省深圳市龙岗区南湾街道三鼎电商文创园A612',
+            contact_map_address: '办公地址：广东省深圳市龙岗区南湾街道三鼎电商文创园A612',
             contact_map_directions: '导航前往',
             contact_map_note: '地图将在正式网站上线时嵌入，可点击上方"导航前往"获取路线',
             contact_map_company_name: '深圳市嘉旅国际物流有限公司',
             contact_footer_brand_desc: '深圳市嘉旅国际物流有限公司，专业国际物流服务提供商，致力于为全球客户提供高效、安全、可靠的物流解决方案。',
             contact_footer_copyright: '深圳市嘉旅国际物流有限公司. 保留所有权利.',
-            contact_footer_icp: '粤ICP备XXXXXXXX号',
+            contact_footer_icp: '',
 
             // About Page
             about_title: '关于我们 - 深圳市嘉旅国际物流有限公司 | 专业国际物流服务商',
@@ -223,7 +223,7 @@
             about_company_intro1: '深圳市嘉旅国际物流有限公司于2015年在香港成立，2023年将总部迁至深圳，依托珠三角地区发达的制造业和贸易优势，已建立起覆盖全球50多个国家和地区的完善服务网络。公司注册资金200万元，在广州、宁波、上海、天津设有分支机构。',
             about_company_intro2: '作为一家综合性国际物流服务提供商，我们拥有专业的操作团队和先进的信息系统，能够为客户提供海运、空运、快递、仓储、报关等一站式物流服务。公司年货运量超过10万TEU，服务客户涵盖电子、机械、纺织、家居等多个行业领域。',
             about_company_intro3: '公司秉承"客户至上、服务为本"的经营理念，坚持"专业、高效、诚信、创新"的服务宗旨，通过精细化管理和技术创新，持续为客户创造价值，降低物流成本，提升供应链效率。',
-            about_stat_years_label: '年行业经验',
+            about_stat_years_label: '团队经验',
             about_stat_countries_label: '覆盖国家',
             about_stat_volume_label: '年货运量(TEU)',
             about_stat_satisfaction_label: '客户满意度',
@@ -236,7 +236,7 @@
             about_advantage_cost: '成本优化方案',
             about_advantage_cost_desc: '规模化运营，为客户提供最具竞争力的价格',
             about_advantage_security: '安全可靠保障',
-            about_advantage_security_desc: 'ISO9001认证，完善的质量管理体系',
+            about_advantage_security_desc: '完善的质量管理体系，全程货物保险保障',
             about_culture_label: '企业文化',
             about_culture_title: '使命 · 愿景 · 价值观',
             about_culture_desc: '以使命驱动发展，以愿景引领未来，以价值观凝聚力量',
@@ -359,7 +359,7 @@
             // Services Page - Advantages
             services_advantages_label: '核心优势',
             services_advantages_title: '为什么选择嘉旅物流',
-            services_advantages_desc: '10年行业深耕，我们以专业、高效、安全的服务赢得全球客户的信赖',
+            services_advantages_desc: '公司成立于2022年，专业团队拥有10年以上行业经验，以专业、高效、安全的服务赢得全球客户的信赖',
             services_advantage_network_title: '全球网络',
             services_advantage_network_desc: '覆盖全球50多个国家和地区，与众多国际知名物流企业建立长期战略合作，确保货物安全准时到达世界每个角落。',
             services_advantage_efficiency_title: '高效快捷',
@@ -367,7 +367,7 @@
             services_advantage_cost_title: '成本优化',
             services_advantage_cost_desc: '规模化运营和精细化管理，为客户提供最具竞争力的价格方案，持续优化物流成本，提升贸易竞争力。',
             services_advantage_security_title: '安全可靠',
-            services_advantage_security_desc: '完善的质量管理体系和风险控制措施，ISO9001认证，全程货物保险保障，让每一次运输都安心无忧。',
+            services_advantage_security_desc: '完善的质量管理体系和风险控制措施，全程货物保险保障，让每一次运输都安心无忧。',
 
             // Services Page - CTA
             services_cta_contact: '查看联系方式',
@@ -391,7 +391,7 @@
             footer_services: 'Services',
             footer_contact_us: 'Contact Us',
             footer_copyright: 'Shenzhen Excellent Voyage Logistics Co., Ltd. All Rights Reserved.',
-            footer_icp: 'Guangdong ICP No. XXXXXXXX',
+            footer_icp: '',
 
             // Floating buttons
             float_call: 'Call Us',
@@ -417,7 +417,7 @@
             // Contact info
             contact_phone: '+86 13590173320',
             contact_email: 'sales06@excellent-voyage.cn',
-            contact_address: 'A612, Sanding E-commerce Park\nNanwan Street, Longgang District\nShenzhen, Guangdong, China',
+            contact_address: 'Registered: Building C101, Qiushuishan Industrial Park, No.31 Nanxin Road, Nanling Village Community, Nanwan Street, Longgang District, Shenzhen\nOffice: A612, Sanding E-commerce Park, Nanwan Street, Longgang District, Shenzhen, Guangdong, China',
             contact_hours: 'Mon-Fri 9:00-18:00\nSat 9:00-12:00',
 
             // Tracking page
@@ -458,7 +458,7 @@
             hero_title_line1: 'Connecting Global Trade',
             hero_title_line2: 'Efficient Logistics Solutions',
             hero_desc: 'Shenzhen Excellent Voyage Logistics provides one-stop international logistics services including ocean freight, air freight, express delivery, warehousing, and customs clearance, covering 50+ countries and regions worldwide.',
-            hero_stat_years: 'Years Experience',
+            hero_stat_years: 'Team Experience',
             hero_stat_countries: 'Countries Covered',
             hero_stat_volume: 'Annual Volume (TEU)',
             hero_stat_satisfaction: 'Client Satisfaction',
@@ -490,7 +490,7 @@
             // Home Page - Why Choose Us
             whyus_label: 'Why Choose Us',
             whyus_title: 'Your Trusted Logistics Partner',
-            whyus_desc: '10 years of industry expertise, earning client trust through professionalism and integrity',
+            whyus_desc: 'Founded in 2022, our professional team brings 10+ years of industry experience, earning client trust through professionalism and integrity',
             whyus_network_title: 'Global Service Network',
             whyus_network_desc: 'Covering 50+ countries and regions, with long-term partnerships with renowned international logistics companies, ensuring safe and on-time delivery.',
             whyus_efficiency_title: 'Fast & Efficient Response',
@@ -498,7 +498,7 @@
             whyus_cost_title: 'Cost Optimization',
             whyus_cost_desc: 'Large-scale operations and refined management, providing the most competitive prices while continuously optimizing logistics costs.',
             whyus_security_title: 'Safe & Reliable',
-            whyus_security_desc: 'Comprehensive quality management system and risk control measures, ISO9001 certified, with full cargo insurance coverage.',
+            whyus_security_desc: 'Comprehensive quality management system and risk control measures, with full cargo insurance coverage.',
 
             // Home Page - CTA Section
             cta_title: 'Get Your Custom Logistics Solution',
@@ -519,7 +519,7 @@
             contact_info_company_name: 'Shenzhen Excellent Voyage Logistics Co., Ltd.',
             contact_info_company_en: 'Excellent Voyage Logistics',
             contact_info_address_label: 'Address',
-            contact_info_address_value: 'A612, Sanding E-commerce Park\nNanwan Street, Longgang District\nShenzhen, Guangdong, China',
+            contact_info_address_value: 'Registered: Building C101, Qiushuishan Industrial Park, No.31 Nanxin Road, Nanling Village Community, Nanwan Street, Longgang District, Shenzhen\nOffice: A612, Sanding E-commerce Park, Nanwan Street, Longgang District, Shenzhen, Guangdong, China',
             contact_info_phone_label: 'Phone',
             contact_info_phone_value: 'Sales Director Davis Luo\n+86 19128604658\n+86 13590173320',
             contact_info_email_label: 'Email',
@@ -563,13 +563,13 @@
             contact_success_desc: 'Thank you for your inquiry. Our sales manager will contact you within 24 hours.',
             contact_success_reset: 'Continue Inquiry',
             contact_map_title: 'Our Location',
-            contact_map_address: 'A612, Sanding E-commerce Park, Nanwan Street, Longgang District, Shenzhen, Guangdong',
+            contact_map_address: 'Office: A612, Sanding E-commerce Park, Nanwan Street, Longgang District, Shenzhen, Guangdong',
             contact_map_directions: 'Get Directions',
             contact_map_note: 'Map will be embedded when the website goes live. Click "Get Directions" above for route guidance',
             contact_map_company_name: 'Shenzhen Excellent Voyage Logistics Co., Ltd.',
             contact_footer_brand_desc: 'Shenzhen Excellent Voyage Logistics Co., Ltd. is a professional international logistics service provider, dedicated to delivering efficient, safe, and reliable logistics solutions to clients worldwide.',
             contact_footer_copyright: 'Shenzhen Excellent Voyage Logistics Co., Ltd. All Rights Reserved.',
-            contact_footer_icp: 'Guangdong ICP No. XXXXXXXX',
+            contact_footer_icp: '',
 
             // About Page
             about_title: 'About Us - Shenzhen Excellent Voyage Logistics | Professional International Logistics Service Provider',
@@ -583,7 +583,7 @@
             about_company_intro1: 'Shenzhen Excellent Voyage Logistics Co., Ltd. was established in Hong Kong in 2015 and relocated its headquarters to Shenzhen in 2023. Leveraging the developed manufacturing and trade advantages of the Pearl River Delta region, the company has built a comprehensive service network covering over 50 countries and regions worldwide. With a registered capital of 2 million RMB, the company has branch offices in Guangzhou, Ningbo, Shanghai, and Tianjin.',
             about_company_intro2: 'As a comprehensive international logistics service provider, we have a professional operations team and advanced information systems, capable of providing one-stop logistics services including ocean freight, air freight, express delivery, warehousing, and customs clearance. The company handles an annual cargo volume of over 100,000 TEU, serving clients across multiple industries including electronics, machinery, textiles, and home furnishings.',
             about_company_intro3: 'The company adheres to the business philosophy of "Customer First, Service Oriented" and the service tenet of "Professional, Efficient, Honest, and Innovative." Through refined management and technological innovation, we continuously create value for clients, reduce logistics costs, and improve supply chain efficiency.',
-            about_stat_years_label: 'Years of Experience',
+            about_stat_years_label: 'Team Experience',
             about_stat_countries_label: 'Countries Covered',
             about_stat_volume_label: 'Annual Volume (TEU)',
             about_stat_satisfaction_label: 'Client Satisfaction',
@@ -596,7 +596,7 @@
             about_advantage_cost: 'Cost Optimization Solutions',
             about_advantage_cost_desc: 'Large-scale operations providing the most competitive prices for clients',
             about_advantage_security: 'Safe & Reliable Guarantee',
-            about_advantage_security_desc: 'ISO9001 certified with a comprehensive quality management system',
+            about_advantage_security_desc: 'Comprehensive quality management system with full cargo insurance coverage',
             about_culture_label: 'Corporate Culture',
             about_culture_title: 'Mission · Vision · Values',
             about_culture_desc: 'Driven by mission, guided by vision, united by values',
@@ -719,7 +719,7 @@
             // Services Page - Advantages
             services_advantages_label: 'Core Advantages',
             services_advantages_title: 'Why Choose Excellent Voyage Logistics',
-            services_advantages_desc: 'With 10 years of industry expertise, we have earned the trust of global clients through professional, efficient, and secure services',
+            services_advantages_desc: 'Founded in 2022, our professional team brings 10+ years of industry experience. We have earned the trust of global clients through professional, efficient, and secure services',
             services_advantage_network_title: 'Global Network',
             services_advantage_network_desc: 'Covering 50+ countries and regions worldwide, with long-term strategic partnerships with renowned international logistics companies, ensuring safe and on-time delivery to every corner of the world.',
             services_advantage_efficiency_title: 'Fast & Efficient',
@@ -727,7 +727,7 @@
             services_advantage_cost_title: 'Cost Optimization',
             services_advantage_cost_desc: 'Large-scale operations and refined management provide clients with the most competitive pricing, continuously optimizing logistics costs and enhancing trade competitiveness.',
             services_advantage_security_title: 'Safe & Reliable',
-            services_advantage_security_desc: 'Comprehensive quality management system and risk control measures, ISO9001 certified, with full cargo insurance coverage, ensuring peace of mind for every shipment.',
+            services_advantage_security_desc: 'Comprehensive quality management system and risk control measures, with full cargo insurance coverage, ensuring peace of mind for every shipment.',
 
             // Services Page - CTA
             services_cta_contact: 'View Contact Info',

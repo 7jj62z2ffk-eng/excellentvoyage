@@ -36,7 +36,7 @@
         "email": "sales06@excellent-voyage.cn",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "三鼎电商文创园A612",
+            "streetAddress": "南湾街道南岭村社区南新路31号求水山产业园C栋101",
             "addressLocality": "深圳市",
             "addressRegion": "广东省",
             "addressCountry": "CN"
@@ -1210,6 +1210,16 @@
                 justify-content: center;
             }
         }
+        /* Trust / Certificates Section */
+        .trust-certs { background: var(--bg-section); padding: 100px 0; }
+        .cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto; }
+        .cert-card { background: var(--bg-white); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-md); }
+        .cert-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--text-dark); }
+        .cert-card ul { list-style: none; padding: 0; margin: 0 0 16px 0; font-size: 0.9rem; color: var(--text-body); }
+        .cert-card li { margin: 6px 0; }
+        .cert-card img { width: 100%; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+        .cert-note { text-align: center; font-size: 0.85rem; color: var(--text-light); margin-top: 24px; }
+        @media (max-width: 768px) { .cert-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -1401,10 +1411,43 @@
                     <div class="why-icon">&#x1F512;</div>
                     <div>
                         <h4 data-i18n="whyus_security_title">安全可靠保障</h4>
-                        <p data-i18n="whyus_security_desc">完善的质量管理体系和风险控制措施，ISO9001认证，全程货物保险保障。</p>
+                        <p data-i18n="whyus_security_desc">完善的质量管理体系和风险控制措施，全程货物保险保障。</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Certificates / Trust Section -->
+    <section class="section trust-certs" id="trust">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">合规资质</div>
+                <h2 class="section-title">正规登记，值得信赖</h2>
+                <p class="section-desc">工商登记 + 无船承运业务备案，为您的货物运输提供合法保障</p>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card animate-on-scroll">
+                    <h3>营业执照</h3>
+                    <ul>
+                        <li><strong>统一社会信用代码：</strong>91440300MA5HH1RU4D</li>
+                        <li><strong>公司名称：</strong>深圳市嘉旅国际物流有限公司</li>
+                        <li><strong>成立日期：</strong>2022年09月22日</li>
+                        <li><strong>法定代表人：</strong>罗龙明</li>
+                    </ul>
+                    <img src="images/cert/business-license.png" alt="深圳市嘉旅国际物流有限公司营业执照副本" loading="lazy">
+                </div>
+                <div class="cert-card animate-on-scroll">
+                    <h3>无船承运业务备案</h3>
+                    <ul>
+                        <li><strong>备案号：</strong>GD20251119163617</li>
+                        <li><strong>备案机关：</strong>深圳市交通运输局</li>
+                        <li><strong>备案日期：</strong>2025年11月19日</li>
+                    </ul>
+                    <img src="images/cert/nvocc-filing.png" alt="无船承运业务备案证明" loading="lazy">
+                </div>
+            </div>
+            <p class="cert-note">* 资质信息以国家企业信用信息公示系统及主管部门备案为准。</p>
         </div>
     </section>
 
@@ -1472,7 +1515,7 @@
                     </div>
                     <div class="footer-contact-item">
                         <span class="icon">&#x1F4CD;</span>
-                        <span data-i18n="contact_address">广东省深圳市龙岗区<br>南湾街道三鼎电商文创园A612</span>
+                        <span data-i18n="contact_address">注册地址：广东省深圳市龙岗区<br>南湾街道南岭村社区南新路31号求水山产业园C栋101<br>办公地址：广东省深圳市龙岗区<br>南湾街道三鼎电商文创园A612</span>
                     </div>
                     <div class="footer-contact-item">
                         <span class="icon">&#x1F554;</span>
@@ -1482,7 +1525,6 @@
             </div>
             <div class="footer-bottom">
                 <span data-i18n="footer_copyright">&copy; 2026 深圳市嘉旅国际物流有限公司. 保留所有权利.</span>
-                <span data-i18n="footer_icp">粤ICP备XXXXXXXX号</span>
             </div>
         </div>
     </footer>
