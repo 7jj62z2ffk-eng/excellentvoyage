@@ -2,21 +2,26 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n-title="contact_page_title">联系我们 - 深圳市嘉旅国际物流有限公司 | 获取免费物流报价</title>
     <meta name="description" content="联系深圳市嘉旅国际物流有限公司，获取免费国际物流报价。电话：+86 13590173320，办公地址：广东省深圳市龙岗区南湾街道三鼎电商文创园A612。海运、空运、快递、仓储、报关一站式服务。">
     <meta name="keywords" content="联系嘉旅物流,国际物流报价,深圳物流公司,嘉旅国际物流电话,物流咨询,海运报价,空运报价">
     <meta name="author" content="深圳市嘉旅国际物流有限公司">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://excellent-voyage.cn/contact.html">
-    <link rel="alternate" hreflang="zh-CN" href="https://excellent-voyage.cn/contact.html">
-    <link rel="alternate" hreflang="en" href="https://excellent-voyage.cn/en/contact.html">
-    <link rel="alternate" hreflang="x-default" href="https://excellent-voyage.cn/contact.html">
+    <link rel="canonical" href="https://www.excellent-voyage.cn/contact.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.excellent-voyage.cn/contact.html">
+    <link rel="alternate" hreflang="en" href="https://www.excellent-voyage.cn/en/contact.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.excellent-voyage.cn/contact.html">
     <!-- Open Graph -->
     <meta property="og:title" content="联系我们 - 深圳市嘉旅国际物流有限公司 | 获取免费物流报价">
     <meta property="og:description" content="立即联系嘉旅国际物流，获取专业的一站式国际物流解决方案和免费报价。覆盖全球50+国家和地区。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://excellent-voyage.cn/contact.html">
+    <meta property="og:url" content="https://www.excellent-voyage.cn/contact.html">
+        <meta property="og:image" content="https://www.excellent-voyage.cn/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="嘉旅国际物流">
     <meta property="og:locale" content="zh_CN">
     <!-- Twitter Card -->
@@ -30,9 +35,9 @@
         "@type": "LocalBusiness",
         "name": "深圳市嘉旅国际物流有限公司",
         "alternateName": "Excellent Voyage Logistics",
-        "url": "https://excellent-voyage.cn",
-        "logo": "https://excellent-voyage.cn/logo.png",
-        "image": "https://excellent-voyage.cn/images/office.jpg",
+        "url": "https://www.excellent-voyage.cn",
+        "logo": "https://www.excellent-voyage.cn/logo.png",
+        "image": "https://www.excellent-voyage.cn/images/office.jpg",
         "description": "专业国际物流服务提供商，提供海运、空运、快递、仓储、报关等一站式国际物流解决方案",
         "telephone": "+8613590173320",
         "email": "sales06@excellent-voyage.cn",
@@ -80,13 +85,13 @@
                 "@type": "ListItem",
                 "position": 1,
                 "name": "首页",
-                "item": "https://excellent-voyage.cn/"
+                "item": "https://www.excellent-voyage.cn/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "联系我们",
-                "item": "https://excellent-voyage.cn/contact.html"
+                "item": "https://www.excellent-voyage.cn/contact.html"
             }
         ]
     }
@@ -1319,6 +1324,15 @@
             }
         }
     </style>
+    <style>
+        .success-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0}
+        .success-btn{display:inline-flex;align-items:center;gap:8px;background:#1a56db;color:#fff;padding:12px 24px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;transition:transform .2s}
+        .success-btn:hover{transform:translateY(-2px)}
+        .success-btn-wa{background:#25d366}
+    </style>
+    <style>
+        .qc-icon.whatsapp{background:#e6f9ee}
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -1389,12 +1403,19 @@
                         <div class="qc-value">davis003</div>
                     </div>
                 </div>
+                <div class="quick-contact-item">
+                    <div class="qc-icon whatsapp">&#x1F4AC;</div>
+                    <div>
+                        <div class="qc-label" data-i18n="contact_qc_whatsapp_label">WhatsApp</div>
+                        <div class="qc-value"><a href="https://wa.me/8613590173320" target="_blank" rel="noopener">+86 13590173320</a></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact-info">
         <div class="container">
             <div class="contact-grid">
                 <!-- Left: Contact Info Card -->
@@ -1499,7 +1520,7 @@
                 </div>
 
                 <!-- Right: Contact Form -->
-                <div class="contact-form-card animate-on-scroll">
+                <div class="contact-form-card animate-on-scroll" id="contact-form">
                     <div class="form-header">
                         <h3 data-i18n="contact_form_title">在线留言</h3>
                         <p data-i18n="contact_form_desc">填写以下信息，我们将在24小时内与您联系</p>
@@ -1554,8 +1575,12 @@
                     <!-- Success Message (hidden by default) -->
                     <div class="form-success" id="formSuccess">
                         <div class="success-icon">&#x2705;</div>
-                        <h4 data-i18n="contact_success_title">提交成功！</h4>
-                        <p data-i18n="contact_success_desc">感谢您的咨询，我们的业务经理将在24小时内与您联系。</p>
+                        <h4 data-i18n="contact_success_title">请完成发送</h4>
+                        <p data-i18n="contact_success_desc">已为您打开邮件客户端，请点击"发送"把咨询发给我们。业务经理将在24小时内与您联系。</p>
+                        <div class="success-actions">
+                            <a href="tel:+8613590173320" class="success-btn" data-i18n="contact_success_call">&#x1F4DE; 直接拨打电话</a>
+                            <a href="https://wa.me/8613590173320" target="_blank" rel="noopener" class="success-btn success-btn-wa" data-i18n="contact_success_whatsapp">WhatsApp 咨询</a>
+                        </div>
                         <button class="reset-btn" id="resetForm" data-i18n="contact_success_reset">
                             &#x21BB; 继续咨询
                         </button>
@@ -1566,7 +1591,7 @@
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="map-section" id="map">
         <div class="container">
             <div class="map-wrapper animate-on-scroll">
                 <div class="map-header">
@@ -1780,10 +1805,19 @@
             const isMessageValid = validateField(messageField, document.getElementById('messageError'), v => v.length > 0);
 
             if (isNameValid && isPhoneValid && isEmailValid && isMessageValid) {
-                // Collect form data
+                // Collect form data and send via email client
                 const formData = new FormData(this);
                 const data = Object.fromEntries(formData);
-                console.log('Form submitted:', data);
+                const serviceNames = { ocean: '海运服务', air: '空运服务', express: '快递服务', warehouse: '仓储服务', customs: '报关服务', 'supply-chain': '供应链管理', other: '其他服务' };
+                const subject = encodeURIComponent('网站询盘：' + (data.name || '') + ' - ' + (serviceNames[data.serviceType] || '物流咨询'));
+                const body = encodeURIComponent(
+                    '姓名：' + (data.name || '') + '\n' +
+                    '电话：' + (data.phone || '') + '\n' +
+                    '邮箱：' + (data.email || '') + '\n' +
+                    '服务类型：' + (serviceNames[data.serviceType] || '未选择') + '\n\n' +
+                    '留言内容：\n' + (data.message || '')
+                );
+                window.location.href = 'mailto:sales06@excellent-voyage.cn?subject=' + subject + '&body=' + body;
 
                 // Show success message
                 contactForm.style.display = 'none';

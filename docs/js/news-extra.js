@@ -1,4 +1,4 @@
-﻿        // Category filter
+        // Category filter
         const filterBtns = document.querySelectorAll('.filter-btn');
         const newsCards = document.querySelectorAll('.news-card');
 
@@ -34,6 +34,15 @@
                 });
             });
         });
+
+        // Deep-link support: news.html?cat=公司新闻
+        try {
+            const catParam = new URLSearchParams(window.location.search).get('cat');
+            if (catParam) {
+                const target = Array.from(filterBtns).find(b => b.dataset.filter === catParam);
+                if (target) target.click();
+            }
+        } catch (e) { /* ignore */ }
 
         // Pagination
         const pageBtns = document.querySelectorAll('.page-btn');
