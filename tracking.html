@@ -418,6 +418,11 @@
                 <div class="icon">&#x1F6AB;</div>
                 <h4 data-i18n="tracking_not_found_title">未找到该运单</h4>
                 <p data-i18n="tracking_not_found_desc">请检查运单号是否正确，或联系客服查询</p>
+                <div class="fallback-actions" id="fallbackActions" style="display:none;">
+                    <a href="#" id="carrierLink" class="btn-track" style="display:inline-flex; text-decoration:none;" target="_blank" rel="noopener">
+                        <span>&#x1F517;</span> <span data-i18n="tracking_go_carrier">前往船公司官网查询</span>
+                    </a>
+                </div>
                 <a href="contact.html" class="btn-track" style="display:inline-flex; text-decoration:none;">
                     <span>&#x1F4DE;</span> <span data-i18n="tracking_contact_service">联系客服</span>
                 </a>
@@ -484,100 +489,146 @@
 
     <script src="js/i18n.js"></script>
     <script>
-    // ==================== 物流追踪数据（模拟数据库）====================
-    // 你可以随时在此添加更多运单数据
-    const TRACKING_DB = {
-        'EV20260624001': {
-            waybill: 'EV20260624001',
-            cargo: '五金工具套装',
-            origin: '深圳 (Shenzhen)',
-            destination: '洛杉矶 (Los Angeles)',
-            transport: '国际海运 · 整箱',
-            status: 'transit',
-            statusText: '运输中',
-            eta: '2026-07-05',
-            timeline: [
-                { time: '2026-06-24 09:00', location: '深圳盐田港', event: '装船完成，已离港', status: 'completed' },
-                { time: '2026-06-23 14:30', location: '深圳盐田港', event: '货物已报关放行', status: 'completed' },
-                { time: '2026-06-22 10:00', location: '深圳盐田港', event: '货物到港，等待装船', status: 'completed' },
-                { time: '2026-06-21 16:00', location: '工厂仓库', event: '货物已提货出发', status: 'completed' },
-                { time: '2026-06-21 08:00', location: '工厂仓库', event: '订舱确认，等待提货', status: 'completed' },
-            ]
-        },
-        'EV20260624002': {
-            waybill: 'EV20260624002',
-            cargo: '电子元器件',
-            origin: '深圳 (Shenzhen)',
-            destination: '法兰克福 (Frankfurt)',
-            transport: '国际空运 · 直飞',
-            status: 'transit',
-            statusText: '运输中',
-            eta: '2026-06-27',
-            timeline: [
-                { time: '2026-06-24 16:00', location: '深圳宝安机场', event: '航班起飞，飞往法兰克福', status: 'completed' },
-                { time: '2026-06-24 12:00', location: '深圳宝安机场', event: '货物安检通过', status: 'completed' },
-                { time: '2026-06-24 08:00', location: '深圳宝安机场', event: '货物入库，等待配载', status: 'completed' },
-                { time: '2026-06-23 15:00', location: '工厂仓库', event: '提货完成', status: 'completed' },
-                { time: '2026-06-23 10:00', location: '深圳', event: '空运订舱确认', status: 'completed' },
-            ]
-        },
-        'EV20260624003': {
-            waybill: 'EV20260624003',
-            cargo: '卫浴洁具',
-            origin: '宁波 (Ningbo)',
-            destination: '迪拜 (Dubai)',
-            transport: '国际海运 · 拼箱',
-            status: 'delivered',
-            statusText: '已签收',
-            eta: '2026-06-24',
-            timeline: [
-                { time: '2026-06-24 10:30', location: '迪拜杰贝阿里港', event: '客户已签收', status: 'completed' },
-                { time: '2026-06-23 18:00', location: '迪拜杰贝阿里港', event: '清关完成，放行提货', status: 'completed' },
-                { time: '2026-06-22 09:00', location: '迪拜杰贝阿里港', event: '货物到港，等待清关', status: 'completed' },
-                { time: '2026-06-20 14:00', location: '宁波北仑港', event: '货物离港', status: 'completed' },
-                { time: '2026-06-19 08:00', location: '宁波北仑港', event: '货物到港装船', status: 'completed' },
-            ]
+    // ==================== 货物追踪 · 真实数据查询 ====================
+    // 数据来源：嘉旅自建边缘代理（解决 TrackingMCP 的 CORS 限制）
+    // 代理不可用时自动降级到船公司官网跟踪页，保证客户始终有下一步。
+
+    // 代理端点候选：按顺序尝试，第一个成功即用。隧道地址变更时可在此增补。
+    const TRACK_ENDPOINTS = [
+        'https://sofa-sequence-covers-shop.trycloudflare.com'
+    ];
+
+    // 箱号前缀 -> 船公司官网跟踪页模板（代理不可用时的本地兜底）
+    const CARRIER_DEEP_LINKS = {
+        MSKU: 'https://www.maersk.com/tracking/{ref}', MRKU: 'https://www.maersk.com/tracking/{ref}',
+        MSNU: 'https://www.msc.com/en/track-a-shipment?agencyPath=mwi&trackingNumber={ref}',
+        MSCU: 'https://www.msc.com/en/track-a-shipment?agencyPath=mwi&trackingNumber={ref}',
+        CMAU: 'https://www.cma-cgm.com/ebusiness/tracking/search?SearchBy=BL&Reference={ref}',
+        CMDU: 'https://www.cma-cgm.com/ebusiness/tracking/search?SearchBy=BL&Reference={ref}',
+        CSNU: 'https://elines.cma-cgm.com/en/online-business/edi/edi-shipment-tracking?BLReference={ref}',
+        COSU: 'https://elines.cma-cgm.com/en/online-business/edi/edi-shipment-tracking?BLReference={ref}',
+        HLXU: 'https://www.hapag-lloyd.com/en/online-business/track/track-by-booking-solution?searchBy=BL&reference={ref}',
+        HLCU: 'https://www.hapag-lloyd.com/en/online-business/track/track-by-booking-solution?searchBy=BL&reference={ref}',
+        ZIMU: 'https://www.zim.com/tools/track-a-shipment?consnumber={ref}',
+        ONEU: 'https://www.one-line.com/en/track-and-trace?reference={ref}',
+        EGHU: 'https://www.evgu.com/en/track-trace?blno={ref}',
+        OOLU: 'https://www.oocl.com/eng/ourservices/eservices/cargotracking/Pages/cargotracking.aspx?ctSearchType=BL&ctShipmentNumber={ref}',
+        YMLU: 'https://www.yangming.com/e-service/Track_Trace/ctm_tracking.aspx?BLADINGNO={ref}',
+        TGHU: 'https://www.oocl.com/eng/ourservices/eservices/cargotracking/Pages/cargotracking.aspx?ctSearchType=BL&ctShipmentNumber={ref}'
+    };
+
+    const CARRIER_NAMES = {
+        MAEU: 'Maersk 马士基', MSCU: 'MSC 地中海航运', CMDU: 'CMA CGM 达飞',
+        COSU: 'COSCO 中远海运', HLCU: 'Hapag-Lloyd 赫伯罗特', ZIMU: 'ZIM 以星',
+        ONEY: 'ONE 海洋网联', EGLV: 'Evergreen 长荣', OOLU: 'OOCL 东方海外',
+        YMLU: 'Yang Ming 阳明'
+    };
+
+    // 状态 -> 官网现有样式类
+    const STATUS_CLASS = {
+        in_transit: 'status-transit', transit: 'status-transit', sailed: 'status-transit',
+        departed: 'status-transit', loaded: 'status-transit', gate_in: 'status-transit',
+        at_transshipment: 'status-transit', transshipment: 'status-transit',
+        booked: 'status-pending', empty: 'status-pending', pending: 'status-pending',
+        arrived: 'status-delivered', discharged: 'status-delivered', delivered: 'status-delivered',
+        returned_empty: 'status-delivered'
+    };
+
+    // 判断当前界面语言，中文显示中文状态名
+    function isZh() {
+        return (typeof EVI18n !== 'undefined' && EVI18n.currentLang !== 'en');
+    }
+
+    // 状态中文名映射（代理返回 status_label 已是中文，英文时这里转英文）
+    const STATUS_EN = {
+        booked: 'Booked', empty: 'Empty', loaded: 'Loaded', in_transit: 'In Transit',
+        transit: 'In Transit', sailed: 'Sailed', departed: 'Departed', arrived: 'Arrived',
+        discharged: 'Discharged', delivered: 'Delivered', returned_empty: 'Container Returned',
+        gate_in: 'Gate In', gate_out: 'Gate Out', customs_hold: 'Customs Hold',
+        at_transshipment: 'At Transshipment', transshipment: 'At Transshipment',
+        exception: 'Exception', unknown: 'Unknown'
+    };
+
+    function localDeepLink(ref) {
+        const p = (ref || '').toUpperCase().slice(0, 4);
+        if (CARRIER_DEEP_LINKS[p]) return CARRIER_DEEP_LINKS[p].replace('{ref}', ref);
+        return 'https://www.google.com/search?q=' + encodeURIComponent(ref + ' tracking');
+    }
+
+    function carrierLabel(code) {
+        return CARRIER_NAMES[code] || code || '';
+    }
+
+    // 代理端点来源优先级:
+    //   1) /data/track-endpoints.json  (隧道地址变更时只需改这个文件并 push)
+    //   2) TRACK_ENDPOINTS 常量         (最终兜底)
+    let endpointList = TRACK_ENDPOINTS.slice();
+
+    async function loadEndpoints() {
+        try {
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), 5000);
+            const resp = await fetch('data/track-endpoints.json?t=' + Date.now(), { signal: ctrl.signal });
+            clearTimeout(timer);
+            if (!resp.ok) return;
+            const cfg = await resp.json();
+            if (cfg && Array.isArray(cfg.endpoints) && cfg.endpoints.length) {
+                // 远程配置优先，保留内置项作为末位兜底
+                endpointList = cfg.endpoints.concat(TRACK_ENDPOINTS);
+            }
+        } catch (e) {
+            // 配置读取失败时沿用内置端点
         }
-    },
-        'SE2605X010': {
-            waybill: 'SE2605X010',
-            cargo: '扒胎机',
-            origin: '深圳 (Shenzhen)',
-            destination: '欧洲 (Europe)',
-            transport: '欧洲海运超大件',
-            status: 'sailed',
-            statusText: '已开船',
-            eta: '2026-07-20',
-            weight: '567KG',
-            channel: '欧洲海运超大件',
-            customs: '其它',
-            vessel: 'EVER GLOBE/1404-026W',
-            etaOriginal: '预计7月20日到港，以实际到港为准',
-            sailDate: '预计6月15日开船，以实际开船为准',
-            timeline: [
-                { time: '2026-06-15', location: '深圳港', event: '预计开船', status: 'upcoming' },
-                { time: '2026-06-14', location: '深圳港', event: '装船完成，已离港', status: 'upcoming' },
-                { time: '2026-06-13', location: '深圳港', event: '货物已报关放行（其它方式）', status: 'upcoming' },
-                { time: '2026-06-12', location: '深圳港', event: '货物到港，等待装船', status: 'upcoming' },
-                { time: '2026-06-11', location: '工厂仓库', event: '货物已提货出发', status: 'upcoming' },
-                { time: '2026-06-10', location: '深圳', event: '订舱确认 · 计费重 567KG', status: 'upcoming' },
-            ]
-        },
+    }
 
+    // 依次尝试各代理端点
+    async function queryViaProxy(ref) {
+        await loadEndpoints();
+        for (const base of endpointList) {
+            try {
+                const ctrl = new AbortController();
+                const timer = setTimeout(() => ctrl.abort(), 12000);
+                const resp = await fetch(base + '/api/track?ref=' + encodeURIComponent(ref), {
+                    signal: ctrl.signal
+                });
+                clearTimeout(timer);
+                if (!resp.ok) continue;
+                const data = await resp.json();
+                if (data && (data.ok || data.deep_link)) return data;
+            } catch (e) {
+                // 该端点不可用，尝试下一个
+            }
+        }
+        return null;
+    }
 
-    // ==================== 追踪功能 ====================
     function fillSample(e, waybill) {
         e.preventDefault();
         document.getElementById('trackingInput').value = waybill;
         trackCargo();
     }
 
-    function trackCargo() {
+    function showNotFound(ref, deepLink) {
+        const notFound = document.getElementById('notFound');
+        const fb = document.getElementById('fallbackActions');
+        const link = document.getElementById('carrierLink');
+        if (deepLink) {
+            link.href = deepLink;
+            fb.style.display = 'block';
+        } else {
+            fb.style.display = 'none';
+        }
+        notFound.classList.add('show');
+        notFound.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    async function trackCargo() {
         const input = document.getElementById('trackingInput');
         const waybill = input.value.trim().toUpperCase();
         const loading = document.getElementById('loading');
         const result = document.getElementById('trackingResult');
         const notFound = document.getElementById('notFound');
+        const fb = document.getElementById('fallbackActions');
 
         if (!waybill) {
             input.focus();
@@ -586,49 +637,106 @@
             return;
         }
 
-        // Hide all, show loading
         result.classList.remove('show');
         notFound.classList.remove('show');
+        fb.style.display = 'none';
         loading.classList.add('show');
 
-        // Simulate API call
-        setTimeout(() => {
-            loading.classList.remove('show');
-            const data = TRACKING_DB[waybill];
+        const data = await queryViaProxy(waybill);
+        loading.classList.remove('show');
 
-            if (data) {
-                showResult(data);
-            } else {
-                notFound.classList.add('show');
-            }
-        }, 1200);
+        if (data && data.ok) {
+            showResult(data, waybill);
+        } else {
+            // 代理不可用或无记录：仍给出船司官网深链，让客户可自助查询
+            const link = (data && data.deep_link) || localDeepLink(waybill);
+            showNotFound(waybill, link);
+        }
     }
 
-                    function showResult(data) {
+    function showResult(data, waybill) {
         const result = document.getElementById('trackingResult');
         const resultTitle = document.getElementById('resultTitle');
         const resultWaybill = document.getElementById('resultWaybill');
         const resultStatus = document.getElementById('resultStatus');
         const resultInfo = document.getElementById('resultInfo');
         const resultTimeline = document.getElementById('resultTimeline');
-        resultTitle.textContent = data.cargo;
-        resultWaybill.textContent = data.waybill;
-        const statusClass = data.status === 'delivered' ? 'status-delivered' : data.status === 'transit' ? 'status-transit' : data.status === 'sailed' ? 'status-sailed' : 'status-pending';
-        resultStatus.innerHTML = `<span class="result-status ${statusClass}">${data.statusText}</span>`;
-        let infoHTML = `<div class="info-item"><div class="label">运单号</div><div class="value">${data.waybill}</div></div><div class="info-item"><div class="label">货物名称</div><div class="value">${data.cargo}</div></div><div class="info-item"><div class="label">起运地</div><div class="value">${data.origin}</div></div><div class="info-item"><div class="label">目的地</div><div class="value highlight">${data.destination}</div></div><div class="info-item"><div class="label">运输方式</div><div class="value">${data.transport}</div></div><div class="info-item"><div class="label">预计到达</div><div class="value">${data.eta}</div></div>`;
-        if (data.weight) { infoHTML += `<div class="info-item"><div class="label">计费重量</div><div class="value">${data.weight}</div></div>`; }
-        if (data.vessel) { infoHTML += `<div class="info-item"><div class="label">船名航次</div><div class="value">${data.vessel}</div></div>`; }
-        if (data.channel) { infoHTML += `<div class="info-item"><div class="label">渠道</div><div class="value">${data.channel}</div></div>`; }
-        if (data.customs) { infoHTML += `<div class="info-item"><div class="label">报关方式</div><div class="value">${data.customs}</div></div>`; }
-        if (data.etaOriginal) { infoHTML += `<div class="info-item" style="grid-column: 1 / -1;"><div class="label">备注</div><div class="value" style="font-size: 0.85rem; color: #718096;">${data.etaOriginal}</div></div>`; }
-        resultInfo.innerHTML = infoHTML;
-        resultTimeline.innerHTML = data.timeline.map((item, idx) => {
-            const dotClass = item.status === 'completed' ? 'completed' : item.status === 'current' ? 'current' : 'upcoming';
-            return `<div class="timeline-item ${dotClass}"><div class="timeline-dot"></div><div class="timeline-content"><h5>${item.event}</h5><p>${item.location}</p><div class="time">${item.time}</div></div></div>`;
+
+        const carrier = carrierLabel(data.carrier_code) || data.carrier_name || '';
+        resultTitle.textContent = carrier || (isZh() ? '货物运输状态' : 'Shipment Status');
+        resultWaybill.textContent = data.identifier || waybill;
+
+        // 状态标签
+        const statusKey = (data.status || 'unknown').toLowerCase();
+        const statusText = isZh()
+            ? (data.status_label || statusKey)
+            : (STATUS_EN[statusKey] || data.status_label || statusKey);
+        const cls = STATUS_CLASS[statusKey] || 'status-pending';
+        resultStatus.innerHTML = '<span class="result-status ' + cls + '">' + escapeHtml(statusText) + '</span>';
+
+        // 信息网格
+        const info = [];
+        info.push(['运单号 / Reference', data.identifier || waybill]);
+        if (data.carrier_name || data.carrier_code) info.push(['船公司 / Carrier', carrier || data.carrier_name]);
+        if (data.origin) info.push(['起运地 / Origin', data.origin]);
+        if (data.destination) info.push(['目的地 / Destination', data.destination]);
+        if (data.eta) {
+            const etaTxt = formatEta(data.eta);
+            info.push(['预计到达 / ETA', etaTxt + (data.eta_is_estimated ? ' (预计)' : '')]);
+        }
+        if (data.vessel_name) info.push(['船名航次 / Vessel', data.vessel_name]);
+        if (data.identifier_type) info.push(['单号类型 / Type', data.identifier_type]);
+        info.push(['数据更新 / Updated', data.updated_at || '-']);
+
+        resultInfo.innerHTML = info.map(function (row) {
+            return '<div class="info-item"><div class="label">' + escapeHtml(row[0]) +
+                   '</div><div class="value">' + escapeHtml(row[1]) + '</div></div>';
         }).join('');
+
+        // 轨迹时间线
+        const events = data.events || [];
+        if (events.length) {
+            resultTimeline.innerHTML = events.map(function (ev) {
+                const isLast = false;
+                const dotClass = ev.actual ? 'completed' : 'upcoming';
+                const time = formatEta(ev.event_time);
+                const desc = (ev.description || ev.event_code || '') +
+                    (ev.transport_mode ? ' · ' + ev.transport_mode : '');
+                return '<div class="timeline-item ' + dotClass + '"><div class="timeline-dot"></div>' +
+                       '<div class="timeline-content"><h5>' + escapeHtml(desc) + '</h5>' +
+                       '<p>' + escapeHtml(ev.location || '') + '</p>' +
+                       '<div class="time">' + escapeHtml(time) + '</div></div></div>';
+            }).join('');
+        } else {
+            // 免费查询未返回逐条轨迹时，引导至船司官网查看完整轨迹
+            const dl = data.deep_link || localDeepLink(waybill);
+            resultTimeline.innerHTML =
+                '<div class="timeline-item upcoming"><div class="timeline-dot"></div>' +
+                '<div class="timeline-content"><h5>' + (isZh() ? '查看完整运输轨迹' : 'View full tracking history') + '</h5>' +
+                '<p>' + (isZh() ? '在船公司官网可查看逐条节点记录' : 'Open the carrier site for milestone-by-milestone status') + '</p>' +
+                '<div class="time"><a href="' + escapeHtml(dl) + '" target="_blank" rel="noopener" style="color:var(--accent);">' +
+                escapeHtml(dl) + '</a></div></div></div>';
+        }
+
         result.classList.add('show');
         result.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }</script>
+    }
+
+    function escapeHtml(s) {
+        return String(s === undefined || s === null ? '' : s)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    function formatEta(v) {
+        if (!v) return '-';
+        var d = new Date(v);
+        if (isNaN(d.getTime())) return String(v);
+        var pad = function (n) { return n < 10 ? '0' + n : '' + n; };
+        return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
+               ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+    }
+    </script>
 </body>
 </html>
 
