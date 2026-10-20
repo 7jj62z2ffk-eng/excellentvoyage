@@ -1,0 +1,6 @@
+{
+  "endpoints": [
+    "https://sofa-sequence-covers-shop.trycloudflare.com"
+  ],
+  "note": "官网货物跟踪代理地址（NAS + Cloudflare 隧道）。隧道地址变更时更新此文件并 push，官网会自动读取，无需改代码。"
+}
